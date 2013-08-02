@@ -1,0 +1,15 @@
+body{
+  font-family:'Microsoft YaHei',Verdana,Arial,\5b8b\4f53,Helvetica,arial,freesans,clean,sans-serif;
+}
+
+h1{font-size:35px;}
+hr{margin:10px 0;}
+p,li{font-size:108%;line-height:1.5;}
+code, pre{font-size:14px;margin:3px;}
+code{white-space:normal;}
+.code .err{border-width:0;}
+
+.navbar .brand{
+  background:url(ico32.png) 0 4px no-repeat;
+  padding-left:30px;
+}
