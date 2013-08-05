@@ -6,7 +6,17 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://mikecyc.github.io/</loc>
-  <lastmod>2013-08-03</lastmod>
+  <lastmod>2013-08-05</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mikecyc.github.io/2012/</loc>
+  <lastmod>2013-08-05</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mikecyc.github.io/2012/index.html</loc>
+  <lastmod>2013-08-05</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -16,7 +26,7 @@
  </url>
  <url>
   <loc>http://mikecyc.github.io/2013/index.html</loc>
-  <lastmod>2013-08-03</lastmod>
+  <lastmod>2013-08-05</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -26,32 +36,67 @@
  </url>
  <url>
   <loc>http://mikecyc.github.io/archive.html</loc>
-  <lastmod>2013-08-03</lastmod>
+  <lastmod>2013-08-05</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mikecyc.github.io/categories/</loc>
-  <lastmod>2013-08-03</lastmod>
+  <lastmod>2013-08-05</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mikecyc.github.io/categories/an-zhuang.html</loc>
+  <lastmod>2013-08-05</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mikecyc.github.io/categories/cha-jian.html</loc>
+  <lastmod>2013-08-05</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mikecyc.github.io/categories/chrome.html</loc>
+  <lastmod>2013-08-05</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mikecyc.github.io/categories/hello.html</loc>
+  <lastmod>2013-08-05</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mikecyc.github.io/categories/index.html</loc>
-  <lastmod>2013-08-03</lastmod>
+  <lastmod>2013-08-05</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mikecyc.github.io/categories/markdown.html</loc>
+  <lastmod>2013-08-05</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mikecyc.github.io/categories/nikola.html</loc>
-  <lastmod>2013-08-03</lastmod>
+  <lastmod>2013-08-05</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mikecyc.github.io/categories/python.html</loc>
-  <lastmod>2013-08-03</lastmod>
+  <lastmod>2013-08-05</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mikecyc.github.io/categories/rst.html</loc>
+  <lastmod>2013-08-05</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mikecyc.github.io/categories/web.html</loc>
-  <lastmod>2013-08-03</lastmod>
+  <lastmod>2013-08-05</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mikecyc.github.io/categories/xia-zai.html</loc>
+  <lastmod>2013-08-05</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -66,7 +111,7 @@
  </url>
  <url>
   <loc>http://mikecyc.github.io/index.html</loc>
-  <lastmod>2013-08-03</lastmod>
+  <lastmod>2013-08-05</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -80,8 +125,28 @@
   <priority>0.5000</priority>
  </url>
  <url>
+  <loc>http://mikecyc.github.io/posts/hello-markdown.html</loc>
+  <lastmod>2013-08-05</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mikecyc.github.io/posts/hello-rst.html</loc>
+  <lastmod>2013-08-05</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mikecyc.github.io/posts/how-mobile-safari-touch-event-works.html</loc>
+  <lastmod>2013-08-05</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mikecyc.github.io/posts/how-to-download-chrome-plugin-and-setup-offline.html</loc>
+  <lastmod>2013-08-05</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
   <loc>http://mikecyc.github.io/posts/nikola-web.html</loc>
-  <lastmod>2013-08-03</lastmod>
+  <lastmod>2013-08-05</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>

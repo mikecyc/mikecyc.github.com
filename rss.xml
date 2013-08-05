@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>麦客园</title><link>http://mikecyc.github.io</link><description>麦客园--集技术，生活的家园。关注Web前端，网络技术，Linux，开源硬件，基督信仰等。</description><lastBuildDate>Sat, 03 Aug 2013 00:26:13 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Nikola: 静态博客A.K.A引擎，我是怎样创建Shisaa.jp</title><link>http://mikecyc.github.io/posts/nikola-web.html</link><description>&lt;div&gt;&lt;h3&gt;写在前面的话&lt;/h3&gt;
+<rss version="2.0"><channel><title>麦客园</title><link>http://mikecyc.github.io</link><description>麦客园--集技术，生活的家园。关注Web前端，网络技术，Linux，开源硬件，基督信仰等。</description><lastBuildDate>Mon, 05 Aug 2013 15:49:50 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Nikola: 静态博客A.K.A引擎，我是怎样创建Shisaa.jp</title><link>http://mikecyc.github.io/posts/nikola-web.html</link><description>&lt;div&gt;&lt;h3&gt;写在前面的话&lt;/h3&gt;
 &lt;p&gt;当我在Google搜索用git做博客的时候我看到github提供了免费静态页面服务，而且提供Jekyll工具，允许用户用轻量级标记语言（比如Markdown）来写文章，然后生成博客页面。同类的工具还有Octopress。但用的是Ruby语言，在windows下安装环境特别麻烦。因我比较喜欢用Python，再继续搜索，看到了Pelican，只支持Python2.7以上版本，把本地的Python版本更新到2.7版本，好不容易安装好了Pelican环境，但发现Pelican用Makefile来管理项目，而Makefile在Windows下就是一个恶梦。最后看到了Nikola，按照官方文档很快就上手了，而且默认的样式还是特好看的，所以就最终选择了Nikola来建立静态博客。&lt;/p&gt;
 &lt;p&gt;在Nikola的有一篇文章&lt;a href="http://shisaa.jp/postset/nikola-web.html" title="Goes from installing to developing a custom theme."&gt;Tutorial by Tim van der Linden&lt;/a&gt;，正好解决了我对Nikola的一些问题，为了日后查阅方便，也为了能让更多母语是中文的网络爱好者认识Nikola，故翻译了这篇文章。&lt;/p&gt;
 &lt;hr&gt;&lt;h3&gt;前言&lt;/h3&gt;
@@ -12,4 +12,54 @@
 &lt;/ul&gt;&lt;p&gt;因此，不用Drupal，那用什么呢？Wordpress, Joomla...？这...永远...不可能，它们都是用PHP做后端的语言。&lt;/p&gt;
 &lt;p&gt;好，不用PHP驱动系统...我更喜欢用Python，所以可能是Plone, Pylons, Pyramid, ...？&lt;/p&gt;
 &lt;p&gt;可能……&lt;/p&gt;
-&lt;p&gt;&lt;a href="/posts/nikola-web.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>web</category><category>python</category><category>nikola</category><guid>http://mikecyc.github.io/posts/nikola-web.html</guid><pubDate>Thu, 01 Aug 2013 18:52:05 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="/posts/nikola-web.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>web</category><category>python</category><category>nikola</category><guid>http://mikecyc.github.io/posts/nikola-web.html</guid><pubDate>Thu, 01 Aug 2013 18:52:05 GMT</pubDate></item><item><title>hello-markdown</title><link>http://mikecyc.github.io/posts/hello-markdown.html</link><description>&lt;div&gt;&lt;h2&gt;Markdown 语法说明 (简体中文版)&lt;/h2&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="/posts/hello-markdown.html#overview"&gt;概述&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="/posts/hello-markdown.html#philosophy"&gt;宗旨&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#html"&gt;兼容 HTML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#autoescape"&gt;特殊字符自动转换&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#block"&gt;区块元素&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="/posts/hello-markdown.html#p"&gt;段落和换行&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#header"&gt;标题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#blockquote"&gt;区块引用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#list"&gt;列表&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#precode"&gt;代码区块&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#hr"&gt;分隔线&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#span"&gt;区段元素&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="/posts/hello-markdown.html#link"&gt;链接&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#em"&gt;强调&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#code"&gt;代码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#img"&gt;图片&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#misc"&gt;其它&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="/posts/hello-markdown.html#backslash"&gt;反斜杠&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#autolink"&gt;自动链接&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#acknowledgement"&gt;感谢&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/posts/hello-markdown.html#editor"&gt;Markdown 免费编辑器&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;hr&gt;&lt;p&gt;&lt;a href="/posts/hello-markdown.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>markdown</category><category>hello</category><guid>http://mikecyc.github.io/posts/hello-markdown.html</guid><pubDate>Fri, 28 Jun 2013 11:27:46 GMT</pubDate></item><item><title>hello-rst</title><link>http://mikecyc.github.io/posts/hello-rst.html</link><description>&lt;div class="section" id="rst"&gt;
+&lt;h2&gt;rst语法简介&lt;/h2&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h3&gt;空行分段&lt;/h3&gt;
+&lt;p&gt;第一段内容。&lt;/p&gt;
+&lt;p&gt;第二段和第一段间有空行。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h3&gt;自动续行&lt;/h3&gt;
+&lt;p&gt;一个回车不分段，
+本行续上行。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h3&gt;不留白续行&lt;/h3&gt;
+&lt;p&gt;行尾转义字符让续行之间不留白。&lt;/p&gt;
+&lt;p&gt;&lt;a href="/posts/hello-rst.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><category>hello</category><category>rst</category><guid>http://mikecyc.github.io/posts/hello-rst.html</guid><pubDate>Tue, 25 Jun 2013 23:35:32 GMT</pubDate></item><item><title>理解iOS中的touch事件</title><link>http://mikecyc.github.io/posts/how-mobile-safari-touch-event-works.html</link><description>&lt;div&gt;&lt;p&gt;touch事件是iOS中最重要的事件。&lt;/p&gt;
+&lt;h3&gt;一、简介&lt;/h3&gt;
+&lt;p&gt;Apple的官方文档&lt;a href="http://17.254.2.129/library/safari/#documentation/AppleApplications/Reference/SafariWebContent/HandlingEvents/HandlingEvents.html"&gt;Handling Events&lt;/a&gt;和 &lt;a href="http://developer.apple.com/library/safari/#documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Introduction/Introduction.html"&gt;Safari CSS Visual Effects Guide&lt;/a&gt;是很好的开发指南，但是里面的内容显然是针对初学者的，我在这里补充一下。&lt;/p&gt;
+&lt;p&gt;另外，Apple开发者中心有很多不错的HTML5教程与资源，例如HTML5离线存储，CSS动画，CSS 3D变换等，有兴趣的可以了解一下。 &lt;a href="http://developer.apple.com/library/safari/navigation/"&gt;http://developer.apple.com/library/safari/navigation/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="/posts/how-mobile-safari-touch-event-works.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>chrome</category><category>插件</category><category>下载</category><category>安装</category><guid>http://mikecyc.github.io/posts/how-mobile-safari-touch-event-works.html</guid><pubDate>Tue, 13 Mar 2012 09:22:03 GMT</pubDate></item><item><title>怎样下载Chrome插件和离线安装CRX文件</title><link>http://mikecyc.github.io/posts/how-to-download-chrome-plugin-and-setup-offline.html</link><description>&lt;div&gt;&lt;p&gt;自从chrome网上应用店出来后，Chrome插件就无法下载插件，必须在线安装，安装后又自动把CRX文件删除，而且是那么的迅速...&lt;/p&gt;
+&lt;p&gt;以下是下载离线插件包的方法：&lt;/p&gt;
+&lt;h3&gt;第一步：&lt;/h3&gt;
+&lt;p&gt;每个Google Chrome扩展都有一个固定的ID，例如&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;上面是一个Chrome扩展的完整URL，&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;https://chrome.google.com/webstore/detail/adblock/&lt;/code&gt;之后的一串字符就是扩展的ID了。&lt;/p&gt;
+&lt;p&gt;即：&lt;code&gt;gighmmpiobklfepjocnamgkkbiglidom&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;把这个扩展的ID复制下来。&lt;/p&gt;
+&lt;p&gt;&lt;a href="/posts/how-to-download-chrome-plugin-and-setup-offline.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>chrome</category><category>插件</category><category>下载</category><category>安装</category><guid>http://mikecyc.github.io/posts/how-to-download-chrome-plugin-and-setup-offline.html</guid><pubDate>Thu, 08 Mar 2012 13:52:05 GMT</pubDate></item></channel></rss>
