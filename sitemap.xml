@@ -41,7 +41,7 @@
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/</loc>
-  <lastmod>2013-08-06</lastmod>
+  <lastmod>2013-08-08</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -91,6 +91,11 @@
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/rst.html</loc>
+  <lastmod>2013-08-08</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mc.basebb.com/categories/sheng-huo.html</loc>
   <lastmod>2013-08-08</lastmod>
   <priority>0.5000</priority>
  </url>
@@ -161,6 +166,11 @@
  </url>
  <url>
   <loc>http://mc.basebb.com/posts/nikola-web.html</loc>
+  <lastmod>2013-08-08</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mc.basebb.com/posts/ten-christian-life-code.html</loc>
   <lastmod>2013-08-08</lastmod>
   <priority>0.5000</priority>
  </url>
