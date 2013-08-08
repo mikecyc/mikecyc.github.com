@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh_cn"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content="麦客园--集技术，生活的家园。关注Web前端，网络技术，Linux，开源硬件，基督信仰等。"><meta name="author" content="Mike Chen"><title>麦客园 | 麦客园</title><link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="assets/css/rst.css" rel="stylesheet" type="text/css"><link href="assets/css/code.css" rel="stylesheet" type="text/css"><link href="assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="assets/css/theme.css" rel="stylesheet" type="text/css"><link href="assets/css/custom.css" rel="stylesheet" type="text/css"><!--[if lt IE 9]>
+<!DOCTYPE html><html lang="zh_cn"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content="麦客园--集基督信仰技术，生活的家园，分享生活中的点点滴滴。关注Web前端，网络技术，Linux，开源硬件等。"><meta name="author" content="Mike Chen"><title>麦客园 | 麦客园</title><link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="assets/css/rst.css" rel="stylesheet" type="text/css"><link href="assets/css/code.css" rel="stylesheet" type="text/css"><link href="assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="assets/css/theme.css" rel="stylesheet" type="text/css"><link href="assets/css/custom.css" rel="stylesheet" type="text/css"><!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml"><link rel="icon" href="favicon.ico" sizes="16x16"><script>
 var _hmt = _hmt || [];
@@ -26,7 +26,7 @@ var _hmt = _hmt || [];
             <div class="nav-collapse collapse">
                 <ul class="nav"><li><a href="archive.html">文章归档</a>
             </li><li><a href="categories/index.html">文章分类</a>
-            </li><li><a href="stories/about.html">关于我们</a>
+            </li><li><a href="stories/about.html">关于作者</a>
 
                 </li></ul><ul class="nav pull-right"></ul></div>
         </div>
@@ -68,7 +68,7 @@ var _hmt = _hmt || [];
 <p><a href="posts/nikola-web.html">更多...</a></p></div>
         </div>
         <div class="postbox">
-        <h1><a href="posts/hello-markdown.html">hello-markdown</a></h1>
+        <h1><a href="posts/hello-markdown.html">Markdown 语法说明 (简体中文版)</a></h1>
         <small>  
              发表于: <time class="published" datetime="2013-06-28T11:27:46">2013-06-28 11:27</time>
              
@@ -79,32 +79,21 @@ var _hmt = _hmt || [];
             <a class="tag" href="categories/hello.html"><span class="badge">hello</span></a>
 
         </small>
-        <hr><div><h2>Markdown 语法说明 (简体中文版)</h2>
-<ul><li><a href="posts/hello-markdown.html#overview">概述</a><ul><li><a href="posts/hello-markdown.html#philosophy">宗旨</a></li>
-<li><a href="posts/hello-markdown.html#html">兼容 HTML</a></li>
-<li><a href="posts/hello-markdown.html#autoescape">特殊字符自动转换</a></li>
-</ul></li>
-<li><a href="posts/hello-markdown.html#block">区块元素</a><ul><li><a href="posts/hello-markdown.html#p">段落和换行</a></li>
-<li><a href="posts/hello-markdown.html#header">标题</a></li>
-<li><a href="posts/hello-markdown.html#blockquote">区块引用</a></li>
-<li><a href="posts/hello-markdown.html#list">列表</a></li>
-<li><a href="posts/hello-markdown.html#precode">代码区块</a></li>
-<li><a href="posts/hello-markdown.html#hr">分隔线</a></li>
-</ul></li>
-<li><a href="posts/hello-markdown.html#span">区段元素</a><ul><li><a href="posts/hello-markdown.html#link">链接</a></li>
-<li><a href="posts/hello-markdown.html#em">强调</a></li>
-<li><a href="posts/hello-markdown.html#code">代码</a></li>
-<li><a href="posts/hello-markdown.html#img">图片</a></li>
-</ul></li>
-<li><a href="posts/hello-markdown.html#misc">其它</a><ul><li><a href="posts/hello-markdown.html#backslash">反斜杠</a></li>
-<li><a href="posts/hello-markdown.html#autolink">自动链接</a></li>
-</ul></li>
-<li><a href="posts/hello-markdown.html#acknowledgement">感谢</a></li>
-<li><a href="posts/hello-markdown.html#editor">Markdown 免费编辑器</a></li>
-</ul><hr><p><a href="posts/hello-markdown.html">更多...</a></p></div>
+        <hr><div><h2 id="overview">概述
+
+<h3 id="philosophy">宗旨
+
+</h3></h2><p>Markdown 的目标是实现「易读易写」。</p>
+<p>可读性，无论如何，都是最重要的。一份使用 Markdown 格式撰写的文件应该可以直接以纯文本发布，并且看起来不会像是由许多标签或是格式指令所构成。Markdown 语法受到一些既有 text-to-HTML 格式的影响，包括 <a href="http://docutils.sourceforge.net/mirror/setext.html">Setext</a>、<a href="http://www.aaronsw.com/2002/atx/">atx</a>、<a href="http://textism.com/tools/textile/">Textile</a>、<a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>、<a href="http://www.triptico.com/software/grutatxt.html">Grutatext</a> 和 <a href="http://ettext.taint.org/doc/">EtText</a>，而最大灵感来源其实是纯文本电子邮件的格式。</p>
+<p>总之， Markdown 的语法全由一些符号所组成，这些符号经过精挑细选，其作用一目了然。比如：在文字两旁加上星号，看起来就像*强调*。Markdown 的列表看起来，嗯，就是列表。Markdown 的区块引用看起来就真的像是引用一段文字，就像你曾在电子邮件中见过的那样。</p>
+<h3 id="html">兼容 HTML
+
+</h3><p>Markdown 语法的目标是：成为一种适用于网络的<em>书写</em>语言。</p>
+<p>Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法种类很少，只对应 HTML 标记的一小部分。Markdown 的构想<em>不是</em>要使得 HTML 文档更容易书写。在我看来， HTML 已经很容易写了。Markdown 的理念是，能让文档更容易读、写和随意改。HTML 是一种<em>发布</em>的格式，Markdown 是一种<em>书写</em>的格式。就这样，Markdown 的格式语法只涵盖纯文本可以涵盖的范围。</p>
+<p><a href="posts/hello-markdown.html">更多...</a></p></div>
         </div>
         <div class="postbox">
-        <h1><a href="posts/hello-rst.html">hello-rst</a></h1>
+        <h1><a href="posts/hello-rst.html">reStructuredText(rst)语法简介(简体中文)</a></h1>
         <small>  
              发表于: <time class="published" datetime="2013-06-25T23:35:32">2013-06-25 23:35</time>
              
@@ -176,6 +165,35 @@ var _hmt = _hmt || [];
 <p>即：<code>gighmmpiobklfepjocnamgkkbiglidom</code></p>
 <p>把这个扩展的ID复制下来。</p>
 <p><a href="posts/how-to-download-chrome-plugin-and-setup-offline.html">更多...</a></p></div>
+        </div>
+        <div class="postbox">
+        <h1><a href="posts/why-jesus.html">为什么信耶稣？[甘力克]</a></h1>
+        <small>  
+             发表于: <time class="published" datetime="2012-03-08T13:52:05">2012-03-08 13:52</time>
+             
+
+             
+          |  更多相关文章：
+            <a class="tag" href="categories/ye-su.html"><span class="badge">耶稣</span></a>
+            <a class="tag" href="categories/xin-yang.html"><span class="badge">信仰</span></a>
+            <a class="tag" href="categories/ji-du.html"><span class="badge">基督</span></a>
+
+        </small>
+        <hr><div><h3>怎么回事？</h3>
+<p><img src="assets/image/whyjesus/01.gif" width="168" height="172" align="right" hsapce="15"></p>
+<p>人生在世，最叫人振奋的事情，莫如：成功的人际关系——父子、夫妇、爱侣、朋友等。</p>
+<p>有人以为基督教信仰不外乎一大堆教义、戒律、规条，但其实基督教信仰的精髓在乎——在乎一个人，而不仅仅是一套哲学理论。<strong>基督教信仰所着重的关系，是人世间最重要的关系——人与造物主的关系。</strong>耶稣说首要的诫命是全心爱神，其次是爱人如己——两条诫命都涉及关系。 </p>
+<h3>所为何事？</h3>
+<p>你我受造于世，就是为了与神建立关系。除非我们与神复合，否则总会觉得生命欠缺一点什么。世人常常感到空虚无助，就是这个缘故。有一个摇滚乐手这样形容他内心的感受：“我心里，空虚难受。”</p>
+<p>有一个家庭主妇写信给我，说她“心中有一大片空白”；另一个女孩说她“灵魂穿了一个大洞。”</p>
+<p><img src="assets/image/whyjesus/02.jpg" align="left" hsapce="15" width="197" height="206"></p>
+<p>世人用各种方法来填补心中的空洞。有人希望用钱填补——可惜钱财不能满足人心。已故希腊船王奥纳西斯(Aristotle S.Onassis)是世界首富之一，临终前说过这样的话：“人即使拥有万贯家财，也不能满足人心的需求。”</p>
+<p>又有人吸毒、酗酒、滥交。有一个女孩告诉我说：“这些事可以带来一时的快感，可是过后只会觉得更空虚。”又有人朝夕工作，醉心音乐、拼命运动、竞逐名声——这些事本身并无不妥，但不能满足人内心的饥渴。</p>
+<p>人就算得着乐人世界最亲密的关系，也不足以填满“心里头的空虚”！</p>
+<p>人受造原是为了与神在爱中合一，人若持续与神不和好，心里总不会感到满足。</p>
+<p>按照新约圣经的说法，人心感到空虚，因人背弃了神。</p>
+<p>耶稣说：<code>“我就是生命的粮。”(约 6:35)</code> 是的，只有耶稣可以使我们的心灵得满足，因为惟有耶稣可以帮助我们与神重修旧好。</p>
+<p><a href="posts/why-jesus.html">更多...</a></p></div>
         </div>
     
 <div>

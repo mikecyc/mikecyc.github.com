@@ -1,43 +1,12 @@
 <!-- 
 .. tags: markdown, hello
-.. title: hello-markdown
+.. title: Markdown 语法说明 (简体中文版)
 .. date: 2013/06/28 11:27:46
 .. link: http://wowubuntu.com/markdown/
 .. slug: hello-markdown
 .. comment: True
 .. description: Markdown 语法
 -->
-
-
-Markdown 语法说明 (简体中文版) 
-================
-
-*   [概述](#overview)
-    *   [宗旨](#philosophy)
-    *   [兼容 HTML](#html)
-    *   [特殊字符自动转换](#autoescape)
-*   [区块元素](#block)
-    *   [段落和换行](#p)
-    *   [标题](#header)
-    *   [区块引用](#blockquote)
-    *   [列表](#list)
-    *   [代码区块](#precode)
-    *   [分隔线](#hr)
-*   [区段元素](#span)
-    *   [链接](#link)
-    *   [强调](#em)
-    *   [代码](#code)
-    *   [图片](#img)
-*   [其它](#misc)
-    *   [反斜杠](#backslash)
-    *   [自动链接](#autolink)
-*   [感谢](#acknowledgement)
-*	[Markdown 免费编辑器](#editor)
-
-* * *
-
-<!-- TEASER_END -->
-
 
 <h2 id="overview">概述</h2>
 
@@ -61,6 +30,8 @@ Markdown 的目标是实现「易读易写」。
 Markdown 语法的目标是：成为一种适用于网络的*书写*语言。
 
 Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法种类很少，只对应 HTML 标记的一小部分。Markdown 的构想*不是*要使得 HTML 文档更容易书写。在我看来， HTML 已经很容易写了。Markdown 的理念是，能让文档更容易读、写和随意改。HTML 是一种*发布*的格式，Markdown 是一种*书写*的格式。就这样，Markdown 的格式语法只涵盖纯文本可以涵盖的范围。
+
+<!-- TEASER_END -->
 
 不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。不需要额外标注这是 HTML 或是 Markdown；只要直接加标签就可以了。
 

@@ -1,6 +1,6 @@
 .. tags: hello,rst
 .. description:  rst, 语法
-.. title: hello-rst
+.. title: reStructuredText(rst)语法简介(简体中文)
 .. slug: hello-rst
 .. link: 
 .. comment: True

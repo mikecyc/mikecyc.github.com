@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh_cn"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content="Markdown 语法"><meta name="author" content="Mike Chen"><title>hello-markdown | 麦客园</title><link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="../assets/css/rst.css" rel="stylesheet" type="text/css"><link href="../assets/css/code.css" rel="stylesheet" type="text/css"><link href="../assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="../assets/css/theme.css" rel="stylesheet" type="text/css"><link href="../assets/css/custom.css" rel="stylesheet" type="text/css"><!--[if lt IE 9]>
+<!DOCTYPE html><html lang="zh_cn"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content="Markdown 语法"><meta name="author" content="Mike Chen"><title>Markdown 语法说明 (简体中文版) | 麦客园</title><link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="../assets/css/rst.css" rel="stylesheet" type="text/css"><link href="../assets/css/code.css" rel="stylesheet" type="text/css"><link href="../assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="../assets/css/theme.css" rel="stylesheet" type="text/css"><link href="../assets/css/custom.css" rel="stylesheet" type="text/css"><!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml"><link rel="icon" href="../favicon.ico" sizes="16x16"><script>
 var _hmt = _hmt || [];
@@ -26,7 +26,7 @@ var _hmt = _hmt || [];
             <div class="nav-collapse collapse">
                 <ul class="nav"><li><a href="../archive.html">文章归档</a>
             </li><li><a href="../categories/index.html">文章分类</a>
-            </li><li><a href="../stories/about.html">关于我们</a>
+            </li><li><a href="../stories/about.html">关于作者</a>
 
                 </li></ul><ul class="nav pull-right"></ul></div>
         </div>
@@ -41,7 +41,7 @@ var _hmt = _hmt || [];
     
     <div class="postbox">
     
-    <h1>hello-markdown</h1>
+    <h1>Markdown 语法说明 (简体中文版)</h1>
 
     <hr><small>
         发表于: <time class="published" datetime="2013-06-28T11:27:46">2013-06-28 11:27</time>
@@ -53,29 +53,7 @@ var _hmt = _hmt || [];
             <a class="tag" href="../categories/hello.html"><span class="badge">hello</span></a>
 
     </small>
-    <hr><h2>Markdown 语法说明 (简体中文版)</h2>
-<ul><li><a href="hello-markdown.html#overview">概述</a><ul><li><a href="hello-markdown.html#philosophy">宗旨</a></li>
-<li><a href="hello-markdown.html#html">兼容 HTML</a></li>
-<li><a href="hello-markdown.html#autoescape">特殊字符自动转换</a></li>
-</ul></li>
-<li><a href="hello-markdown.html#block">区块元素</a><ul><li><a href="hello-markdown.html#p">段落和换行</a></li>
-<li><a href="hello-markdown.html#header">标题</a></li>
-<li><a href="hello-markdown.html#blockquote">区块引用</a></li>
-<li><a href="hello-markdown.html#list">列表</a></li>
-<li><a href="hello-markdown.html#precode">代码区块</a></li>
-<li><a href="hello-markdown.html#hr">分隔线</a></li>
-</ul></li>
-<li><a href="hello-markdown.html#span">区段元素</a><ul><li><a href="hello-markdown.html#link">链接</a></li>
-<li><a href="hello-markdown.html#em">强调</a></li>
-<li><a href="hello-markdown.html#code">代码</a></li>
-<li><a href="hello-markdown.html#img">图片</a></li>
-</ul></li>
-<li><a href="hello-markdown.html#misc">其它</a><ul><li><a href="hello-markdown.html#backslash">反斜杠</a></li>
-<li><a href="hello-markdown.html#autolink">自动链接</a></li>
-</ul></li>
-<li><a href="hello-markdown.html#acknowledgement">感谢</a></li>
-<li><a href="hello-markdown.html#editor">Markdown 免费编辑器</a></li>
-</ul><hr><!-- TEASER_END --><h2 id="overview">概述
+    <hr><h2 id="overview">概述
 
 <h3 id="philosophy">宗旨
 
@@ -86,6 +64,8 @@ var _hmt = _hmt || [];
 
 </h3><p>Markdown 语法的目标是：成为一种适用于网络的<em>书写</em>语言。</p>
 <p>Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法种类很少，只对应 HTML 标记的一小部分。Markdown 的构想<em>不是</em>要使得 HTML 文档更容易书写。在我看来， HTML 已经很容易写了。Markdown 的理念是，能让文档更容易读、写和随意改。HTML 是一种<em>发布</em>的格式，Markdown 是一种<em>书写</em>的格式。就这样，Markdown 的格式语法只涵盖纯文本可以涵盖的范围。</p>
+<!-- TEASER_END -->
+
 <p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。不需要额外标注这是 HTML 或是 Markdown；只要直接加标签就可以了。</p>
 <p>要制约的只有一些 HTML 区块元素――比如 <code>&lt;div&gt;</code>、<code>&lt;table&gt;</code>、<code>&lt;pre&gt;</code>、<code>&lt;p&gt;</code> 等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。Markdown 的生成器有足够智能，不会在 HTML 区块标签外加上不必要的 <code>&lt;p&gt;</code> 标签。</p>
 <p>例子如下，在 Markdown 文件里加上一段 HTML 表格：</p>
@@ -799,7 +779,7 @@ equivalent of <span class="nt">&lt;code&gt;</span><span class="ni">&amp;amp;</sp
   </div>
   <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6739020"></script><script type="text/javascript" id="bdshell_js"></script><script type="text/javascript">
   document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
-  </script><div class="ds-thread" data-category="cache\posts\hello-markdown.html" data-thread-key="" data-title="hello-markdown" data-author-key="" data-url="http://mikecyc.github.io/posts/hello-markdown.html"></div>
+  </script><div class="ds-thread" data-category="cache\posts\hello-markdown.html" data-thread-key="" data-title="Markdown 语法说明 (简体中文版)" data-author-key="" data-url="http://mc.basebb.com/posts/hello-markdown.html"></div>
       <script type="text/javascript">
       var duoshuoQuery = {short_name:"mikecyc"};
         (function() {

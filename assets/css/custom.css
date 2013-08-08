@@ -8,6 +8,7 @@ p,li{font-size:108%;line-height:1.5;}
 code, pre{font-size:14px;margin:3px;}
 code{white-space:normal;}
 .code .err{border-width:0;}
+code, a{word-wrap:break-word;word-break:break-all;}
 
 .navbar .brand{
   background:url(ico32.png) 0 4px no-repeat;
