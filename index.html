@@ -40,6 +40,39 @@ var _hmt = _hmt || [];
     <div class="span8">
     
         <div class="postbox">
+        <h1><a href="posts/strong-bash.html">两个非常有用的Bash脚本编程命令</a></h1>
+        <small>  
+             发表于: <time class="published" datetime="2013-08-13T15:55:02">2013-08-13 15:55</time>
+             
+
+             
+          |  更多相关文章：
+            <a class="tag" href="categories/bash.html"><span class="badge">Bash</span></a>
+            <a class="tag" href="categories/bian-cheng.html"><span class="badge">编程</span></a>
+            <a class="tag" href="categories/ming-ling.html"><span class="badge">命令</span></a>
+
+        </small>
+        <hr><div><p>Shell脚本可以完成很多任务，但因为Shell脚本运行时遇到异常还是会继续运行，这些问题有时很难发现，所以有两个命令可以帮助你来调试脚本，这是非常有用的命令。</p>
+<h3>命令一：使用 Set -u</h3>
+<p>你有没有因为一个变量没有初始化而经常崩溃？我知道我有，而且很多次。</p>
+<div class="code"><pre><span class="nv">chroot</span><span class="o">=</span><span class="nv">$1</span>
+...
+rm -rf <span class="nv">$chroot</span>/usr/share/doc
+</pre></div>
+
+
+<p>如果你忘记初始化一个变量就运行上面的脚本，你将会删除所有的系统文件，而不是只在chroot目录下的文档。你要做些什么呢？幸运的是bash为您提供了<code>set -u</code>，当你尝试使用一个未初始化的变量将会自动退出脚本。</p>
+<div class="code"><pre>mike% bash /tmp/shrink-chroot.sh
+<span class="nv">$chroot</span><span class="o">=</span>
+mike% bash -u /tmp/shrink-chroot.sh
+/tmp/shrink-chroot.sh: line 3: <span class="nv">$1</span>: unbound variable
+mike%
+</pre></div>
+
+
+<p><a href="posts/strong-bash.html">更多...</a></p></div>
+        </div>
+        <div class="postbox">
         <h1><a href="posts/setup-md-notepad.html">notepad++安装markdown插件</a></h1>
         <small>  
              发表于: <time class="published" datetime="2013-08-08T11:22:05">2013-08-08 11:22</time>

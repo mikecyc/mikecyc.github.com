@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>麦客园</title><link>http://mc.basebb.com</link><description>麦客园--集基督信仰技术，生活的家园，分享生活中的点点滴滴。关注Web前端，网络技术，Linux，开源硬件等。</description><lastBuildDate>Fri, 09 Aug 2013 18:36:13 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>notepad++安装markdown插件</title><link>http://mc.basebb.com/posts/setup-md-notepad.html</link><description>&lt;div&gt;&lt;p&gt;Notepad++ 是一款非常友好的编辑器，轻巧、便捷、高效、插件丰富… 同时 Notepad++ 支持用户自定义语法高亮 &lt;/p&gt;
+<rss version="2.0"><channel><title>麦客园</title><link>http://mc.basebb.com</link><description>麦客园--集基督信仰技术，生活的家园，分享生活中的点点滴滴。关注Web前端，网络技术，Linux，开源硬件等。</description><lastBuildDate>Wed, 14 Aug 2013 13:08:30 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>两个非常有用的Bash脚本编程命令</title><link>http://mc.basebb.com/posts/strong-bash.html</link><description>&lt;div&gt;&lt;p&gt;Shell脚本可以完成很多任务，但因为Shell脚本运行时遇到异常还是会继续运行，这些问题有时很难发现，所以有两个命令可以帮助你来调试脚本，这是非常有用的命令。&lt;/p&gt;
+&lt;h3&gt;命令一：使用 Set -u&lt;/h3&gt;
+&lt;p&gt;你有没有因为一个变量没有初始化而经常崩溃？我知道我有，而且很多次。&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;chroot&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;
+...
+rm -rf &lt;span class="nv"&gt;$chroot&lt;/span&gt;/usr/share/doc
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如果你忘记初始化一个变量就运行上面的脚本，你将会删除所有的系统文件，而不是只在chroot目录下的文档。你要做些什么呢？幸运的是bash为您提供了&lt;code&gt;set -u&lt;/code&gt;，当你尝试使用一个未初始化的变量将会自动退出脚本。&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;mike% bash /tmp/shrink-chroot.sh
+&lt;span class="nv"&gt;$chroot&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+mike% bash -u /tmp/shrink-chroot.sh
+/tmp/shrink-chroot.sh: line 3: &lt;span class="nv"&gt;$1&lt;/span&gt;: unbound variable
+mike%
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href="/posts/strong-bash.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Bash</category><category>编程</category><category>命令</category><guid>http://mc.basebb.com/posts/strong-bash.html</guid><pubDate>Tue, 13 Aug 2013 15:55:02 GMT</pubDate></item><item><title>notepad++安装markdown插件</title><link>http://mc.basebb.com/posts/setup-md-notepad.html</link><description>&lt;div&gt;&lt;p&gt;Notepad++ 是一款非常友好的编辑器，轻巧、便捷、高效、插件丰富… 同时 Notepad++ 支持用户自定义语法高亮 &lt;/p&gt;
 &lt;p&gt;GitHub上已经有人编写好开源的 Markdown 规则： &lt;a href="https://github.com/thomsmits/markdown_npp"&gt;https://github.com/thomsmits/markdown_npp&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;一、让Notepad++ 高亮支持 Markdown 语法:&lt;/h3&gt;
 &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="err"&gt;开始菜单&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="err"&gt;运行&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;或者直接按&lt;/span&gt; &lt;span class="n"&gt;Ctrl&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="err"&gt;输入&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;APPDATA&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Notepad&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;
