@@ -40,6 +40,29 @@ var _hmt = _hmt || [];
     <div class="span8">
     
         <div class="postbox">
+        <h1><a href="posts/how-to-set-https-in-django-and-nginx.html">Nginx如何设置Django的https重定向</a></h1>
+        <small>  
+             发表于: <time class="published" datetime="2013-08-22T21:44:21">2013-08-22 21:44</time>
+             
+
+             
+          |  更多相关文章：
+            <a class="tag" href="categories/nginx.html"><span class="badge">Nginx</span></a>
+            <a class="tag" href="categories/django.html"><span class="badge">Django</span></a>
+            <a class="tag" href="categories/she-zhi.html"><span class="badge">设置</span></a>
+
+        </small>
+        <hr><div><h3>遇到的问题</h3>
+<p>出于网络安全的考虑，<a href="http://www.joyit.me/">欢迅干线</a>增加了SSL协议的连接，但发现Django在重定向跳转的时候总是回到普通的HTTP协议，而不是HTTPS协议。查了资料看到<code>HttpRequest.is_secure()</code>方法用来判断是否https连接，如果是的话就返回<code>True</code>。在Django 1.4 之前只能在Python的环境上去设置，而1.4重新改写了is_secure()方法，可以自己指定判断的变量和值。</p>
+<h3>如何设置Nginx和Django</h3>
+<p>Google了好几篇文章，都说在Nginx配置文件中增加下面的设置：</p>
+<div class="code"><pre>proxy_set_header X-Forwarded-Protocol <span class="nv">$scheme</span>;
+</pre></div>
+
+
+<p><a href="posts/how-to-set-https-in-django-and-nginx.html">更多...</a></p></div>
+        </div>
+        <div class="postbox">
         <h1><a href="posts/strong-bash.html">两个非常有用的Bash脚本编程命令</a></h1>
         <small>  
              发表于: <time class="published" datetime="2013-08-13T15:55:02">2013-08-13 15:55</time>

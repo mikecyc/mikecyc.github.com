@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>麦客园 (命令)</title><link>http://mc.basebb.com</link><description>麦客园--集基督信仰技术，生活的家园，分享生活中的点点滴滴。关注Web前端，网络技术，Linux，开源硬件等。</description><lastBuildDate>Wed, 14 Aug 2013 13:08:30 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>两个非常有用的Bash脚本编程命令</title><link>http://mc.basebb.com/posts/strong-bash.html</link><description>&lt;div&gt;&lt;p&gt;Shell脚本可以完成很多任务，但因为Shell脚本运行时遇到异常还是会继续运行，这些问题有时很难发现，所以有两个命令可以帮助你来调试脚本，这是非常有用的命令。&lt;/p&gt;
+<rss version="2.0"><channel><title>麦客园 (命令)</title><link>http://mc.basebb.com</link><description>麦客园--集基督信仰技术，生活的家园，分享生活中的点点滴滴。关注Web前端，网络技术，Linux，开源硬件等。</description><lastBuildDate>Thu, 22 Aug 2013 22:35:49 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>两个非常有用的Bash脚本编程命令</title><link>http://mc.basebb.com/posts/strong-bash.html</link><description>&lt;div&gt;&lt;p&gt;Shell脚本可以完成很多任务，但因为Shell脚本运行时遇到异常还是会继续运行，这些问题有时很难发现，所以有两个命令可以帮助你来调试脚本，这是非常有用的命令。&lt;/p&gt;
 &lt;h3&gt;命令一：使用 Set -u&lt;/h3&gt;
 &lt;p&gt;你有没有因为一个变量没有初始化而经常崩溃？我知道我有，而且很多次。&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;chroot&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;

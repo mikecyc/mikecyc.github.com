@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>麦客园 (rst)</title><link>http://mc.basebb.com</link><description>麦客园--集基督信仰技术，生活的家园，分享生活中的点点滴滴。关注Web前端，网络技术，Linux，开源硬件等。</description><lastBuildDate>Wed, 14 Aug 2013 13:06:51 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>reStructuredText(rst)语法简介(简体中文)</title><link>http://mc.basebb.com/posts/hello-rst.html</link><description>&lt;div class="section" id="rst"&gt;
+<rss version="2.0"><channel><title>麦客园 (rst)</title><link>http://mc.basebb.com</link><description>麦客园--集基督信仰技术，生活的家园，分享生活中的点点滴滴。关注Web前端，网络技术，Linux，开源硬件等。</description><lastBuildDate>Thu, 22 Aug 2013 22:35:48 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>reStructuredText(rst)语法简介(简体中文)</title><link>http://mc.basebb.com/posts/hello-rst.html</link><description>&lt;div class="section" id="rst"&gt;
 &lt;h2&gt;rst语法简介&lt;/h2&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h3&gt;空行分段&lt;/h3&gt;

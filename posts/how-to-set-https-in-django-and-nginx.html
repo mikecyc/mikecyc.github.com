@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="zh_cn"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content=""><meta name="author" content="Mike Chen"><title>Nginx如何设置Django的https重定向 | 麦客园</title><link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="../assets/css/rst.css" rel="stylesheet" type="text/css"><link href="../assets/css/code.css" rel="stylesheet" type="text/css"><link href="../assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="../assets/css/theme.css" rel="stylesheet" type="text/css"><link href="../assets/css/custom.css" rel="stylesheet" type="text/css"><!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml"><link rel="icon" href="../favicon.ico" sizes="16x16"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?3760af2f06e2095f83b8b7e7c712b7c5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></head><body>
+<!-- Menubar -->
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+
+            <a class="brand" href="../">麦客园</a>
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li><a href="../archive.html">文章归档</a>
+            </li><li><a href="../categories/index.html">文章分类</a>
+            </li><li><a href="../stories/about.html">关于作者</a>
+
+                </li></ul><ul class="nav pull-right"></ul></div>
+        </div>
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="container-fluid" id="container-fluid">
+    <!--Body content-->
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+    
+    <div class="postbox">
+    
+    <h1>Nginx如何设置Django的https重定向</h1>
+
+    <hr><small>
+        发表于: <time class="published" datetime="2013-08-22T21:44:21">2013-08-22 21:44</time>
+        
+
+        
+          |  更多相关文章：
+            <a class="tag" href="../categories/nginx.html"><span class="badge">Nginx</span></a>
+            <a class="tag" href="../categories/django.html"><span class="badge">Django</span></a>
+            <a class="tag" href="../categories/she-zhi.html"><span class="badge">设置</span></a>
+
+    </small>
+    <hr><h3>遇到的问题</h3>
+<p>出于网络安全的考虑，<a href="http://www.joyit.me/">欢迅干线</a>增加了SSL协议的连接，但发现Django在重定向跳转的时候总是回到普通的HTTP协议，而不是HTTPS协议。查了资料看到<code>HttpRequest.is_secure()</code>方法用来判断是否https连接，如果是的话就返回<code>True</code>。在Django 1.4 之前只能在Python的环境上去设置，而1.4重新改写了is_secure()方法，可以自己指定判断的变量和值。</p>
+<h3>如何设置Nginx和Django</h3>
+<p>Google了好几篇文章，都说在Nginx配置文件中增加下面的设置：</p>
+<div class="code"><pre>proxy_set_header X-Forwarded-Protocol <span class="nv">$scheme</span>;
+</pre></div>
+
+
+<!-- TEASER_END -->
+
+<p>但因为我用的Nginx没有通过代理的方式，所以没有办法拿到值，需要修改为：</p>
+<div class="code"><pre>uwsgi_param HTTP_X_FORWARDED_PROTOCOL <span class="nv">$scheme</span>;
+</pre></div>
+
+
+<p>加在<code>location /{}</code>里面。然后再在Django工程的<code>settings.py</code>里增加 <code>SECURE_PROXY_SSL_HEADER</code>变量：</p>
+<div class="code"><pre><span class="nv">SECURE_PROXY_SSL_HEADER</span> <span class="o">=</span> <span class="o">(</span><span class="s1">'HTTP_X_FORWARDED_PROTOCOL'</span>, <span class="s1">'https'</span><span class="o">)</span>
+</pre></div>
+
+
+<p>这种方法就是Nginx会设置SSL连接<code>HTTP_X_FORWARDED_PROTOCOL</code>的值为<code>https</code>，当然也要告诉Django判断的名称和值，详细参考Django文档 <a href="https://docs.djangoproject.com/en/1.4/ref/settings/#secure-proxy-ssl-header">SECURE_PROXY_SSL_HEADER</a> 。</p>
+    
+    <ul class="pager"><li class="previous">
+            <a href="strong-bash.html">← 前一篇</a>
+        </li>
+    </ul><hr><div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+  <a class="bds_tsina"></a>
+  <a class="bds_qzone"></a>
+  <a class="bds_tqq"></a>
+  <a class="bds_renren"></a>
+  <a class="bds_t163"></a>
+  <a class="bds_tqf"></a>
+  <a class="bds_douban"></a>
+  <a class="bds_kaixin001"></a>
+  <a class="bds_sqq"></a>
+  <a class="bds_fbook"></a>
+  <a class="bds_twi"></a>
+  <a class="bds_mshare"></a>
+  <span class="bds_more"></span>
+  </div>
+  <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6739020"></script><script type="text/javascript" id="bdshell_js"></script><script type="text/javascript">
+  document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+  </script><div class="ds-thread" data-category="cache\posts\how-to-set-https-in-django-and-nginx.html" data-thread-key="" data-title="Nginx如何设置Django的https重定向" data-author-key="" data-url="http://mc.basebb.com/posts/how-to-set-https-in-django-and-nginx.html"></div>
+      <script type="text/javascript">
+      var duoshuoQuery = {short_name:"mikecyc"};
+        (function() {
+          var ds = document.createElement('script');
+          ds.type = 'text/javascript';ds.async = true;
+          ds.src = 'http://static.duoshuo.com/embed.js';
+          ds.charset = 'UTF-8';
+          (document.getElementsByTagName('head')[0] 
+          || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+        </script></div>
+
+    </div>
+    </div>
+    <!--End of body content-->
+</div>
+<div class="footerbox">
+    Contents © <a href="mailto:mike.cyc@gmail.com">Mike Chen</a> - Powered by <a href="http://nikola.ralsina.com.ar">Nikola</a>
+</div>
+
+
+
+            <script src="../assets/js/jquery-1.7.2.min.js" type="text/javascript"></script><script src="../assets/js/bootstrap.min.js" type="text/javascript"></script><script src="../assets/js/jquery.colorbox-min.js" type="text/javascript"></script><script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&amp;fade=1"></script><a href="http://www.ujian.cc" style="border:0;"><img src="http://img.ujian.cc/pixel.png" alt="友荐云推荐" style="border:0;padding:0;margin:0;"></a>
+
+
+    <script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"80%",maxHeight:"80%",scalePhotos:true});</script></body></html>
