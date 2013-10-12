@@ -6,7 +6,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://mc.basebb.com/</loc>
-  <lastmod>2013-08-08</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -30,6 +30,41 @@
   <priority>0.5000</priority>
  </url>
  <url>
+  <loc>http://mc.basebb.com/20things/</loc>
+  <lastmod>2013-10-12</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mc.basebb.com/20things/index.html</loc>
+  <lastmod>2013-10-12</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mc.basebb.com/20things/index2.html</loc>
+  <lastmod>2013-10-12</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mc.basebb.com/20things/zh-CN/all/</loc>
+  <lastmod>2013-10-12</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mc.basebb.com/20things/zh-CN/all/index.html</loc>
+  <lastmod>2013-10-12</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mc.basebb.com/20things/zh-CN/all/print/</loc>
+  <lastmod>2013-10-12</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mc.basebb.com/20things/zh-CN/all/print/index.html</loc>
+  <lastmod>2013-10-12</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
   <loc>http://mc.basebb.com/404.html</loc>
   <lastmod>2013-07-26</lastmod>
   <priority>0.5000</priority>
@@ -41,12 +76,12 @@
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/an-zhuang.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -61,37 +96,52 @@
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/cha-jian.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/chrome.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mc.basebb.com/categories/css3.html</loc>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/django.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/hello.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mc.basebb.com/categories/html3.html</loc>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/index.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/ji-du.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mc.basebb.com/categories/liu-lan-qi.html</loc>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/markdown.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -101,57 +151,62 @@
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/nginx.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/nikola.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/notepad.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/python.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/rst.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/she-zhi.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/sheng-huo.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mc.basebb.com/categories/wang-luo.html</loc>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/web.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/xia-zai.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/xin-yang.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
   <loc>http://mc.basebb.com/categories/ye-su.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -166,7 +221,7 @@
  </url>
  <url>
   <loc>http://mc.basebb.com/index.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -177,6 +232,11 @@
  <url>
   <loc>http://mc.basebb.com/listings/index.html</loc>
   <lastmod>2013-08-03</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://mc.basebb.com/posts/20thingsilearned.html</loc>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -201,7 +261,7 @@
  </url>
  <url>
   <loc>http://mc.basebb.com/posts/how-to-set-https-in-django-and-nginx.html</loc>
-  <lastmod>2013-08-22</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
@@ -211,7 +271,7 @@
  </url>
  <url>
   <loc>http://mc.basebb.com/posts/setup-md-notepad.html</loc>
-  <lastmod>2013-08-14</lastmod>
+  <lastmod>2013-10-12</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
