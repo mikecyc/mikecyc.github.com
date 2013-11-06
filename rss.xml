@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>麦客园</title><link>http://mc.basebb.com</link><description>麦客园--集基督信仰技术，生活的家园，分享生活中的点点滴滴。关注Web前端，网络技术，Linux，开源硬件等。</description><lastBuildDate>Sat, 12 Oct 2013 18:26:45 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>移植《关于浏览器和网络的 20 项须知》代码</title><link>http://mc.basebb.com/posts/20thingsilearned.html</link><description>&lt;div&gt;&lt;p&gt;《关于浏览器和网络的20项须知》（20 Things I Learned About Browsers and the Web）是Google Chrome团队于2010年底推出的网络图书，上周新增了15种语言版本，包括简体中文、繁体中文、英文、法文、德文、荷兰文、意大利文、西班牙文、巴西葡萄牙文、捷克文、波兰文、俄文、日文、印度尼西亚文以及菲律宾文，让更多读者能快速认识浏览器和网络的基本常识。
+<rss version="2.0"><channel><title>麦客园</title><link>http://mc.basebb.com</link><description>麦客园--集基督信仰技术，生活的家园，分享生活中的点点滴滴。关注Web前端，网络技术，Linux，开源硬件等。</description><lastBuildDate>Wed, 06 Nov 2013 22:18:43 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python字符串格式化</title><link>http://mc.basebb.com/posts/python-string-format.html</link><description>&lt;div&gt;&lt;p&gt;在python中也有类似于c中的printf()的格式输出标记。在python中格式化输出字符串使用的是%运算符，通用的形式为&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="err"&gt;格式标记字符串&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="err"&gt;要输出的值组&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;其中，左边部分的”格式标记字符串“可以完全和c中的一致。右边的'值组'如果有两个及以上的值则需要用小括号括起来，中间用短号隔开。重点来看左边的部分。左边部分的最简单形式为：&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="c"&gt;%cdoe&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;其中的code有多种，不过由于在python中，所有东西都可以转换成string类型，因此，如果没有什么特殊需求完全可以全部使用'%s‘来标记。比如：&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;2.3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;one&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;two&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;three&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;它的输出为'1 2.3 ['one', 'two', 'three']'，就是按照%左边的标记输出的。虽然第一个和第二值不是string类型，一样没有问题。在这个过程中，当电脑发现第一个值不是%s时，会先调用整型数的函数，把第一个值也就是1转成string类型，然后再调用str()函数来输出。前面说过还有一个repr()函数，如果要用这个函数，可以用%r来标记。除了%s外，还有很多类似的code:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="err"&gt;整型数：&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;
+&lt;span class="err"&gt;无符号整型数：&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;
+&lt;span class="err"&gt;八进制：&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt;
+&lt;span class="err"&gt;十六进制：&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;   &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;
+&lt;span class="err"&gt;浮点数：&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;
+&lt;span class="err"&gt;科学记数法&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;   &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;E&lt;/span&gt;
+&lt;span class="err"&gt;根据数值的不同自动选择&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="err"&gt;或&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;
+&lt;span class="err"&gt;根据数值的不同自动选择&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;E&lt;/span&gt;&lt;span class="err"&gt;或&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href="/posts/python-string-format.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Python</category><category>格式化</category><guid>http://mc.basebb.com/posts/python-string-format.html</guid><pubDate>Wed, 06 Nov 2013 22:03:54 GMT</pubDate></item><item><title>移植《关于浏览器和网络的 20 项须知》代码</title><link>http://mc.basebb.com/posts/20thingsilearned.html</link><description>&lt;div&gt;&lt;p&gt;《关于浏览器和网络的20项须知》（20 Things I Learned About Browsers and the Web）是Google Chrome团队于2010年底推出的网络图书，上周新增了15种语言版本，包括简体中文、繁体中文、英文、法文、德文、荷兰文、意大利文、西班牙文、巴西葡萄牙文、捷克文、波兰文、俄文、日文、印度尼西亚文以及菲律宾文，让更多读者能快速认识浏览器和网络的基本常识。
 《浏览器和网络世界20大须知》内容浅显易懂，并邀请知名插画家Christoph Niemann绘制插图，大大增加了阅读趣味。&lt;/p&gt;
 &lt;p&gt;前端开发程序师非常值得花时间深入阅读的代码，可以学到很多的html5的知识。&lt;/p&gt;
 &lt;p&gt;&lt;a href="/posts/20thingsilearned.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>浏览器</category><category>网络</category><category>html3</category><category>css3</category><guid>http://mc.basebb.com/posts/20thingsilearned.html</guid><pubDate>Sat, 12 Oct 2013 18:03:54 GMT</pubDate></item><item><title>Nginx如何设置Django的https重定向</title><link>http://mc.basebb.com/posts/how-to-set-https-in-django-and-nginx.html</link><description>&lt;div&gt;&lt;h3&gt;遇到的问题&lt;/h3&gt;
@@ -78,18 +105,4 @@
 &lt;p&gt;在&lt;code&gt;https://chrome.google.com/webstore/detail/adblock/&lt;/code&gt;之后的一串字符就是扩展的ID了。&lt;/p&gt;
 &lt;p&gt;即：&lt;code&gt;gighmmpiobklfepjocnamgkkbiglidom&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;把这个扩展的ID复制下来。&lt;/p&gt;
-&lt;p&gt;&lt;a href="/posts/how-to-download-chrome-plugin-and-setup-offline.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>chrome</category><category>插件</category><category>下载</category><category>安装</category><guid>http://mc.basebb.com/posts/how-to-download-chrome-plugin-and-setup-offline.html</guid><pubDate>Thu, 08 Mar 2012 13:52:05 GMT</pubDate></item><item><title>为什么信耶稣？[甘力克]</title><link>http://mc.basebb.com/posts/why-jesus.html</link><description>&lt;div&gt;&lt;h3&gt;怎么回事？&lt;/h3&gt;
-&lt;p&gt;&lt;img src="/assets/image/whyjesus/01.gif" width="168" height="172" align="right" hsapce="15"&gt;&lt;/p&gt;
-&lt;p&gt;人生在世，最叫人振奋的事情，莫如：成功的人际关系——父子、夫妇、爱侣、朋友等。&lt;/p&gt;
-&lt;p&gt;有人以为基督教信仰不外乎一大堆教义、戒律、规条，但其实基督教信仰的精髓在乎——在乎一个人，而不仅仅是一套哲学理论。&lt;strong&gt;基督教信仰所着重的关系，是人世间最重要的关系——人与造物主的关系。&lt;/strong&gt;耶稣说首要的诫命是全心爱神，其次是爱人如己——两条诫命都涉及关系。 &lt;/p&gt;
-&lt;h3&gt;所为何事？&lt;/h3&gt;
-&lt;p&gt;你我受造于世，就是为了与神建立关系。除非我们与神复合，否则总会觉得生命欠缺一点什么。世人常常感到空虚无助，就是这个缘故。有一个摇滚乐手这样形容他内心的感受：“我心里，空虚难受。”&lt;/p&gt;
-&lt;p&gt;有一个家庭主妇写信给我，说她“心中有一大片空白”；另一个女孩说她“灵魂穿了一个大洞。”&lt;/p&gt;
-&lt;p&gt;&lt;img src="/assets/image/whyjesus/02.jpg" align="left" hsapce="15" width="197" height="206"&gt;&lt;/p&gt;
-&lt;p&gt;世人用各种方法来填补心中的空洞。有人希望用钱填补——可惜钱财不能满足人心。已故希腊船王奥纳西斯(Aristotle S.Onassis)是世界首富之一，临终前说过这样的话：“人即使拥有万贯家财，也不能满足人心的需求。”&lt;/p&gt;
-&lt;p&gt;又有人吸毒、酗酒、滥交。有一个女孩告诉我说：“这些事可以带来一时的快感，可是过后只会觉得更空虚。”又有人朝夕工作，醉心音乐、拼命运动、竞逐名声——这些事本身并无不妥，但不能满足人内心的饥渴。&lt;/p&gt;
-&lt;p&gt;人就算得着乐人世界最亲密的关系，也不足以填满“心里头的空虚”！&lt;/p&gt;
-&lt;p&gt;人受造原是为了与神在爱中合一，人若持续与神不和好，心里总不会感到满足。&lt;/p&gt;
-&lt;p&gt;按照新约圣经的说法，人心感到空虚，因人背弃了神。&lt;/p&gt;
-&lt;p&gt;耶稣说：&lt;code&gt;“我就是生命的粮。”(约 6:35)&lt;/code&gt; 是的，只有耶稣可以使我们的心灵得满足，因为惟有耶稣可以帮助我们与神重修旧好。&lt;/p&gt;
-&lt;p&gt;&lt;a href="/posts/why-jesus.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>耶稣</category><category>信仰</category><category>基督</category><guid>http://mc.basebb.com/posts/why-jesus.html</guid><pubDate>Thu, 08 Mar 2012 13:52:05 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="/posts/how-to-download-chrome-plugin-and-setup-offline.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>chrome</category><category>插件</category><category>下载</category><category>安装</category><guid>http://mc.basebb.com/posts/how-to-download-chrome-plugin-and-setup-offline.html</guid><pubDate>Thu, 08 Mar 2012 13:52:05 GMT</pubDate></item></channel></rss>

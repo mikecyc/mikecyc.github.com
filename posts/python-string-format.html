@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="zh_cn"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content=""><meta name="author" content="Mike Chen"><title>Python字符串格式化 | 麦客园</title><link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="../assets/css/rst.css" rel="stylesheet" type="text/css"><link href="../assets/css/code.css" rel="stylesheet" type="text/css"><link href="../assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="../assets/css/theme.css" rel="stylesheet" type="text/css"><link href="../assets/css/custom.css" rel="stylesheet" type="text/css"><!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml"><link rel="icon" href="../favicon.ico" sizes="16x16"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?3760af2f06e2095f83b8b7e7c712b7c5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></head><body>
+<!-- Menubar -->
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+
+            <a class="brand" href="../">麦客园</a>
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li><a href="../archive.html">文章归档</a>
+            </li><li><a href="../categories/index.html">文章分类</a>
+            </li><li><a href="../stories/about.html">关于作者</a>
+
+                </li></ul><ul class="nav pull-right"></ul></div>
+        </div>
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="container-fluid" id="container-fluid">
+    <!--Body content-->
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+    
+    <div class="postbox">
+    
+    <h1>Python字符串格式化</h1>
+
+    <hr><small>
+        发表于: <time class="published" datetime="2013-11-06T22:03:54">2013-11-06 22:03</time>
+        
+
+        
+          |  更多相关文章：
+            <a class="tag" href="../categories/python.html"><span class="badge">Python</span></a>
+            <a class="tag" href="../categories/ge-shi-hua.html"><span class="badge">格式化</span></a>
+
+    </small>
+    <hr><p>在python中也有类似于c中的printf()的格式输出标记。在python中格式化输出字符串使用的是%运算符，通用的形式为</p>
+<div class="code"><pre><span class="err">格式标记字符串</span> <span class="o">%</span> <span class="err">要输出的值组</span>
+</pre></div>
+
+
+<p>其中，左边部分的”格式标记字符串“可以完全和c中的一致。右边的'值组'如果有两个及以上的值则需要用小括号括起来，中间用短号隔开。重点来看左边的部分。左边部分的最简单形式为：</p>
+<div class="code"><pre><span class="c">%cdoe</span>
+</pre></div>
+
+
+<p>其中的code有多种，不过由于在python中，所有东西都可以转换成string类型，因此，如果没有什么特殊需求完全可以全部使用'%s‘来标记。比如：</p>
+<div class="code"><pre><span class="err">'</span><span class="o">%</span><span class="n">s</span> <span class="o">%</span><span class="n">s</span> <span class="o">%</span><span class="n">s</span><span class="err">'</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="p">[</span><span class="err">'</span><span class="n">one</span><span class="err">'</span><span class="p">,</span> <span class="err">'</span><span class="n">two</span><span class="err">'</span><span class="p">,</span> <span class="err">'</span><span class="n">three</span><span class="err">'</span><span class="p">])</span>
+</pre></div>
+
+
+<p>它的输出为'1 2.3 ['one', 'two', 'three']'，就是按照%左边的标记输出的。虽然第一个和第二值不是string类型，一样没有问题。在这个过程中，当电脑发现第一个值不是%s时，会先调用整型数的函数，把第一个值也就是1转成string类型，然后再调用str()函数来输出。前面说过还有一个repr()函数，如果要用这个函数，可以用%r来标记。除了%s外，还有很多类似的code:</p>
+<div class="code"><pre><span class="err">整型数：</span><span class="o">%</span><span class="n">d</span>
+<span class="err">无符号整型数：</span><span class="o">%</span><span class="n">u</span>
+<span class="err">八进制：</span><span class="o">%</span><span class="n">o</span>
+<span class="err">十六进制：</span><span class="o">%</span><span class="n">x</span>   <span class="o">%</span><span class="n">X</span>
+<span class="err">浮点数：</span><span class="o">%</span><span class="n">f</span>
+<span class="err">科学记数法</span><span class="o">:</span> <span class="o">%</span><span class="n">e</span>   <span class="o">%</span><span class="n">E</span>
+<span class="err">根据数值的不同自动选择</span><span class="o">%</span><span class="n">e</span><span class="err">或</span><span class="o">%</span><span class="n">f</span><span class="o">:</span> <span class="o">%</span><span class="n">g</span>
+<span class="err">根据数值的不同自动选择</span><span class="o">%</span><span class="n">E</span><span class="err">或</span><span class="o">%</span><span class="n">f</span><span class="o">:</span> <span class="o">%</span><span class="n">G</span>
+</pre></div>
+
+
+<!-- TEASER_END -->
+
+<p>就跟前面说用\进行转义一样，这里用%作为格式标记的标识，也有一个%本身应该如何输出的问题。如果要在”格式标记字符串“中输出%本身，可以用%%来表示。
+上面说的只是格式标记的最简间的形式，来看复杂一点的：</p>
+<div class="code"><pre><span class="err">'</span><span class="o">%</span><span class="mf">6.2f</span><span class="err">'</span> <span class="o">%</span> <span class="mf">1.235</span>
+</pre></div>
+
+
+<p>在这种形式中，在f的前面出现了一个类似小数的6.2它表示的意思是，总共输出的长度为6个字符，其中小数2位。还有更复杂的：</p>
+<p>'%06.2f' % 1.235</p>
+<p>在6的前面多了一个0,表示如果输出的位数不足6位就用0补足6位。这一行的输出为‘001.24'，可以看到小数也占用一位。类似于这里0这样的标记还有-、+。其中，-表示左对齐，+表示在正数前面也标上+号，默认是不加的。最后来看最复杂的形式：</p>
+<div class="code"><pre><span class="err">'</span><span class="o">%</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="n">s</span><span class="o">:%</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="mf">06.1f</span><span class="err">'</span> <span class="o">%</span><span class="p">{</span><span class="err">'</span><span class="n">score</span><span class="err">'</span><span class="o">:</span><span class="mf">9.5</span><span class="p">,</span> <span class="err">'</span><span class="n">name</span><span class="sc">':'</span><span class="n">newsim</span><span class="err">'</span><span class="p">}</span>
+</pre></div>
+
+
+<p>这种形式只用在要输出的内容为dictionary（一种python的数据类型）时，小括号中的(name)和(score)对应于后面的键值对中的键。前面的例子可以看到，”格式标记字符串“中标记的顺序和"要输出的值组"中的值是一一对应的，有顺序，一对一，二对二。而在这种形式中，则不是，每个格式标记对应哪个值由小括号中的键来指定。这行代码的输出为：'newsim:0009.5'。</p>
+<p>有时候在%6.2f这种形式中，6和2也不能事先指定，会在程序运行过程中再产生，那怎么输入呢，当然不能用%%d.%df或%d.%d%f。可以用%<em>.</em>f的形式，当然在后面的”要输出的值组“中包含那两个<em>的值。比如：'%</em>.*f' % (6, 2, 2.345)就相当于'%6.2f' % 2.345。</p>
+<p>这是这本书到此为止看起来最复杂的内容。不过如果记不住，或不想那么耐烦，完全可以全部用%s代替，或者用多个"+"来构造类似的输出字符串。这里的%真有点除法的味道，怪不得设计者会选择用%这个除号。</p>
+<p>象C 中的sprintf函数一样，可以用“%”来格式化字符串。</p>
+<h5>Table 3.1. 字符串格式化代码</h5>
+<div class="code"><pre><span class="err">格式</span>  <span class="err">描述</span>
+<span class="o">%%</span>      <span class="err">百分号标记</span>
+<span class="o">%</span><span class="n">c</span>      <span class="err">字符及其</span><span class="n">ASCII</span><span class="err">码</span>
+<span class="o">%</span><span class="n">s</span>      <span class="err">字符串</span>
+<span class="o">%</span><span class="n">d</span>      <span class="err">有符号整数</span><span class="p">(</span><span class="err">十进制</span><span class="p">)</span>
+<span class="o">%</span><span class="n">u</span>      <span class="err">无符号整数</span><span class="p">(</span><span class="err">十进制</span><span class="p">)</span>
+<span class="o">%</span><span class="n">o</span>      <span class="err">无符号整数</span><span class="p">(</span><span class="err">八进制</span><span class="p">)</span>
+<span class="o">%</span><span class="n">x</span>      <span class="err">无符号整数</span><span class="p">(</span><span class="err">十六进制</span><span class="p">)</span>
+<span class="o">%</span><span class="n">X</span>      <span class="err">无符号整数</span><span class="p">(</span><span class="err">十六进制大写字符</span><span class="p">)</span>
+<span class="o">%</span><span class="n">e</span>      <span class="err">浮点数字</span><span class="p">(</span><span class="err">科学计数法</span><span class="p">)</span>
+<span class="o">%</span><span class="n">E</span>      <span class="err">浮点数字</span><span class="p">(</span><span class="err">科学计数法，用</span><span class="n">E</span><span class="err">代替</span><span class="n">e</span><span class="p">)</span>
+<span class="o">%</span><span class="n">f</span>      <span class="err">浮点数字</span><span class="p">(</span><span class="err">用小数点符号</span><span class="p">)</span>
+<span class="o">%</span><span class="n">g</span>      <span class="err">浮点数字</span><span class="p">(</span><span class="err">根据值的大小采用</span><span class="o">%</span><span class="n">e</span><span class="err">或</span><span class="o">%</span><span class="n">f</span><span class="p">)</span>
+<span class="o">%</span><span class="n">G</span>      <span class="err">浮点数字</span><span class="p">(</span><span class="err">类似于</span><span class="o">%</span><span class="n">g</span><span class="p">)</span>
+<span class="o">%</span><span class="n">p</span>      <span class="err">指针</span><span class="p">(</span><span class="err">用十六进制打印值的内存地址</span><span class="p">)</span>
+<span class="o">%</span><span class="n">n</span>      <span class="err">存储输出字符的数量放进参数列表的下一个变量中</span>
+</pre></div>
+    
+    <ul class="pager"><li class="previous">
+            <a href="20thingsilearned.html">← 前一篇</a>
+        </li>
+    </ul><hr><div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+  <a class="bds_tsina"></a>
+  <a class="bds_qzone"></a>
+  <a class="bds_tqq"></a>
+  <a class="bds_renren"></a>
+  <a class="bds_t163"></a>
+  <a class="bds_tqf"></a>
+  <a class="bds_douban"></a>
+  <a class="bds_kaixin001"></a>
+  <a class="bds_sqq"></a>
+  <a class="bds_fbook"></a>
+  <a class="bds_twi"></a>
+  <a class="bds_mshare"></a>
+  <span class="bds_more"></span>
+  </div>
+  <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6739020"></script><script type="text/javascript" id="bdshell_js"></script><script type="text/javascript">
+  document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+  </script><div class="ds-thread" data-category="cache\posts\python-string-format.html" data-thread-key="" data-title="Python字符串格式化" data-author-key="" data-url="http://mc.basebb.com/posts/python-string-format.html"></div>
+      <script type="text/javascript">
+      var duoshuoQuery = {short_name:"mikecyc"};
+        (function() {
+          var ds = document.createElement('script');
+          ds.type = 'text/javascript';ds.async = true;
+          ds.src = 'http://static.duoshuo.com/embed.js';
+          ds.charset = 'UTF-8';
+          (document.getElementsByTagName('head')[0] 
+          || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+        </script></div>
+
+    </div>
+    </div>
+    <!--End of body content-->
+</div>
+<div class="footerbox">
+    Contents © <a href="mailto:mike.cyc@gmail.com">Mike Chen</a> - Powered by <a href="http://nikola.ralsina.com.ar">Nikola</a>
+</div>
+
+
+
+            <script src="../assets/js/jquery-1.7.2.min.js" type="text/javascript"></script><script src="../assets/js/bootstrap.min.js" type="text/javascript"></script><script src="../assets/js/jquery.colorbox-min.js" type="text/javascript"></script><script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&amp;fade=1"></script><a href="http://www.ujian.cc" style="border:0;"><img src="http://img.ujian.cc/pixel.png" alt="友荐云推荐" style="border:0;padding:0;margin:0;"></a>
+
+
+    <script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"80%",maxHeight:"80%",scalePhotos:true});</script></body></html>

@@ -40,6 +40,47 @@ var _hmt = _hmt || [];
     <div class="span8">
     
         <div class="postbox">
+        <h1><a href="posts/python-string-format.html">Python字符串格式化</a></h1>
+        <small>  
+             发表于: <time class="published" datetime="2013-11-06T22:03:54">2013-11-06 22:03</time>
+             
+
+             
+          |  更多相关文章：
+            <a class="tag" href="categories/python.html"><span class="badge">Python</span></a>
+            <a class="tag" href="categories/ge-shi-hua.html"><span class="badge">格式化</span></a>
+
+        </small>
+        <hr><div><p>在python中也有类似于c中的printf()的格式输出标记。在python中格式化输出字符串使用的是%运算符，通用的形式为</p>
+<div class="code"><pre><span class="err">格式标记字符串</span> <span class="o">%</span> <span class="err">要输出的值组</span>
+</pre></div>
+
+
+<p>其中，左边部分的”格式标记字符串“可以完全和c中的一致。右边的'值组'如果有两个及以上的值则需要用小括号括起来，中间用短号隔开。重点来看左边的部分。左边部分的最简单形式为：</p>
+<div class="code"><pre><span class="c">%cdoe</span>
+</pre></div>
+
+
+<p>其中的code有多种，不过由于在python中，所有东西都可以转换成string类型，因此，如果没有什么特殊需求完全可以全部使用'%s‘来标记。比如：</p>
+<div class="code"><pre><span class="err">'</span><span class="o">%</span><span class="n">s</span> <span class="o">%</span><span class="n">s</span> <span class="o">%</span><span class="n">s</span><span class="err">'</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="p">[</span><span class="err">'</span><span class="n">one</span><span class="err">'</span><span class="p">,</span> <span class="err">'</span><span class="n">two</span><span class="err">'</span><span class="p">,</span> <span class="err">'</span><span class="n">three</span><span class="err">'</span><span class="p">])</span>
+</pre></div>
+
+
+<p>它的输出为'1 2.3 ['one', 'two', 'three']'，就是按照%左边的标记输出的。虽然第一个和第二值不是string类型，一样没有问题。在这个过程中，当电脑发现第一个值不是%s时，会先调用整型数的函数，把第一个值也就是1转成string类型，然后再调用str()函数来输出。前面说过还有一个repr()函数，如果要用这个函数，可以用%r来标记。除了%s外，还有很多类似的code:</p>
+<div class="code"><pre><span class="err">整型数：</span><span class="o">%</span><span class="n">d</span>
+<span class="err">无符号整型数：</span><span class="o">%</span><span class="n">u</span>
+<span class="err">八进制：</span><span class="o">%</span><span class="n">o</span>
+<span class="err">十六进制：</span><span class="o">%</span><span class="n">x</span>   <span class="o">%</span><span class="n">X</span>
+<span class="err">浮点数：</span><span class="o">%</span><span class="n">f</span>
+<span class="err">科学记数法</span><span class="o">:</span> <span class="o">%</span><span class="n">e</span>   <span class="o">%</span><span class="n">E</span>
+<span class="err">根据数值的不同自动选择</span><span class="o">%</span><span class="n">e</span><span class="err">或</span><span class="o">%</span><span class="n">f</span><span class="o">:</span> <span class="o">%</span><span class="n">g</span>
+<span class="err">根据数值的不同自动选择</span><span class="o">%</span><span class="n">E</span><span class="err">或</span><span class="o">%</span><span class="n">f</span><span class="o">:</span> <span class="o">%</span><span class="n">G</span>
+</pre></div>
+
+
+<p><a href="posts/python-string-format.html">更多...</a></p></div>
+        </div>
+        <div class="postbox">
         <h1><a href="posts/20thingsilearned.html">移植《关于浏览器和网络的 20 项须知》代码</a></h1>
         <small>  
              发表于: <time class="published" datetime="2013-10-12T18:03:54">2013-10-12 18:03</time>
@@ -254,35 +295,6 @@ var _hmt = _hmt || [];
 <p>即：<code>gighmmpiobklfepjocnamgkkbiglidom</code></p>
 <p>把这个扩展的ID复制下来。</p>
 <p><a href="posts/how-to-download-chrome-plugin-and-setup-offline.html">更多...</a></p></div>
-        </div>
-        <div class="postbox">
-        <h1><a href="posts/why-jesus.html">为什么信耶稣？[甘力克]</a></h1>
-        <small>  
-             发表于: <time class="published" datetime="2012-03-08T13:52:05">2012-03-08 13:52</time>
-             
-
-             
-          |  更多相关文章：
-            <a class="tag" href="categories/ye-su.html"><span class="badge">耶稣</span></a>
-            <a class="tag" href="categories/xin-yang.html"><span class="badge">信仰</span></a>
-            <a class="tag" href="categories/ji-du.html"><span class="badge">基督</span></a>
-
-        </small>
-        <hr><div><h3>怎么回事？</h3>
-<p><img src="assets/image/whyjesus/01.gif" width="168" height="172" align="right" hsapce="15"></p>
-<p>人生在世，最叫人振奋的事情，莫如：成功的人际关系——父子、夫妇、爱侣、朋友等。</p>
-<p>有人以为基督教信仰不外乎一大堆教义、戒律、规条，但其实基督教信仰的精髓在乎——在乎一个人，而不仅仅是一套哲学理论。<strong>基督教信仰所着重的关系，是人世间最重要的关系——人与造物主的关系。</strong>耶稣说首要的诫命是全心爱神，其次是爱人如己——两条诫命都涉及关系。 </p>
-<h3>所为何事？</h3>
-<p>你我受造于世，就是为了与神建立关系。除非我们与神复合，否则总会觉得生命欠缺一点什么。世人常常感到空虚无助，就是这个缘故。有一个摇滚乐手这样形容他内心的感受：“我心里，空虚难受。”</p>
-<p>有一个家庭主妇写信给我，说她“心中有一大片空白”；另一个女孩说她“灵魂穿了一个大洞。”</p>
-<p><img src="assets/image/whyjesus/02.jpg" align="left" hsapce="15" width="197" height="206"></p>
-<p>世人用各种方法来填补心中的空洞。有人希望用钱填补——可惜钱财不能满足人心。已故希腊船王奥纳西斯(Aristotle S.Onassis)是世界首富之一，临终前说过这样的话：“人即使拥有万贯家财，也不能满足人心的需求。”</p>
-<p>又有人吸毒、酗酒、滥交。有一个女孩告诉我说：“这些事可以带来一时的快感，可是过后只会觉得更空虚。”又有人朝夕工作，醉心音乐、拼命运动、竞逐名声——这些事本身并无不妥，但不能满足人内心的饥渴。</p>
-<p>人就算得着乐人世界最亲密的关系，也不足以填满“心里头的空虚”！</p>
-<p>人受造原是为了与神在爱中合一，人若持续与神不和好，心里总不会感到满足。</p>
-<p>按照新约圣经的说法，人心感到空虚，因人背弃了神。</p>
-<p>耶稣说：<code>“我就是生命的粮。”(约 6:35)</code> 是的，只有耶稣可以使我们的心灵得满足，因为惟有耶稣可以帮助我们与神重修旧好。</p>
-<p><a href="posts/why-jesus.html">更多...</a></p></div>
         </div>
     
 <div>
