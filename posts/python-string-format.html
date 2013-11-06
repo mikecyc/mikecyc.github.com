@@ -89,7 +89,10 @@ var _hmt = _hmt || [];
 
 
 <p>在这种形式中，在f的前面出现了一个类似小数的6.2它表示的意思是，总共输出的长度为6个字符，其中小数2位。还有更复杂的：</p>
-<p>'%06.2f' % 1.235</p>
+<div class="code"><pre><span class="err">'</span><span class="o">%</span><span class="mf">06.2f</span><span class="err">'</span> <span class="o">%</span> <span class="mf">1.235</span>
+</pre></div>
+
+
 <p>在6的前面多了一个0,表示如果输出的位数不足6位就用0补足6位。这一行的输出为‘001.24'，可以看到小数也占用一位。类似于这里0这样的标记还有-、+。其中，-表示左对齐，+表示在正数前面也标上+号，默认是不加的。最后来看最复杂的形式：</p>
 <div class="code"><pre><span class="err">'</span><span class="o">%</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="n">s</span><span class="o">:%</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="mf">06.1f</span><span class="err">'</span> <span class="o">%</span><span class="p">{</span><span class="err">'</span><span class="n">score</span><span class="err">'</span><span class="o">:</span><span class="mf">9.5</span><span class="p">,</span> <span class="err">'</span><span class="n">name</span><span class="sc">':'</span><span class="n">newsim</span><span class="err">'</span><span class="p">}</span>
 </pre></div>
