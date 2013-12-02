@@ -123,6 +123,39 @@ var _hmt = _hmt || [];
 <p><a href="posts/how-to-set-https-in-django-and-nginx.html">更多...</a></p></div>
         </div>
         <div class="postbox">
+        <h1><a href="posts/strong-bash.html">两个非常有用的Bash脚本编程命令</a></h1>
+        <small>  
+             发表于: <time class="published" datetime="2013-08-13T15:55:02">2013-08-13 15:55</time>
+             
+
+             
+          |  更多相关文章：
+            <a class="tag" href="categories/bash.html"><span class="badge">Bash</span></a>
+            <a class="tag" href="categories/bian-cheng.html"><span class="badge">编程</span></a>
+            <a class="tag" href="categories/ming-ling.html"><span class="badge">命令</span></a>
+
+        </small>
+        <hr><div><p>Shell脚本可以完成很多任务，但因为Shell脚本运行时遇到异常还是会继续运行，这些问题有时很难发现，所以有两个命令可以帮助你来调试脚本，这是非常有用的命令。</p>
+<h3>命令一：使用 Set -u</h3>
+<p>你有没有因为一个变量没有初始化而经常崩溃？我知道我有，而且很多次。</p>
+<div class="code"><pre><span class="nv">chroot</span><span class="o">=</span><span class="nv">$1</span>
+...
+rm -rf <span class="nv">$chroot</span>/usr/share/doc
+</pre></div>
+
+
+<p>如果你忘记初始化一个变量就运行上面的脚本，你将会删除所有的系统文件，而不是只在chroot目录下的文档。你要做些什么呢？幸运的是bash为您提供了<code>set -u</code>，当你尝试使用一个未初始化的变量将会自动退出脚本。</p>
+<div class="code"><pre>mike% bash /tmp/shrink-chroot.sh
+<span class="nv">$chroot</span><span class="o">=</span>
+mike% bash -u /tmp/shrink-chroot.sh
+/tmp/shrink-chroot.sh: line 3: <span class="nv">$1</span>: unbound variable
+mike%
+</pre></div>
+
+
+<p><a href="posts/strong-bash.html">更多...</a></p></div>
+        </div>
+        <div class="postbox">
         <h1><a href="posts/setup-md-notepad.html">notepad++安装markdown插件</a></h1>
         <small>  
              发表于: <time class="published" datetime="2013-08-08T11:22:05">2013-08-08 11:22</time>
@@ -270,31 +303,6 @@ var _hmt = _hmt || [];
 <p>Apple的官方文档<a href="http://17.254.2.129/library/safari/#documentation/AppleApplications/Reference/SafariWebContent/HandlingEvents/HandlingEvents.html">Handling Events</a>和 <a href="http://developer.apple.com/library/safari/#documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Introduction/Introduction.html">Safari CSS Visual Effects Guide</a>是很好的开发指南，但是里面的内容显然是针对初学者的，我在这里补充一下。</p>
 <p>另外，Apple开发者中心有很多不错的HTML5教程与资源，例如HTML5离线存储，CSS动画，CSS 3D变换等，有兴趣的可以了解一下。 <a href="http://developer.apple.com/library/safari/navigation/">http://developer.apple.com/library/safari/navigation/</a></p>
 <p><a href="posts/how-mobile-safari-touch-event-works.html">更多...</a></p></div>
-        </div>
-        <div class="postbox">
-        <h1><a href="posts/how-to-download-chrome-plugin-and-setup-offline.html">怎样下载Chrome插件和离线安装CRX文件</a></h1>
-        <small>  
-             发表于: <time class="published" datetime="2012-03-08T13:52:05">2012-03-08 13:52</time>
-             
-
-             
-          |  更多相关文章：
-            <a class="tag" href="categories/chrome.html"><span class="badge">chrome</span></a>
-            <a class="tag" href="categories/cha-jian.html"><span class="badge">插件</span></a>
-            <a class="tag" href="categories/xia-zai.html"><span class="badge">下载</span></a>
-            <a class="tag" href="categories/an-zhuang.html"><span class="badge">安装</span></a>
-
-        </small>
-        <hr><div><p>自从chrome网上应用店出来后，Chrome插件就无法下载插件，必须在线安装，安装后又自动把CRX文件删除，而且是那么的迅速...</p>
-<p>以下是下载离线插件包的方法：</p>
-<h3>第一步：</h3>
-<p>每个Google Chrome扩展都有一个固定的ID，例如</p>
-<p><code>https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom</code></p>
-<p>上面是一个Chrome扩展的完整URL，</p>
-<p>在<code>https://chrome.google.com/webstore/detail/adblock/</code>之后的一串字符就是扩展的ID了。</p>
-<p>即：<code>gighmmpiobklfepjocnamgkkbiglidom</code></p>
-<p>把这个扩展的ID复制下来。</p>
-<p><a href="posts/how-to-download-chrome-plugin-and-setup-offline.html">更多...</a></p></div>
         </div>
     
 <div>
