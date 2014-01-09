@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>麦客园 (Nginx)</title><link>http://mc.basebb.com</link><description>麦客园--集基督信仰技术，生活的家园，分享生活中的点点滴滴。关注Web前端，网络技术，Linux，开源硬件等。</description><lastBuildDate>Mon, 02 Dec 2013 12:29:28 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Nginx如何设置Django的https重定向</title><link>http://mc.basebb.com/posts/how-to-set-https-in-django-and-nginx.html</link><description>&lt;div&gt;&lt;h3&gt;遇到的问题&lt;/h3&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>麦客园 (Nginx)</title><link>http://mc.basebb.com/</link><description></description><atom:link href="http://mc.basebb.com/categories/nginx.xml" type="application/rss+xml" rel="self"></atom:link><language>zh_cn</language><lastBuildDate>Fri, 10 Jan 2014 01:36:53 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Nginx如何设置Django的https重定向</title><link>http://mc.basebb.com/posts/how-to-set-https-in-django-and-nginx.html</link><description>&lt;div&gt;&lt;h3&gt;遇到的问题&lt;/h3&gt;
 &lt;p&gt;出于网络安全的考虑，&lt;a href="http://www.joyit.me/"&gt;欢迅干线&lt;/a&gt;增加了SSL协议的连接，但发现Django在重定向跳转的时候总是回到普通的HTTP协议，而不是HTTPS协议。查了资料看到&lt;code&gt;HttpRequest.is_secure()&lt;/code&gt;方法用来判断是否https连接，如果是的话就返回&lt;code&gt;True&lt;/code&gt;。在Django 1.4 之前只能在Python的环境上去设置，而1.4重新改写了is_secure()方法，可以自己指定判断的变量和值。&lt;/p&gt;
 &lt;h3&gt;如何设置Nginx和Django&lt;/h3&gt;
 &lt;p&gt;Google了好几篇文章，都说在Nginx配置文件中增加下面的设置：&lt;/p&gt;
@@ -7,4 +7,4 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;a href="/posts/how-to-set-https-in-django-and-nginx.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Nginx</category><category>Django</category><category>设置</category><guid>http://mc.basebb.com/posts/how-to-set-https-in-django-and-nginx.html</guid><pubDate>Thu, 22 Aug 2013 21:44:21 GMT</pubDate></item></channel></rss>
+&lt;p class="more"&gt;&lt;a href="http://mc.basebb.com/posts/how-to-set-https-in-django-and-nginx.html"&gt;更多…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Nginx</category><category>Django</category><category>设置</category><guid>http://mc.basebb.com/posts/how-to-set-https-in-django-and-nginx.html</guid><pubDate>Thu, 22 Aug 2013 21:44:21 GMT</pubDate></item></channel></rss>

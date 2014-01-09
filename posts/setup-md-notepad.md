@@ -2,7 +2,7 @@
 .. title: notepad++安装markdown插件
 .. slug: setup-md-notepad
 .. date: 2013/08/08 11:22:05
-.. tags: Notepad++, Markdown, 插件
+.. tags: notepad++, markdown, 插件
 .. link: 
 -->
 

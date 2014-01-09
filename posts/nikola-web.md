@@ -16,7 +16,7 @@
 
 ## 前言
 
-首先，非常感谢Nikola创作者Roberto Alsina，给这篇文章[很高的评价](http://nikola.ralsina.com.ar/blog/new-nikola-tutorial.html "基于Nikola建立博客shisaa.jp")，并将其嵌入到Nikola文档中！
+首先，非常感谢Nikola创作者Roberto Alsina，给这篇文章[很高的评价](http://getnikola.com/blog/new-nikola-tutorial.html "基于Nikola建立博客shisaa.jp")，并将其嵌入到Nikola文档中！
 
 当我设计Shisaa.jp的时候我花一些时间思考用怎么样的“后端”。什么样的系统建站...使用CMS吗？
 我使用Drupal有丰富的经验，这可能是我的首选......但熟悉Drupal的，也知道一些难以忽视的事实：
@@ -55,9 +55,9 @@
 
 ## 关于Nikola
 
-事实上我对Nikola Tesla有极大的兴趣，我很快就感觉到[这点](http://nikola.ralsina.com "Nikola主页")，Nikola将是我的首选武器，它是相当快速和优雅的系统，具有不错的功能集合，而且可扩展。它还包含了一个实用的工具包来帮助你建立或创作你的网站。它甚至是多语言的！
+事实上我对Nikola Tesla有极大的兴趣，我很快就感觉到[这点](http://getnikola.com/ "Nikola主页")，Nikola将是我的首选武器，它是相当快速和优雅的系统，具有不错的功能集合，而且可扩展。它还包含了一个实用的工具包来帮助你建立或创作你的网站。它甚至是多语言的！
 
-去阅读[Roberto Alsina的](http://nikola.ralsina.com.ar/handbook.html "Nikola手册")Nikola手册关于这个项目背后的动机和美丽的功能并提供的工具。在该网站上，你还会发现有相当详细的指南教你如何开始建立自己的网站。尽管Roberto尽最大努力来指导你使用Nikola，但我觉得还有有点抽象，尤其在主题化上，只好自己去探索。
+去阅读[Roberto Alsina的](http://getnikola.com/handbook.html "Nikola手册")Nikola手册关于这个项目背后的动机和美丽的功能并提供的工具。在该网站上，你还会发现有相当详细的指南教你如何开始建立自己的网站。尽管Roberto尽最大努力来指导你使用Nikola，但我觉得还有有点抽象，尤其在主题化上，只好自己去探索。
 
 所以我现在带你进行短暂的旅行，告诉你我是如何用Nikola设置，部署和制作这个网站，基于上述原因，主要是基本设置和建立您的自定义主题。
 
@@ -69,23 +69,23 @@
 
 使用Virtualenv你能做到以上所有要求...在你选择的目录下部署一个新的虚拟环境，并把Shell指向那个目录，你就可以开始建网站了。首先来安装Virtualenv：
 
-	:::bash
+    ::bash
     $ pip install virtualenv
 	
 现在，我们可以设置我们的虚拟环境
 
-	:::bash
+    ::bash
     $ virtualenv --python=python2.7 yourdir
 
 注意：我告诉Virtualenv使用Python2.7版本，Nikola 5.3 *是* 兼容Python 3的，但如果你想提供一个很好的谷歌地图XML，你只有采用Python2.x版本。
 完成了Virtualenv沙箱的设置，**进到该目录**加载该沙箱环境到当前的Shell：
 
-	:::bash
+    ::bash
     $ source bin/activate
 
 瞧，你会发现在当前目录名插入到你使用的Shell前面，这意味着一切都很好。现在...来安装Nikola！
 
-	:::bash
+    ::bash
     $ pip install nikola
 	
 这将会安装的是Nikola5.3（在当时写这的时候），并为您安装所有必要的依赖。现在，我们开始初始化我们的网站。
@@ -94,7 +94,7 @@
 
 要建立一个新的站点，你只要简单地运行：
 
-	:::bash
+    ::bash
 	$ nikola init shisaa.jp
 	
 自从Nikola 5.2 将创建一个 *空* 的网站，只包含基本的目录结构和配置文件的示例。
@@ -128,14 +128,14 @@
 由于Nikola是一个Python的应用程序，也是用Python语言编写的配置文件。
 因此，我们必须做的第一件事是加载一些Python模块，所以Nikola可以成功地解析该文件：
 
-    :::python
+    ::python
     from __future__ import unicode_literals
     import os
     import time
 
 接下来我们就可以设置我们的网站的一些基本信息和变量，将应用到我们的模板中：
 
-	:::python
+    ::python
 	BLOG_AUTHOR = "Tim van der Linden"
 	BLOG_TITLE = "Shisaa.jp"
 	BLOG_URL = "http://Shisaa.jp"
@@ -150,7 +150,7 @@
 
 所以接下来，我们要进入我们的配置文件建立一个哈希表：
 	
-	::python
+    ::python
     post_pages = (
 		("posts/*.md", "posts", "post.tmpl", True),
 	)
@@ -159,7 +159,7 @@
 
 接下来Nikola需要知道用哪种语言写的静态文件。你可以简单地写 *HTML* 或使用其它Nikola支持的标记语言，如 *Markdown* 或 *reStructuredText* 。为此，我们定义另一个称为*post_compilers*哈希表：
 
-	::python
+    ::python
 	post_compilers = {
 		"markdown": ('.md', '.mdown', '.markdown'),
     }
@@ -172,7 +172,7 @@
 
 Nikola有一个命令来启动一个新的文章：
 
-	:::bash
+    ::bash
 	$ nikola new_post -f markdown
 
 它会问你一些必要的元数据并加到文本本身。注意 *-f* 标志，如果你使用多种标记语言，你将要指定你想要的语言来编写的新的文章。
@@ -196,7 +196,7 @@ Nikola有一个命令来启动一个新的文章：
 
 只要运行下面的命令并观察输出结果：
 
-	:::bash
+    ::bash
 	$ nikola build
 
 Nikola将创建一个名为"output"的目录，整个网站的结构将放在那里。
@@ -208,7 +208,7 @@ Nikola将创建一个名为"output"的目录，整个网站的结构将放在那
 怎么样做到呢，你可以设置一个Web服务器并指向 "output" 目录...或者你可以使用Nikola来构建服务器。
 在同一个站点的根目录下，启动Nikola来建立服务器：
 
-	:::bash
+    ::bash
 	$ nikola serve
 
 看吧...你在浏览器上输出“http://localhost:8000”（端口配置在你网站的config.py文件中），看到是多么美丽的画面！
@@ -228,7 +228,7 @@ Nikola将创建一个名为"output"的目录，整个网站的结构将放在那
 
 Nikola始终搜索 *themes* 目录中的主题并加载你定义在 *conf.py* 中的主题：
 	
-	:::python
+    ::python
 	THEME = 'shisaa'
 
 现在Nikola将在 *themes* 目录下搜索名为 *shisaa* 的目录。
@@ -269,7 +269,7 @@ Mako只需要几个目录在你的主题目录里面，在那里你可以存储�
 让我们先从最精彩的 *templates* 目录开始。
 
 Nikola使用一组硬编码文件名的模板文件，他将会被找到。
-在Nikola的[基本主题文件](http://nikola.ralsina.com.ar/theming.html "基本主题化的文档")是：
+在Nikola的[基本主题文件](http://getnikola.com/theming.html "基本主题化的文档")是：
 
 * base.tmpl
 * index.tmpl
@@ -285,12 +285,12 @@ Nikola使用一组硬编码文件名的模板文件，他将会被找到。
 
 Mako是用Python编写的模板引擎来*运行*Python。它与Python语言有非常密切的关系。一个Mako模板文件可以很容易从其它Mako模板文件继承，使您能保持模板的逻辑整洁。你可以继承一个文件，使用下面的语法：
 	
-	:::mako
+    ::mako
 	<%inherit file="base.tmpl"/>
 
 接下来你将使用继承的模板块代码，你使用你的主模板：
 
-	:::mako
+    ::mako
 	<%block name="footer">
 		<div id="footer">
 			<p>This is a footer, just static html!</p>
@@ -299,13 +299,13 @@ Mako是用Python编写的模板引擎来*运行*Python。它与Python语言有�
 
 现在在你继承的模板文件中你可以调用该功能块，像这样：
 
-	:::mako
+    ::mako
 	${footer()}
 
 除了继承，你可以使用任何Python代码嵌入到你的模板文件中。
 要使用Python代码，以 *<%* 开始和 *%>* 结束你的代码块来完成：
 
-	:::mako
+    ::mako
 	<%!
 		text = "foobar"
 	%>
@@ -323,7 +323,7 @@ Mako是用Python编写的模板引擎来*运行*Python。它与Python语言有�
 例如默认的英文翻译，创建一个文件名为 *en_messages.py*。
 此文件 *必须* 有导入模块和叫 *MESSAGES* 的字典包含如下固定数量的项：
 
-	:::python
+    ::python
 	from __future__ import unicode_literals
 
 	MESSAGES = {
@@ -369,7 +369,7 @@ Mako是用Python编写的模板引擎来*运行*Python。它与Python语言有�
 首先，要在文件 *base.tmpl* 能够使用自定义的块中声明，你首先要告诉 *base.tmpl* 文件。
 你可以简单地导入定义块使用Mako的“命名空间”属性：
 
-	:::mako
+    ::mako
 	<%namespace file="base_helper.tmpl import="*"/>
 
 这一行简单地告诉Mako从 *base_helper.tmpl* 文件导入所有的定义块。
@@ -395,7 +395,7 @@ shisaa框架看起来有点像这样：
 我们可以直接把它放在 *base.tmpl* 文件中，但我们希望它尽可能整洁。
 所以最好是在 *base_helpers.tmpl* 文件中定义，让我们来定义header块：
 
-	:::mako
+    ::mako
 	<%def name="html_head()">
 		<meta charset="utf-8">
 		<meta name="title" content="${title} | ${blog_title}" >
@@ -441,7 +441,7 @@ shisaa框架看起来有点像这样：
 现在，关于 *body* 部分？这里需要显示我们的文章或页面等的实际内容..
 我们总是希望在屏幕上显示一个固定的标题，所以让我们添加一个很好语义的 *h1* 来包含标题，并使其可随时点击回到主页：
 
-	:::html
+    ::html
     <h1 id="blog-title">
       <a href="${abs_link('/')}" title="${blog_title}">${blog_title}</a>
     </h1>
@@ -452,18 +452,18 @@ shisaa框架看起来有点像这样：
 我们所要做的唯一事情是定义一个 *block* 让所有其他的模板文件来填充。
 你的页面标题下面，加入下面的内容：
 
-	:::mako
+    ::mako
 	<%block name="content"></%block>
 
 所有其他模板将参考此标记，并在那里将内容呈现出来。
 这些模板将需要继承自*base.tmpl*：
 
-	:::mako
+    ::mako
 	<%inherit file="base.tmpl"/>
 
 他们将包含相同名称的块，具体的模板标记如下：
 
-	:::mako
+    ::mako
 	<%block name="content">
 		...
 	</%block>
@@ -474,13 +474,13 @@ shisaa框架看起来有点像这样：
 
 我还需要呈现页脚的内容：
 
-	:::mako
+    ::mako
 	${content_footer}
 
 但 *content_footer* 这个变量从哪里来的呢？在conf.py中定义：
 
-	:::python
-	CONTENT_FOOTER = 'Contents &copy; {date} <a href="mailto:{email}">{author}</a> - Powered by <a href="http://nikola.ralsina.com.ar">Nikola</a>'
+    ::python
+	CONTENT_FOOTER = 'Contents &copy; {date} <a href="mailto:{email}">{author}</a> - Powered by <a href="http://getnikola.com">Nikola</a>'
 
 在你的配置文件中找到这行，并调整成为你的要求！
 
@@ -489,7 +489,7 @@ shisaa框架看起来有点像这样：
 你会注意到shisaa有一个侧边风格的菜单。
 这个菜单生成的链接是在conf.py中的*SIDEBAR_LINKS*字典中定义：
 
-	:::python
+    ::python
 	SIDEBAR_LINKS = {
 		DEFAULT_LANG: (
 			('/', 'Home'),
@@ -502,7 +502,7 @@ shisaa框架看起来有点像这样：
 在字典中，你首先宣告链接路径，然后是你想显示的菜单名称。
 这个标记定义在 *base_helper.tmpl* 文件中：
 
-	:::mako
+    ::mako
 	<%def name="html_sidebar_links()">
 		%for url, text in sidebar_links[lang]:
 			% if rel_link(permalink, url) == "#":
@@ -524,7 +524,7 @@ shisaa框架看起来有点像这样：
 
 当我们把所有这些内容放在一起，shisaa的*base.tmpl*看起来像这样子：
 
-	:::mako
+    ::mako
 	<%namespace file="base_helper.tmpl" import="*"/>
 	<!DOCTYPE html>
 	<html lang="${lang}">
@@ -549,7 +549,7 @@ shisaa框架看起来有点像这样：
 
 *base_helper.tmpl* 看起来像这样子：
 
-	:::mako
+    ::mako
 	<%def name="html_head()">
 		<meta charset="utf-8">
 		<meta name="title" content="${title} | ${blog_title}" >
@@ -599,7 +599,7 @@ shisaa框架看起来有点像这样：
 
 所以我的 *index.tmpl*：
 
-	:::mako
+    ::mako
 	<%inherit file="base.tmpl"/>
 	<%namespace name="helper" file="index_helper.tmpl" import="*"/>
 	<%block name="content">
@@ -624,7 +624,7 @@ shisaa框架看起来有点像这样：
 
 *index_helper.tmpl* 看起来像这样子：
 
-	:::mako
+    ::mako
 	<%def name="html_tags(post)">
 		% if post.tags:
 			<ul class="tags">
@@ -666,7 +666,7 @@ shisaa框架看起来有点像这样：
 
 下面是我渲染文章的模板：
 
-	:::mako
+    ::mako
 	<%inherit file="base.tmpl"/>
 	<%namespace name="helper" file="post_helper.tmpl"/>
 	<%block name="content">
@@ -683,7 +683,7 @@ shisaa框架看起来有点像这样：
 
 还有helper文件：
 
-	:::mako
+    ::mako
 	<%def name="html_title()">
 		<h1>${title}</h1>
 		% if link:
@@ -735,7 +735,7 @@ shisaa框架看起来有点像这样：
 
 下一个是渲染代码清单的功能，就是我们之前看到的文章，看起来像这样：
 
-	:::mako
+    ::mako
 	<%inherit file="base.tmpl"/>
 	<%block name="content">
 		<ul class="breadcrumb">
@@ -763,7 +763,7 @@ We first render out a breadcrumb that resembles the path of the file in a hierar
 
 *list_post.tmpl* 用来按年份来显示文章的列表（当用存档显示的方式浏览）。该模板看起来像这样：
 
-	:::mako
+    ::mako
 	<%inherit file="base.tmpl"/>
 	<%block name="content">
         <!--Body content-->
@@ -783,7 +783,7 @@ We first render out a breadcrumb that resembles the path of the file in a hierar
 
 当你对比将看到 *list.tmpl* 会发现用相同的代码，只是用 *items* 代替 *posts*：
 
-	:::mako
+    ::mako
 	<%inherit file="base.tmpl"/>
 	<%block name="content">
         <!--Body content-->
@@ -802,7 +802,7 @@ We first render out a breadcrumb that resembles the path of the file in a hierar
 
 文件 *tags.tmpl* 也是用 *items* 保存所有的信息：
 
-	:::mako
+    ::mako
 	<%inherit file="base.tmpl"/>
 	<%block name="content">
 		<div class="postbox">
@@ -824,7 +824,7 @@ We first render out a breadcrumb that resembles the path of the file in a hierar
 
 那么，你准备好进入构建的第二阶段了吗？这一次有自己的主题了吗？冲啊！
 
-	:::bash
+    ::bash
 	$ nikola build
 
 如果您仍然在另一个终端有Nikola服务器运行，你就可以刷新页面，这样就看到你新的模板。

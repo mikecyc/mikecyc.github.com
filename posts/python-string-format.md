@@ -2,7 +2,7 @@
 .. title: Python字符串格式化
 .. slug: python-string-format
 .. date: 2013/11/06 22:03:54
-.. tags: Python, 格式化
+.. tags: python, 格式化
 -->
 
 

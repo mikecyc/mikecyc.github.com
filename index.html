@@ -1,57 +1,34 @@
-<!DOCTYPE html><html lang="zh_cn"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content="麦客园--集基督信仰技术，生活的家园，分享生活中的点点滴滴。关注Web前端，网络技术，Linux，开源硬件等。"><meta name="author" content="Mike Chen"><title>麦客园 | 麦客园</title><link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="assets/css/rst.css" rel="stylesheet" type="text/css"><link href="assets/css/code.css" rel="stylesheet" type="text/css"><link href="assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="assets/css/theme.css" rel="stylesheet" type="text/css"><link href="assets/css/custom.css" rel="stylesheet" type="text/css"><!--[if lt IE 9]>
+<!DOCTYPE html><html lang="zh_cn"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="麦客园--集基督信仰技术，生活的家园，分享生活中的点点滴滴。关注Web前端，网络技术，Linux，开源硬件等。"><meta name="author" content="Mike Chen"><title>麦客园 | 麦客园</title><link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="assets/css/rst.css" rel="stylesheet" type="text/css"><link href="assets/css/code.css" rel="stylesheet" type="text/css"><link href="assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="assets/css/theme.css" rel="stylesheet" type="text/css"><link href="assets/css/custom.css" rel="stylesheet" type="text/css"><!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml"><link rel="icon" href="favicon.ico" sizes="16x16"><script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?3760af2f06e2095f83b8b7e7c712b7c5";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script></head><body>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml"><link rel="icon" href="favicon.ico" sizes="16x16"></head><body>
 <!-- Menubar -->
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
 
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
-
-            <a class="brand" href=".">麦客园</a>
-            <!-- Everything you want hidden at 940px or less, place within here -->
-            <div class="nav-collapse collapse">
-                <ul class="nav"><li><a href="archive.html">文章归档</a>
-            </li><li><a href="categories/index.html">文章分类</a>
-            </li><li><a href="stories/about.html">关于作者</a>
-
-                </li></ul><ul class="nav pull-right"></ul></div>
-        </div>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href=".">麦客园</a>
     </div>
-</div>
-<!-- End of Menubar -->
-<div class="container-fluid" id="container-fluid">
-    <!--Body content-->
-    <div class="row-fluid">
-    <div class="span2"></div>
-    <div class="span8">
-    
-        <div class="postbox">
-        <h1><a href="posts/python-string-format.html">Python字符串格式化</a></h1>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav"><li><a href="archive.html">文章归档</a>
+                </li><li><a href="categories/index.html">文章分类</a>
+                </li><li><a href="stories/about.html">关于作者</a>
+
+        </li></ul><ul class="nav navbar-nav navbar-right"></ul></div><!-- /.navbar-collapse -->
+</nav><!-- End of Menubar --><div class="container">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+        <div class="postbox h-entry">
+        <h1 class="p-name"><a href="posts/python-string-format.html" class="u-url">Python字符串格式化</a>
         <small>  
-             发表于: <time class="published" datetime="2013-11-06T22:03:54">2013-11-06 22:03</time>
-             
-
-             
-          |  更多相关文章：
-            <a class="tag" href="categories/python.html"><span class="badge">Python</span></a>
-            <a class="tag" href="categories/ge-shi-hua.html"><span class="badge">格式化</span></a>
-
-        </small>
-        <hr><div><p>在python中也有类似于c中的printf()的格式输出标记。在python中格式化输出字符串使用的是%运算符，通用的形式为</p>
+             发表于: <time class="published dt-published" datetime="2013-11-06T22:03:54">2013-11-06 22:03</time></small></h1>
+        <hr><div class="p-summary">
+        <div><p>在python中也有类似于c中的printf()的格式输出标记。在python中格式化输出字符串使用的是%运算符，通用的形式为</p>
 <div class="code"><pre><span class="err">格式标记字符串</span> <span class="o">%</span> <span class="err">要输出的值组</span>
 </pre></div>
 
@@ -78,41 +55,38 @@ var _hmt = _hmt || [];
 </pre></div>
 
 
-<p><a href="posts/python-string-format.html">更多...</a></p></div>
+<p class="more"><a href="posts/python-string-format.html">更多…</a></p></div>
         </div>
-        <div class="postbox">
-        <h1><a href="posts/20thingsilearned.html">移植《关于浏览器和网络的 20 项须知》代码</a></h1>
+            
+        
+    <p>
+        <a href="posts/python-string-format.html#disqus_thread" data-disqus-identifier="cache/posts/python-string-format.html">Comments</a>
+
+
+        </p></div>
+        <div class="postbox h-entry">
+        <h1 class="p-name"><a href="posts/20thingsilearned.html" class="u-url">移植《关于浏览器和网络的 20 项须知》代码</a>
         <small>  
-             发表于: <time class="published" datetime="2013-10-12T18:03:54">2013-10-12 18:03</time>
-             
-
-             
-          |  更多相关文章：
-            <a class="tag" href="categories/liu-lan-qi.html"><span class="badge">浏览器</span></a>
-            <a class="tag" href="categories/wang-luo.html"><span class="badge">网络</span></a>
-            <a class="tag" href="categories/html3.html"><span class="badge">html3</span></a>
-            <a class="tag" href="categories/css3.html"><span class="badge">css3</span></a>
-
-        </small>
-        <hr><div><p>《关于浏览器和网络的20项须知》（20 Things I Learned About Browsers and the Web）是Google Chrome团队于2010年底推出的网络图书，上周新增了15种语言版本，包括简体中文、繁体中文、英文、法文、德文、荷兰文、意大利文、西班牙文、巴西葡萄牙文、捷克文、波兰文、俄文、日文、印度尼西亚文以及菲律宾文，让更多读者能快速认识浏览器和网络的基本常识。
+             发表于: <time class="published dt-published" datetime="2013-10-12T18:03:54">2013-10-12 18:03</time></small></h1>
+        <hr><div class="p-summary">
+        <div><p>《关于浏览器和网络的20项须知》（20 Things I Learned About Browsers and the Web）是Google Chrome团队于2010年底推出的网络图书，上周新增了15种语言版本，包括简体中文、繁体中文、英文、法文、德文、荷兰文、意大利文、西班牙文、巴西葡萄牙文、捷克文、波兰文、俄文、日文、印度尼西亚文以及菲律宾文，让更多读者能快速认识浏览器和网络的基本常识。
 《浏览器和网络世界20大须知》内容浅显易懂，并邀请知名插画家Christoph Niemann绘制插图，大大增加了阅读趣味。</p>
 <p>前端开发程序师非常值得花时间深入阅读的代码，可以学到很多的html5的知识。</p>
-<p><a href="posts/20thingsilearned.html">更多...</a></p></div>
+<p class="more"><a href="posts/20thingsilearned.html">更多…</a></p></div>
         </div>
-        <div class="postbox">
-        <h1><a href="posts/how-to-set-https-in-django-and-nginx.html">Nginx如何设置Django的https重定向</a></h1>
+            
+        
+    <p>
+        <a href="posts/20thingsilearned.html#disqus_thread" data-disqus-identifier="cache/posts/20thingsilearned.html">Comments</a>
+
+
+        </p></div>
+        <div class="postbox h-entry">
+        <h1 class="p-name"><a href="posts/how-to-set-https-in-django-and-nginx.html" class="u-url">Nginx如何设置Django的https重定向</a>
         <small>  
-             发表于: <time class="published" datetime="2013-08-22T21:44:21">2013-08-22 21:44</time>
-             
-
-             
-          |  更多相关文章：
-            <a class="tag" href="categories/nginx.html"><span class="badge">Nginx</span></a>
-            <a class="tag" href="categories/django.html"><span class="badge">Django</span></a>
-            <a class="tag" href="categories/she-zhi.html"><span class="badge">设置</span></a>
-
-        </small>
-        <hr><div><h3>遇到的问题</h3>
+             发表于: <time class="published dt-published" datetime="2013-08-22T21:44:21">2013-08-22 21:44</time></small></h1>
+        <hr><div class="p-summary">
+        <div><h3>遇到的问题</h3>
 <p>出于网络安全的考虑，<a href="http://www.joyit.me/">欢迅干线</a>增加了SSL协议的连接，但发现Django在重定向跳转的时候总是回到普通的HTTP协议，而不是HTTPS协议。查了资料看到<code>HttpRequest.is_secure()</code>方法用来判断是否https连接，如果是的话就返回<code>True</code>。在Django 1.4 之前只能在Python的环境上去设置，而1.4重新改写了is_secure()方法，可以自己指定判断的变量和值。</p>
 <h3>如何设置Nginx和Django</h3>
 <p>Google了好几篇文章，都说在Nginx配置文件中增加下面的设置：</p>
@@ -120,22 +94,21 @@ var _hmt = _hmt || [];
 </pre></div>
 
 
-<p><a href="posts/how-to-set-https-in-django-and-nginx.html">更多...</a></p></div>
+<p class="more"><a href="posts/how-to-set-https-in-django-and-nginx.html">更多…</a></p></div>
         </div>
-        <div class="postbox">
-        <h1><a href="posts/strong-bash.html">两个非常有用的Bash脚本编程命令</a></h1>
+            
+        
+    <p>
+        <a href="posts/how-to-set-https-in-django-and-nginx.html#disqus_thread" data-disqus-identifier="cache/posts/how-to-set-https-in-django-and-nginx.html">Comments</a>
+
+
+        </p></div>
+        <div class="postbox h-entry">
+        <h1 class="p-name"><a href="posts/strong-bash.html" class="u-url">两个非常有用的Bash脚本编程命令</a>
         <small>  
-             发表于: <time class="published" datetime="2013-08-13T15:55:02">2013-08-13 15:55</time>
-             
-
-             
-          |  更多相关文章：
-            <a class="tag" href="categories/bash.html"><span class="badge">Bash</span></a>
-            <a class="tag" href="categories/bian-cheng.html"><span class="badge">编程</span></a>
-            <a class="tag" href="categories/ming-ling.html"><span class="badge">命令</span></a>
-
-        </small>
-        <hr><div><p>Shell脚本可以完成很多任务，但因为Shell脚本运行时遇到异常还是会继续运行，这些问题有时很难发现，所以有两个命令可以帮助你来调试脚本，这是非常有用的命令。</p>
+             发表于: <time class="published dt-published" datetime="2013-08-13T15:55:02">2013-08-13 15:55</time></small></h1>
+        <hr><div class="p-summary">
+        <div><p>Shell脚本可以完成很多任务，但因为Shell脚本运行时遇到异常还是会继续运行，这些问题有时很难发现，所以有两个命令可以帮助你来调试脚本，这是非常有用的命令。</p>
 <h3>命令一：使用 Set -u</h3>
 <p>你有没有因为一个变量没有初始化而经常崩溃？我知道我有，而且很多次。</p>
 <div class="code"><pre><span class="nv">chroot</span><span class="o">=</span><span class="nv">$1</span>
@@ -153,22 +126,21 @@ mike%
 </pre></div>
 
 
-<p><a href="posts/strong-bash.html">更多...</a></p></div>
+<p class="more"><a href="posts/strong-bash.html">更多…</a></p></div>
         </div>
-        <div class="postbox">
-        <h1><a href="posts/setup-md-notepad.html">notepad++安装markdown插件</a></h1>
+            
+        
+    <p>
+        <a href="posts/strong-bash.html#disqus_thread" data-disqus-identifier="cache/posts/strong-bash.html">Comments</a>
+
+
+        </p></div>
+        <div class="postbox h-entry">
+        <h1 class="p-name"><a href="posts/setup-md-notepad.html" class="u-url">notepad++安装markdown插件</a>
         <small>  
-             发表于: <time class="published" datetime="2013-08-08T11:22:05">2013-08-08 11:22</time>
-             
-
-             
-          |  更多相关文章：
-            <a class="tag" href="categories/notepad.html"><span class="badge">Notepad++</span></a>
-            <a class="tag" href="categories/markdown.html"><span class="badge">Markdown</span></a>
-            <a class="tag" href="categories/cha-jian.html"><span class="badge">插件</span></a>
-
-        </small>
-        <hr><div><p>Notepad++ 是一款非常友好的编辑器，轻巧、便捷、高效、插件丰富… 同时 Notepad++ 支持用户自定义语法高亮 </p>
+             发表于: <time class="published dt-published" datetime="2013-08-08T11:22:05">2013-08-08 11:22</time></small></h1>
+        <hr><div class="p-summary">
+        <div><p>Notepad++ 是一款非常友好的编辑器，轻巧、便捷、高效、插件丰富… 同时 Notepad++ 支持用户自定义语法高亮 </p>
 <p>GitHub上已经有人编写好开源的 Markdown 规则： <a href="https://github.com/thomsmits/markdown_npp">https://github.com/thomsmits/markdown_npp</a></p>
 <h3>一、让Notepad++ 高亮支持 Markdown 语法:</h3>
 <div class="code"><pre><span class="err">开始菜单</span> <span class="o">-&gt;</span> <span class="err">运行</span><span class="p">(</span><span class="err">或者直接按</span> <span class="n">Ctrl</span><span class="o">+</span><span class="n">R</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="err">输入</span> <span class="o">%</span><span class="n">APPDATA</span><span class="o">%</span><span class="err">\</span><span class="n">Notepad</span><span class="o">++</span>
@@ -178,26 +150,25 @@ mike%
 
 
 <p>在语言菜单下可以看到自定义的 Markdown 高亮规则。</p>
-<p><a href="posts/setup-md-notepad.html">更多...</a></p></div>
+<p class="more"><a href="posts/setup-md-notepad.html">更多…</a></p></div>
         </div>
-        <div class="postbox">
-        <h1><a href="posts/nikola-web.html">Nikola: 静态博客A.K.A引擎，我是怎样创建Shisaa.jp</a></h1>
+            
+        
+    <p>
+        <a href="posts/setup-md-notepad.html#disqus_thread" data-disqus-identifier="cache/posts/setup-md-notepad.html">Comments</a>
+
+
+        </p></div>
+        <div class="postbox h-entry">
+        <h1 class="p-name"><a href="posts/nikola-web.html" class="u-url">Nikola: 静态博客A.K.A引擎，我是怎样创建Shisaa.jp</a>
         <small>  
-             发表于: <time class="published" datetime="2013-08-01T18:52:05">2013-08-01 18:52</time>
-             
-
-             
-          |  更多相关文章：
-            <a class="tag" href="categories/web.html"><span class="badge">web</span></a>
-            <a class="tag" href="categories/python.html"><span class="badge">python</span></a>
-            <a class="tag" href="categories/nikola.html"><span class="badge">nikola</span></a>
-
-        </small>
-        <hr><div><h3>写在前面的话</h3>
+             发表于: <time class="published dt-published" datetime="2013-08-01T18:52:05">2013-08-01 18:52</time></small></h1>
+        <hr><div class="p-summary">
+        <div><h3>写在前面的话</h3>
 <p>当我在Google搜索用git做博客的时候我看到github提供了免费静态页面服务，而且提供Jekyll工具，允许用户用轻量级标记语言（比如Markdown）来写文章，然后生成博客页面。同类的工具还有Octopress。但用的是Ruby语言，在windows下安装环境特别麻烦。因我比较喜欢用Python，再继续搜索，看到了Pelican，只支持Python2.7以上版本，把本地的Python版本更新到2.7版本，好不容易安装好了Pelican环境，但发现Pelican用Makefile来管理项目，而Makefile在Windows下就是一个恶梦。最后看到了Nikola，按照官方文档很快就上手了，而且默认的样式还是特好看的，所以就最终选择了Nikola来建立静态博客。</p>
 <p>在Nikola的有一篇文章<a href="http://shisaa.jp/postset/nikola-web.html" title="Goes from installing to developing a custom theme.">Tutorial by Tim van der Linden</a>，正好解决了我对Nikola的一些问题，为了日后查阅方便，也为了能让更多母语是中文的网络爱好者认识Nikola，故翻译了这篇文章。</p>
 <hr><h3>前言</h3>
-<p>首先，非常感谢Nikola创作者Roberto Alsina，给这篇文章<a href="http://nikola.ralsina.com.ar/blog/new-nikola-tutorial.html" title="基于Nikola建立博客shisaa.jp">很高的评价</a>，并将其嵌入到Nikola文档中！</p>
+<p>首先，非常感谢Nikola创作者Roberto Alsina，给这篇文章<a href="http://getnikola.com/blog/new-nikola-tutorial.html" title="基于Nikola建立博客shisaa.jp">很高的评价</a>，并将其嵌入到Nikola文档中！</p>
 <p>当我设计Shisaa.jp的时候我花一些时间思考用怎么样的“后端”。什么样的系统建站...使用CMS吗？
 我使用Drupal有丰富的经验，这可能是我的首选......但熟悉Drupal的，也知道一些难以忽视的事实：</p>
 <ul><li>Drupal是用PHP编写的，这不是我所向往的编程语言。</li>
@@ -206,21 +177,21 @@ mike%
 </ul><p>因此，不用Drupal，那用什么呢？Wordpress, Joomla...？这...永远...不可能，它们都是用PHP做后端的语言。</p>
 <p>好，不用PHP驱动系统...我更喜欢用Python，所以可能是Plone, Pylons, Pyramid, ...？</p>
 <p>可能……</p>
-<p><a href="posts/nikola-web.html">更多...</a></p></div>
+<p class="more"><a href="posts/nikola-web.html">更多…</a></p></div>
         </div>
-        <div class="postbox">
-        <h1><a href="posts/hello-markdown.html">Markdown 语法说明 (简体中文版)</a></h1>
+            
+        
+    <p>
+        <a href="posts/nikola-web.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-web.html">Comments</a>
+
+
+        </p></div>
+        <div class="postbox h-entry">
+        <h1 class="p-name"><a href="posts/hello-markdown.html" class="u-url">Markdown 语法说明 (简体中文版)</a>
         <small>  
-             发表于: <time class="published" datetime="2013-06-28T11:27:46">2013-06-28 11:27</time>
-             
-
-             
-          |  更多相关文章：
-            <a class="tag" href="categories/markdown.html"><span class="badge">markdown</span></a>
-            <a class="tag" href="categories/hello.html"><span class="badge">hello</span></a>
-
-        </small>
-        <hr><div><h2 id="overview">概述
+             发表于: <time class="published dt-published" datetime="2013-06-28T11:27:46">2013-06-28 11:27</time></small></h1>
+        <hr><div class="p-summary">
+        <div><h2 id="overview">概述
 
 <h3 id="philosophy">宗旨
 
@@ -231,21 +202,21 @@ mike%
 
 </h3><p>Markdown 语法的目标是：成为一种适用于网络的<em>书写</em>语言。</p>
 <p>Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法种类很少，只对应 HTML 标记的一小部分。Markdown 的构想<em>不是</em>要使得 HTML 文档更容易书写。在我看来， HTML 已经很容易写了。Markdown 的理念是，能让文档更容易读、写和随意改。HTML 是一种<em>发布</em>的格式，Markdown 是一种<em>书写</em>的格式。就这样，Markdown 的格式语法只涵盖纯文本可以涵盖的范围。</p>
-<p><a href="posts/hello-markdown.html">更多...</a></p></div>
+<p class="more"><a href="posts/hello-markdown.html">更多…</a></p></div>
         </div>
-        <div class="postbox">
-        <h1><a href="posts/hello-rst.html">reStructuredText(rst)语法简介(简体中文)</a></h1>
+            
+        
+    <p>
+        <a href="posts/hello-markdown.html#disqus_thread" data-disqus-identifier="cache/posts/hello-markdown.html">Comments</a>
+
+
+        </p></div>
+        <div class="postbox h-entry">
+        <h1 class="p-name"><a href="posts/hello-rst.html" class="u-url">reStructuredText(rst)语法简介(简体中文)</a>
         <small>  
-             发表于: <time class="published" datetime="2013-06-25T23:35:32">2013-06-25 23:35</time>
-             
-
-             
-          |  更多相关文章：
-            <a class="tag" href="categories/hello.html"><span class="badge">hello</span></a>
-            <a class="tag" href="categories/rst.html"><span class="badge">rst</span></a>
-
-        </small>
-        <hr><div class="section" id="rst">
+             发表于: <time class="published dt-published" datetime="2013-06-25T23:35:32">2013-06-25 23:35</time></small></h1>
+        <hr><div class="p-summary">
+        <div class="section" id="rst">
 <h2>rst语法简介</h2>
 <div class="section" id="id1">
 <h3>空行分段</h3>
@@ -260,68 +231,69 @@ mike%
 <div class="section" id="id3">
 <h3>不留白续行</h3>
 <p>行尾转义字符让续行之间不留白。</p>
-<p><a href="posts/hello-rst.html">更多...</a></p></div></div>
+<p class="more"><a href="posts/hello-rst.html">更多…</a></p></div></div>
         </div>
-        <div class="postbox">
-        <h1><a href="posts/ten-christian-life-code.html">基督徒生活十大守则</a></h1>
+            
+        
+    <p>
+        <a href="posts/hello-rst.html#disqus_thread" data-disqus-identifier="cache/posts/hello-rst.html">Comments</a>
+
+
+        </p></div>
+        <div class="postbox h-entry">
+        <h1 class="p-name"><a href="posts/ten-christian-life-code.html" class="u-url">基督徒生活十大守则</a>
         <small>  
-             发表于: <time class="published" datetime="2013-03-08T13:52:05">2013-03-08 13:52</time>
-             
-
-             
-          |  更多相关文章：
-            <a class="tag" href="categories/ye-su.html"><span class="badge">耶稣</span></a>
-            <a class="tag" href="categories/xin-yang.html"><span class="badge">信仰</span></a>
-            <a class="tag" href="categories/ji-du.html"><span class="badge">基督</span></a>
-            <a class="tag" href="categories/sheng-huo.html"><span class="badge">生活</span></a>
-
-        </small>
-        <hr><div><p><strong>你们愿意人怎样待你们，你们也要怎样待人。——路加福音六章三十一节</strong></p>
+             发表于: <time class="published dt-published" datetime="2013-03-08T13:52:05">2013-03-08 13:52</time></small></h1>
+        <hr><div class="p-summary">
+        <div><p><strong>你们愿意人怎样待你们，你们也要怎样待人。——路加福音六章三十一节</strong></p>
 <p>无论是玩游戏、开车或者做个可口的小菜，要成功又安全，一定得守某些规则。</p>
 <p>我清楚记得，几年前，家宅附近马路扩大，从两线行车变成四线。在扩建期间，马路上划的那些白线没有了。有一晚，两辆车迎头相撞，死了五个人；原因是那条分开左右行车道的中央白线没有了，驾车的人失去了可循的“规则”。</p>
 <p>圣经教训我们，基督徒有个不断生长的生命。你重生 了，生在天父的家里。我与妻子露丝现有孙儿女十六人，每个孩子都是我们的珍宝；天父眼中的你也是这样。他盼望你在基督里长大成人。要是你长来长去仍是婴儿 模样，成了一个灵性上的侏儒，那不仅违反自然律，也不合上主的旨意。《彼得后书》三章十八节劝勉基督徒一定要有长进，也就是灵性生命应该不断长大，恩典和 知识日有增加，做个成长的基督徒。</p>
 <p><strong>天天读圣经</strong></p>
 <p>基督徒要灵性健康，生长顺畅，不断长进，一定得遵行某些守则。</p>
-<p><a href="posts/ten-christian-life-code.html">更多...</a></p></div>
+<p class="more"><a href="posts/ten-christian-life-code.html">更多…</a></p></div>
         </div>
-        <div class="postbox">
-        <h1><a href="posts/how-mobile-safari-touch-event-works.html">理解iOS中的touch事件</a></h1>
+            
+        
+    <p>
+        <a href="posts/ten-christian-life-code.html#disqus_thread" data-disqus-identifier="cache/posts/ten-christian-life-code.html">Comments</a>
+
+
+        </p></div>
+        <div class="postbox h-entry">
+        <h1 class="p-name"><a href="posts/how-mobile-safari-touch-event-works.html" class="u-url">理解iOS中的touch事件</a>
         <small>  
-             发表于: <time class="published" datetime="2012-03-13T09:22:03">2012-03-13 09:22</time>
-             
-
-             
-          |  更多相关文章：
-            <a class="tag" href="categories/chrome.html"><span class="badge">chrome</span></a>
-            <a class="tag" href="categories/cha-jian.html"><span class="badge">插件</span></a>
-            <a class="tag" href="categories/xia-zai.html"><span class="badge">下载</span></a>
-            <a class="tag" href="categories/an-zhuang.html"><span class="badge">安装</span></a>
-
-        </small>
-        <hr><div><p>touch事件是iOS中最重要的事件。</p>
+             发表于: <time class="published dt-published" datetime="2012-03-13T09:22:03">2012-03-13 09:22</time></small></h1>
+        <hr><div class="p-summary">
+        <div><p>touch事件是iOS中最重要的事件。</p>
 <h3>一、简介</h3>
 <p>Apple的官方文档<a href="http://17.254.2.129/library/safari/#documentation/AppleApplications/Reference/SafariWebContent/HandlingEvents/HandlingEvents.html">Handling Events</a>和 <a href="http://developer.apple.com/library/safari/#documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Introduction/Introduction.html">Safari CSS Visual Effects Guide</a>是很好的开发指南，但是里面的内容显然是针对初学者的，我在这里补充一下。</p>
 <p>另外，Apple开发者中心有很多不错的HTML5教程与资源，例如HTML5离线存储，CSS动画，CSS 3D变换等，有兴趣的可以了解一下。 <a href="http://developer.apple.com/library/safari/navigation/">http://developer.apple.com/library/safari/navigation/</a></p>
-<p><a href="posts/how-mobile-safari-touch-event-works.html">更多...</a></p></div>
+<p class="more"><a href="posts/how-mobile-safari-touch-event-works.html">更多…</a></p></div>
         </div>
+            
+        
+    <p>
+        <a href="posts/how-mobile-safari-touch-event-works.html#disqus_thread" data-disqus-identifier="cache/posts/how-mobile-safari-touch-event-works.html">Comments</a>
+
+
+        </p></div>
     
 <div>
-<ul class="pager"></ul></div>
+<ul class="pager"><li class="next">
+        <a href="index-1.html" rel="next">旧一篇 →</a>
+    </li>
+</ul></div>
 
     
+        
+       <script type="text/javascript">var disqus_shortname="nikolademo";(function(){var a=document.createElement("script");a.async=true;a.type="text/javascript";a.src="http://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("HEAD")[0]||document.getElementsByTagName("BODY")[0]).appendChild(a)}());</script></div>
+        <!--End of body content-->
 
-
-    
-
-
-    </div>
-    </div>
-    <!--End of body content-->
-</div>
-<div class="footerbox">
-    Contents © <a href="mailto:mike.cyc@gmail.com">Mike Chen</a> - Powered by <a href="http://nikola.ralsina.com.ar">Nikola</a>
+        <footer>
+            Contents © <a href="mailto:mike.cyc@gmail.com">Mike Chen</a> - Powered by <a href="http://getnikola.com/">Nikola</a>
+        </footer></div>
 </div>
 
 
-
-            <script src="assets/js/jquery-1.7.2.min.js" type="text/javascript"></script><script src="assets/js/bootstrap.min.js" type="text/javascript"></script><script src="assets/js/jquery.colorbox-min.js" type="text/javascript"></script><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"80%",maxHeight:"80%",scalePhotos:true});</script></body></html>
+            <script src="assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="assets/js/bootstrap.min.js" type="text/javascript"></script><script src="assets/js/jquery.colorbox-min.js" type="text/javascript"></script><br><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script></body></html>

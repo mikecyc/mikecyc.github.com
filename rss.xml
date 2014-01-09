@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>麦客园</title><link>http://mc.basebb.com</link><description>麦客园--集基督信仰技术，生活的家园，分享生活中的点点滴滴。关注Web前端，网络技术，Linux，开源硬件等。</description><lastBuildDate>Mon, 02 Dec 2013 12:29:28 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python字符串格式化</title><link>http://mc.basebb.com/posts/python-string-format.html</link><description>&lt;div&gt;&lt;p&gt;在python中也有类似于c中的printf()的格式输出标记。在python中格式化输出字符串使用的是%运算符，通用的形式为&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>麦客园</title><link>http://mc.basebb.com/</link><description>麦客园--集基督信仰技术，生活的家园，分享生活中的点点滴滴。关注Web前端，网络技术，Linux，开源硬件等。</description><atom:link href="http://mc.basebb.com/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>zh_cn</language><lastBuildDate>Fri, 10 Jan 2014 01:19:24 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python字符串格式化</title><link>http://mc.basebb.com/posts/python-string-format.html</link><description>&lt;div&gt;&lt;p&gt;在python中也有类似于c中的printf()的格式输出标记。在python中格式化输出字符串使用的是%运算符，通用的形式为&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="err"&gt;格式标记字符串&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="err"&gt;要输出的值组&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -26,10 +26,10 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;a href="/posts/python-string-format.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Python</category><category>格式化</category><guid>http://mc.basebb.com/posts/python-string-format.html</guid><pubDate>Wed, 06 Nov 2013 22:03:54 GMT</pubDate></item><item><title>移植《关于浏览器和网络的 20 项须知》代码</title><link>http://mc.basebb.com/posts/20thingsilearned.html</link><description>&lt;div&gt;&lt;p&gt;《关于浏览器和网络的20项须知》（20 Things I Learned About Browsers and the Web）是Google Chrome团队于2010年底推出的网络图书，上周新增了15种语言版本，包括简体中文、繁体中文、英文、法文、德文、荷兰文、意大利文、西班牙文、巴西葡萄牙文、捷克文、波兰文、俄文、日文、印度尼西亚文以及菲律宾文，让更多读者能快速认识浏览器和网络的基本常识。
+&lt;p class="more"&gt;&lt;a href="http://mc.basebb.com/posts/python-string-format.html"&gt;更多…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>格式化</category><guid>http://mc.basebb.com/posts/python-string-format.html</guid><pubDate>Wed, 06 Nov 2013 22:03:54 GMT</pubDate></item><item><title>移植《关于浏览器和网络的 20 项须知》代码</title><link>http://mc.basebb.com/posts/20thingsilearned.html</link><description>&lt;div&gt;&lt;p&gt;《关于浏览器和网络的20项须知》（20 Things I Learned About Browsers and the Web）是Google Chrome团队于2010年底推出的网络图书，上周新增了15种语言版本，包括简体中文、繁体中文、英文、法文、德文、荷兰文、意大利文、西班牙文、巴西葡萄牙文、捷克文、波兰文、俄文、日文、印度尼西亚文以及菲律宾文，让更多读者能快速认识浏览器和网络的基本常识。
 《浏览器和网络世界20大须知》内容浅显易懂，并邀请知名插画家Christoph Niemann绘制插图，大大增加了阅读趣味。&lt;/p&gt;
 &lt;p&gt;前端开发程序师非常值得花时间深入阅读的代码，可以学到很多的html5的知识。&lt;/p&gt;
-&lt;p&gt;&lt;a href="/posts/20thingsilearned.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>浏览器</category><category>网络</category><category>html3</category><category>css3</category><guid>http://mc.basebb.com/posts/20thingsilearned.html</guid><pubDate>Sat, 12 Oct 2013 18:03:54 GMT</pubDate></item><item><title>Nginx如何设置Django的https重定向</title><link>http://mc.basebb.com/posts/how-to-set-https-in-django-and-nginx.html</link><description>&lt;div&gt;&lt;h3&gt;遇到的问题&lt;/h3&gt;
+&lt;p class="more"&gt;&lt;a href="http://mc.basebb.com/posts/20thingsilearned.html"&gt;更多…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>浏览器</category><category>网络</category><category>html3</category><category>css3</category><guid>http://mc.basebb.com/posts/20thingsilearned.html</guid><pubDate>Sat, 12 Oct 2013 18:03:54 GMT</pubDate></item><item><title>Nginx如何设置Django的https重定向</title><link>http://mc.basebb.com/posts/how-to-set-https-in-django-and-nginx.html</link><description>&lt;div&gt;&lt;h3&gt;遇到的问题&lt;/h3&gt;
 &lt;p&gt;出于网络安全的考虑，&lt;a href="http://www.joyit.me/"&gt;欢迅干线&lt;/a&gt;增加了SSL协议的连接，但发现Django在重定向跳转的时候总是回到普通的HTTP协议，而不是HTTPS协议。查了资料看到&lt;code&gt;HttpRequest.is_secure()&lt;/code&gt;方法用来判断是否https连接，如果是的话就返回&lt;code&gt;True&lt;/code&gt;。在Django 1.4 之前只能在Python的环境上去设置，而1.4重新改写了is_secure()方法，可以自己指定判断的变量和值。&lt;/p&gt;
 &lt;h3&gt;如何设置Nginx和Django&lt;/h3&gt;
 &lt;p&gt;Google了好几篇文章，都说在Nginx配置文件中增加下面的设置：&lt;/p&gt;
@@ -37,7 +37,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;a href="/posts/how-to-set-https-in-django-and-nginx.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Nginx</category><category>Django</category><category>设置</category><guid>http://mc.basebb.com/posts/how-to-set-https-in-django-and-nginx.html</guid><pubDate>Thu, 22 Aug 2013 21:44:21 GMT</pubDate></item><item><title>两个非常有用的Bash脚本编程命令</title><link>http://mc.basebb.com/posts/strong-bash.html</link><description>&lt;div&gt;&lt;p&gt;Shell脚本可以完成很多任务，但因为Shell脚本运行时遇到异常还是会继续运行，这些问题有时很难发现，所以有两个命令可以帮助你来调试脚本，这是非常有用的命令。&lt;/p&gt;
+&lt;p class="more"&gt;&lt;a href="http://mc.basebb.com/posts/how-to-set-https-in-django-and-nginx.html"&gt;更多…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Nginx</category><category>Django</category><category>设置</category><guid>http://mc.basebb.com/posts/how-to-set-https-in-django-and-nginx.html</guid><pubDate>Thu, 22 Aug 2013 21:44:21 GMT</pubDate></item><item><title>两个非常有用的Bash脚本编程命令</title><link>http://mc.basebb.com/posts/strong-bash.html</link><description>&lt;div&gt;&lt;p&gt;Shell脚本可以完成很多任务，但因为Shell脚本运行时遇到异常还是会继续运行，这些问题有时很难发现，所以有两个命令可以帮助你来调试脚本，这是非常有用的命令。&lt;/p&gt;
 &lt;h3&gt;命令一：使用 Set -u&lt;/h3&gt;
 &lt;p&gt;你有没有因为一个变量没有初始化而经常崩溃？我知道我有，而且很多次。&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;chroot&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;
@@ -55,7 +55,7 @@ mike%
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;a href="/posts/strong-bash.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Bash</category><category>编程</category><category>命令</category><guid>http://mc.basebb.com/posts/strong-bash.html</guid><pubDate>Tue, 13 Aug 2013 15:55:02 GMT</pubDate></item><item><title>notepad++安装markdown插件</title><link>http://mc.basebb.com/posts/setup-md-notepad.html</link><description>&lt;div&gt;&lt;p&gt;Notepad++ 是一款非常友好的编辑器，轻巧、便捷、高效、插件丰富… 同时 Notepad++ 支持用户自定义语法高亮 &lt;/p&gt;
+&lt;p class="more"&gt;&lt;a href="http://mc.basebb.com/posts/strong-bash.html"&gt;更多…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Bash</category><category>编程</category><category>命令</category><guid>http://mc.basebb.com/posts/strong-bash.html</guid><pubDate>Tue, 13 Aug 2013 15:55:02 GMT</pubDate></item><item><title>notepad++安装markdown插件</title><link>http://mc.basebb.com/posts/setup-md-notepad.html</link><description>&lt;div&gt;&lt;p&gt;Notepad++ 是一款非常友好的编辑器，轻巧、便捷、高效、插件丰富… 同时 Notepad++ 支持用户自定义语法高亮 &lt;/p&gt;
 &lt;p&gt;GitHub上已经有人编写好开源的 Markdown 规则： &lt;a href="https://github.com/thomsmits/markdown_npp"&gt;https://github.com/thomsmits/markdown_npp&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;一、让Notepad++ 高亮支持 Markdown 语法:&lt;/h3&gt;
 &lt;div class="code"&gt;&lt;pre&gt;&lt;span class="err"&gt;开始菜单&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="err"&gt;运行&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;或者直接按&lt;/span&gt; &lt;span class="n"&gt;Ctrl&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="err"&gt;输入&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;APPDATA&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Notepad&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;
@@ -65,11 +65,11 @@ mike%
 
 
 &lt;p&gt;在语言菜单下可以看到自定义的 Markdown 高亮规则。&lt;/p&gt;
-&lt;p&gt;&lt;a href="/posts/setup-md-notepad.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Notepad++</category><category>Markdown</category><category>插件</category><guid>http://mc.basebb.com/posts/setup-md-notepad.html</guid><pubDate>Thu, 08 Aug 2013 11:22:05 GMT</pubDate></item><item><title>Nikola: 静态博客A.K.A引擎，我是怎样创建Shisaa.jp</title><link>http://mc.basebb.com/posts/nikola-web.html</link><description>&lt;div&gt;&lt;h3&gt;写在前面的话&lt;/h3&gt;
+&lt;p class="more"&gt;&lt;a href="http://mc.basebb.com/posts/setup-md-notepad.html"&gt;更多…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>notepad++</category><category>markdown</category><category>插件</category><guid>http://mc.basebb.com/posts/setup-md-notepad.html</guid><pubDate>Thu, 08 Aug 2013 11:22:05 GMT</pubDate></item><item><title>Nikola: 静态博客A.K.A引擎，我是怎样创建Shisaa.jp</title><link>http://mc.basebb.com/posts/nikola-web.html</link><description>&lt;div&gt;&lt;h3&gt;写在前面的话&lt;/h3&gt;
 &lt;p&gt;当我在Google搜索用git做博客的时候我看到github提供了免费静态页面服务，而且提供Jekyll工具，允许用户用轻量级标记语言（比如Markdown）来写文章，然后生成博客页面。同类的工具还有Octopress。但用的是Ruby语言，在windows下安装环境特别麻烦。因我比较喜欢用Python，再继续搜索，看到了Pelican，只支持Python2.7以上版本，把本地的Python版本更新到2.7版本，好不容易安装好了Pelican环境，但发现Pelican用Makefile来管理项目，而Makefile在Windows下就是一个恶梦。最后看到了Nikola，按照官方文档很快就上手了，而且默认的样式还是特好看的，所以就最终选择了Nikola来建立静态博客。&lt;/p&gt;
 &lt;p&gt;在Nikola的有一篇文章&lt;a href="http://shisaa.jp/postset/nikola-web.html" title="Goes from installing to developing a custom theme."&gt;Tutorial by Tim van der Linden&lt;/a&gt;，正好解决了我对Nikola的一些问题，为了日后查阅方便，也为了能让更多母语是中文的网络爱好者认识Nikola，故翻译了这篇文章。&lt;/p&gt;
 &lt;hr&gt;&lt;h3&gt;前言&lt;/h3&gt;
-&lt;p&gt;首先，非常感谢Nikola创作者Roberto Alsina，给这篇文章&lt;a href="http://nikola.ralsina.com.ar/blog/new-nikola-tutorial.html" title="基于Nikola建立博客shisaa.jp"&gt;很高的评价&lt;/a&gt;，并将其嵌入到Nikola文档中！&lt;/p&gt;
+&lt;p&gt;首先，非常感谢Nikola创作者Roberto Alsina，给这篇文章&lt;a href="http://getnikola.com/blog/new-nikola-tutorial.html" title="基于Nikola建立博客shisaa.jp"&gt;很高的评价&lt;/a&gt;，并将其嵌入到Nikola文档中！&lt;/p&gt;
 &lt;p&gt;当我设计Shisaa.jp的时候我花一些时间思考用怎么样的“后端”。什么样的系统建站...使用CMS吗？
 我使用Drupal有丰富的经验，这可能是我的首选......但熟悉Drupal的，也知道一些难以忽视的事实：&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;Drupal是用PHP编写的，这不是我所向往的编程语言。&lt;/li&gt;
@@ -78,7 +78,7 @@ mike%
 &lt;/ul&gt;&lt;p&gt;因此，不用Drupal，那用什么呢？Wordpress, Joomla...？这...永远...不可能，它们都是用PHP做后端的语言。&lt;/p&gt;
 &lt;p&gt;好，不用PHP驱动系统...我更喜欢用Python，所以可能是Plone, Pylons, Pyramid, ...？&lt;/p&gt;
 &lt;p&gt;可能……&lt;/p&gt;
-&lt;p&gt;&lt;a href="/posts/nikola-web.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>web</category><category>python</category><category>nikola</category><guid>http://mc.basebb.com/posts/nikola-web.html</guid><pubDate>Thu, 01 Aug 2013 18:52:05 GMT</pubDate></item><item><title>Markdown 语法说明 (简体中文版)</title><link>http://mc.basebb.com/posts/hello-markdown.html</link><description>&lt;div&gt;&lt;h2 id="overview"&gt;概述
+&lt;p class="more"&gt;&lt;a href="http://mc.basebb.com/posts/nikola-web.html"&gt;更多…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>web</category><category>python</category><category>nikola</category><guid>http://mc.basebb.com/posts/nikola-web.html</guid><pubDate>Thu, 01 Aug 2013 18:52:05 GMT</pubDate></item><item><title>Markdown 语法说明 (简体中文版)</title><link>http://mc.basebb.com/posts/hello-markdown.html</link><description>&lt;div&gt;&lt;h2 id="overview"&gt;概述
 
 &lt;h3 id="philosophy"&gt;宗旨
 
@@ -89,7 +89,7 @@ mike%
 
 &lt;/h3&gt;&lt;p&gt;Markdown 语法的目标是：成为一种适用于网络的&lt;em&gt;书写&lt;/em&gt;语言。&lt;/p&gt;
 &lt;p&gt;Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法种类很少，只对应 HTML 标记的一小部分。Markdown 的构想&lt;em&gt;不是&lt;/em&gt;要使得 HTML 文档更容易书写。在我看来， HTML 已经很容易写了。Markdown 的理念是，能让文档更容易读、写和随意改。HTML 是一种&lt;em&gt;发布&lt;/em&gt;的格式，Markdown 是一种&lt;em&gt;书写&lt;/em&gt;的格式。就这样，Markdown 的格式语法只涵盖纯文本可以涵盖的范围。&lt;/p&gt;
-&lt;p&gt;&lt;a href="/posts/hello-markdown.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>markdown</category><category>hello</category><guid>http://mc.basebb.com/posts/hello-markdown.html</guid><pubDate>Fri, 28 Jun 2013 11:27:46 GMT</pubDate></item><item><title>reStructuredText(rst)语法简介(简体中文)</title><link>http://mc.basebb.com/posts/hello-rst.html</link><description>&lt;div class="section" id="rst"&gt;
+&lt;p class="more"&gt;&lt;a href="http://mc.basebb.com/posts/hello-markdown.html"&gt;更多…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>markdown</category><category>hello</category><guid>http://mc.basebb.com/posts/hello-markdown.html</guid><pubDate>Fri, 28 Jun 2013 11:27:46 GMT</pubDate></item><item><title>reStructuredText(rst)语法简介(简体中文)</title><link>http://mc.basebb.com/posts/hello-rst.html</link><description>&lt;div class="section" id="rst"&gt;
 &lt;h2&gt;rst语法简介&lt;/h2&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h3&gt;空行分段&lt;/h3&gt;
@@ -104,14 +104,14 @@ mike%
 &lt;div class="section" id="id3"&gt;
 &lt;h3&gt;不留白续行&lt;/h3&gt;
 &lt;p&gt;行尾转义字符让续行之间不留白。&lt;/p&gt;
-&lt;p&gt;&lt;a href="/posts/hello-rst.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><category>hello</category><category>rst</category><guid>http://mc.basebb.com/posts/hello-rst.html</guid><pubDate>Tue, 25 Jun 2013 23:35:32 GMT</pubDate></item><item><title>基督徒生活十大守则</title><link>http://mc.basebb.com/posts/ten-christian-life-code.html</link><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;你们愿意人怎样待你们，你们也要怎样待人。——路加福音六章三十一节&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="more"&gt;&lt;a href="http://mc.basebb.com/posts/hello-rst.html"&gt;更多…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><category>hello</category><category>rst</category><guid>http://mc.basebb.com/posts/hello-rst.html</guid><pubDate>Tue, 25 Jun 2013 23:35:32 GMT</pubDate></item><item><title>基督徒生活十大守则</title><link>http://mc.basebb.com/posts/ten-christian-life-code.html</link><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;你们愿意人怎样待你们，你们也要怎样待人。——路加福音六章三十一节&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;无论是玩游戏、开车或者做个可口的小菜，要成功又安全，一定得守某些规则。&lt;/p&gt;
 &lt;p&gt;我清楚记得，几年前，家宅附近马路扩大，从两线行车变成四线。在扩建期间，马路上划的那些白线没有了。有一晚，两辆车迎头相撞，死了五个人；原因是那条分开左右行车道的中央白线没有了，驾车的人失去了可循的“规则”。&lt;/p&gt;
 &lt;p&gt;圣经教训我们，基督徒有个不断生长的生命。你重生 了，生在天父的家里。我与妻子露丝现有孙儿女十六人，每个孩子都是我们的珍宝；天父眼中的你也是这样。他盼望你在基督里长大成人。要是你长来长去仍是婴儿 模样，成了一个灵性上的侏儒，那不仅违反自然律，也不合上主的旨意。《彼得后书》三章十八节劝勉基督徒一定要有长进，也就是灵性生命应该不断长大，恩典和 知识日有增加，做个成长的基督徒。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;天天读圣经&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;基督徒要灵性健康，生长顺畅，不断长进，一定得遵行某些守则。&lt;/p&gt;
-&lt;p&gt;&lt;a href="/posts/ten-christian-life-code.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>耶稣</category><category>信仰</category><category>基督</category><category>生活</category><guid>http://mc.basebb.com/posts/ten-christian-life-code.html</guid><pubDate>Fri, 08 Mar 2013 13:52:05 GMT</pubDate></item><item><title>理解iOS中的touch事件</title><link>http://mc.basebb.com/posts/how-mobile-safari-touch-event-works.html</link><description>&lt;div&gt;&lt;p&gt;touch事件是iOS中最重要的事件。&lt;/p&gt;
+&lt;p class="more"&gt;&lt;a href="http://mc.basebb.com/posts/ten-christian-life-code.html"&gt;更多…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>耶稣</category><category>信仰</category><category>基督</category><category>生活</category><guid>http://mc.basebb.com/posts/ten-christian-life-code.html</guid><pubDate>Fri, 08 Mar 2013 13:52:05 GMT</pubDate></item><item><title>理解iOS中的touch事件</title><link>http://mc.basebb.com/posts/how-mobile-safari-touch-event-works.html</link><description>&lt;div&gt;&lt;p&gt;touch事件是iOS中最重要的事件。&lt;/p&gt;
 &lt;h3&gt;一、简介&lt;/h3&gt;
 &lt;p&gt;Apple的官方文档&lt;a href="http://17.254.2.129/library/safari/#documentation/AppleApplications/Reference/SafariWebContent/HandlingEvents/HandlingEvents.html"&gt;Handling Events&lt;/a&gt;和 &lt;a href="http://developer.apple.com/library/safari/#documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Introduction/Introduction.html"&gt;Safari CSS Visual Effects Guide&lt;/a&gt;是很好的开发指南，但是里面的内容显然是针对初学者的，我在这里补充一下。&lt;/p&gt;
 &lt;p&gt;另外，Apple开发者中心有很多不错的HTML5教程与资源，例如HTML5离线存储，CSS动画，CSS 3D变换等，有兴趣的可以了解一下。 &lt;a href="http://developer.apple.com/library/safari/navigation/"&gt;http://developer.apple.com/library/safari/navigation/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="/posts/how-mobile-safari-touch-event-works.html"&gt;更多...&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>chrome</category><category>插件</category><category>下载</category><category>安装</category><guid>http://mc.basebb.com/posts/how-mobile-safari-touch-event-works.html</guid><pubDate>Tue, 13 Mar 2012 09:22:03 GMT</pubDate></item></channel></rss>
+&lt;p class="more"&gt;&lt;a href="http://mc.basebb.com/posts/how-mobile-safari-touch-event-works.html"&gt;更多…&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>chrome</category><category>插件</category><category>下载</category><category>安装</category><guid>http://mc.basebb.com/posts/how-mobile-safari-touch-event-works.html</guid><pubDate>Tue, 13 Mar 2012 09:22:03 GMT</pubDate></item></channel></rss>

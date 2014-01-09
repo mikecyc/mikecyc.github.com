@@ -1,47 +1,31 @@
-<!DOCTYPE html><html lang="zh_cn"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content=""><meta name="author" content="Mike Chen"><title>Nikola: 静态博客A.K.A引擎，我是怎样创建Shisaa.jp | 麦客园</title><link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="../assets/css/rst.css" rel="stylesheet" type="text/css"><link href="../assets/css/code.css" rel="stylesheet" type="text/css"><link href="../assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="../assets/css/theme.css" rel="stylesheet" type="text/css"><link href="../assets/css/custom.css" rel="stylesheet" type="text/css"><!--[if lt IE 9]>
+<!DOCTYPE html><html lang="zh_cn"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Mike Chen"><title>Nikola: 静态博客A.K.A引擎，我是怎样创建Shisaa.jp | 麦客园</title><link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="../assets/css/rst.css" rel="stylesheet" type="text/css"><link href="../assets/css/code.css" rel="stylesheet" type="text/css"><link href="../assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="../assets/css/theme.css" rel="stylesheet" type="text/css"><link href="../assets/css/custom.css" rel="stylesheet" type="text/css"><!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml"><link rel="icon" href="../favicon.ico" sizes="16x16"><script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?3760af2f06e2095f83b8b7e7c712b7c5";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script></head><body>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml"><link rel="icon" href="../favicon.ico" sizes="16x16"></head><body>
 <!-- Menubar -->
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
 
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
-
-            <a class="brand" href="../">麦客园</a>
-            <!-- Everything you want hidden at 940px or less, place within here -->
-            <div class="nav-collapse collapse">
-                <ul class="nav"><li><a href="../archive.html">文章归档</a>
-            </li><li><a href="../categories/index.html">文章分类</a>
-            </li><li><a href="../stories/about.html">关于作者</a>
-
-                </li></ul><ul class="nav pull-right"></ul></div>
-        </div>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../">麦客园</a>
     </div>
-</div>
-<!-- End of Menubar -->
-<div class="container-fluid" id="container-fluid">
-    <!--Body content-->
-    <div class="row-fluid">
-    <div class="span2"></div>
-    <div class="span8">
-    
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav"><li><a href="../archive.html">文章归档</a>
+                </li><li><a href="../categories/index.html">文章分类</a>
+                </li><li><a href="../stories/about.html">关于作者</a>
+
+        </li></ul><ul class="nav navbar-nav navbar-right"></ul></div><!-- /.navbar-collapse -->
+</nav><!-- End of Menubar --><div class="container">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
     <div class="postbox">
     
-    <h1>Nikola: 静态博客A.K.A引擎，我是怎样创建Shisaa.jp</h1>
+    <h1 class="p-name" itemprop="headline name">Nikola: 静态博客A.K.A引擎，我是怎样创建Shisaa.jp</h1>
 
     <hr><small>
         发表于: <time class="published" datetime="2013-08-01T18:52:05">2013-08-01 18:52</time>
@@ -49,16 +33,18 @@ var _hmt = _hmt || [];
 
         
           |  更多相关文章：
-            <a class="tag" href="../categories/web.html"><span class="badge">web</span></a>
-            <a class="tag" href="../categories/python.html"><span class="badge">python</span></a>
-            <a class="tag" href="../categories/nikola.html"><span class="badge">nikola</span></a>
+        <span itemprop="keywords">
+            <a class="tag p-category" href="../categories/web.html"><span class="badge badge-info">web</span></a>
+            <a class="tag p-category" href="../categories/python.html"><span class="badge badge-info">python</span></a>
+            <a class="tag p-category" href="../categories/nikola.html"><span class="badge badge-info">nikola</span></a>
+        </span>
 
     </small>
     <hr><h3>写在前面的话</h3>
 <p>当我在Google搜索用git做博客的时候我看到github提供了免费静态页面服务，而且提供Jekyll工具，允许用户用轻量级标记语言（比如Markdown）来写文章，然后生成博客页面。同类的工具还有Octopress。但用的是Ruby语言，在windows下安装环境特别麻烦。因我比较喜欢用Python，再继续搜索，看到了Pelican，只支持Python2.7以上版本，把本地的Python版本更新到2.7版本，好不容易安装好了Pelican环境，但发现Pelican用Makefile来管理项目，而Makefile在Windows下就是一个恶梦。最后看到了Nikola，按照官方文档很快就上手了，而且默认的样式还是特好看的，所以就最终选择了Nikola来建立静态博客。</p>
 <p>在Nikola的有一篇文章<a href="http://shisaa.jp/postset/nikola-web.html" title="Goes from installing to developing a custom theme.">Tutorial by Tim van der Linden</a>，正好解决了我对Nikola的一些问题，为了日后查阅方便，也为了能让更多母语是中文的网络爱好者认识Nikola，故翻译了这篇文章。</p>
 <hr><h3>前言</h3>
-<p>首先，非常感谢Nikola创作者Roberto Alsina，给这篇文章<a href="http://nikola.ralsina.com.ar/blog/new-nikola-tutorial.html" title="基于Nikola建立博客shisaa.jp">很高的评价</a>，并将其嵌入到Nikola文档中！</p>
+<p>首先，非常感谢Nikola创作者Roberto Alsina，给这篇文章<a href="http://getnikola.com/blog/new-nikola-tutorial.html" title="基于Nikola建立博客shisaa.jp">很高的评价</a>，并将其嵌入到Nikola文档中！</p>
 <p>当我设计Shisaa.jp的时候我花一些时间思考用怎么样的“后端”。什么样的系统建站...使用CMS吗？
 我使用Drupal有丰富的经验，这可能是我的首选......但熟悉Drupal的，也知道一些难以忽视的事实：</p>
 <ul><li>Drupal是用PHP编写的，这不是我所向往的编程语言。</li>
@@ -82,8 +68,8 @@ var _hmt = _hmt || [];
 <p>你会问：“但我将需要大量的技术知识，如果我使用这些类型的系统的话”。不，你不会的。
 这些系统只需要很少的一些配置就可以了（但系统本身可不是，为什么？），良好的工具可以让你有条不紊地进行工作！</p>
 <h3>关于Nikola</h3>
-<p>事实上我对Nikola Tesla有极大的兴趣，我很快就感觉到<a href="http://nikola.ralsina.com" title="Nikola主页">这点</a>，Nikola将是我的首选武器，它是相当快速和优雅的系统，具有不错的功能集合，而且可扩展。它还包含了一个实用的工具包来帮助你建立或创作你的网站。它甚至是多语言的！</p>
-<p>去阅读<a href="http://nikola.ralsina.com.ar/handbook.html" title="Nikola手册">Roberto Alsina的</a>Nikola手册关于这个项目背后的动机和美丽的功能并提供的工具。在该网站上，你还会发现有相当详细的指南教你如何开始建立自己的网站。尽管Roberto尽最大努力来指导你使用Nikola，但我觉得还有有点抽象，尤其在主题化上，只好自己去探索。</p>
+<p>事实上我对Nikola Tesla有极大的兴趣，我很快就感觉到<a href="http://getnikola.com/" title="Nikola主页">这点</a>，Nikola将是我的首选武器，它是相当快速和优雅的系统，具有不错的功能集合，而且可扩展。它还包含了一个实用的工具包来帮助你建立或创作你的网站。它甚至是多语言的！</p>
+<p>去阅读<a href="http://getnikola.com/handbook.html" title="Nikola手册">Roberto Alsina的</a>Nikola手册关于这个项目背后的动机和美丽的功能并提供的工具。在该网站上，你还会发现有相当详细的指南教你如何开始建立自己的网站。尽管Roberto尽最大努力来指导你使用Nikola，但我觉得还有有点抽象，尤其在主题化上，只好自己去探索。</p>
 <p>所以我现在带你进行短暂的旅行，告诉你我是如何用Nikola设置，部署和制作这个网站，基于上述原因，主要是基本设置和建立您的自定义主题。</p>
 <h3>环境设置</h3>
 <p>在进入主题之前，我们必须先配置Nikola......当然配置Nikola，我们必须配置我们的Python环境。
@@ -254,7 +240,7 @@ Mako只需要几个目录在你的主题目录里面，在那里你可以存储�
 最后 <em>messages</em> 目录包含Nokia支持的多语言文件。现在，我们将只专注于英语。</p>
 <p>让我们先从最精彩的 <em>templates</em> 目录开始。</p>
 <p>Nikola使用一组硬编码文件名的模板文件，他将会被找到。
-在Nikola的<a href="http://nikola.ralsina.com.ar/theming.html" title="基本主题化的文档">基本主题文件</a>是：</p>
+在Nikola的<a href="http://getnikola.com/theming.html" title="基本主题化的文档">基本主题文件</a>是：</p>
 <ul><li>base.tmpl</li>
 <li>index.tmpl</li>
 <li>post.tmpl</li>
@@ -442,7 +428,7 @@ shisaa框架看起来有点像这样：</p>
 
 
 <p>但 <em>content_footer</em> 这个变量从哪里来的呢？在conf.py中定义：</p>
-<div class="code"><pre><span class="n">CONTENT_FOOTER</span> <span class="o">=</span> <span class="s">'Contents &amp;copy; {date} &lt;a href="mailto:{email}"&gt;{author}&lt;/a&gt; - Powered by &lt;a href="http://nikola.ralsina.com.ar"&gt;Nikola&lt;/a&gt;'</span>
+<div class="code"><pre><span class="n">CONTENT_FOOTER</span> <span class="o">=</span> <span class="s">'Contents &amp;copy; {date} &lt;a href="mailto:{email}"&gt;{author}&lt;/a&gt; - Powered by &lt;a href="http://getnikola.com"&gt;Nikola&lt;/a&gt;'</span>
 </pre></div>
 
 
@@ -776,52 +762,40 @@ shisaa框架看起来有点像这样：</p>
 <p>很开心陆续花了3天时间翻译完了这篇文章，因英文水平和表达能力有限，有翻译不对的地方或者建议欢迎联系<a href="mailto:mike.cyc@gmail.com" title="Mike's Email">Mike Chen</a>，同时也欢迎更多喜欢Nikola的Funs一同分享心得，谢谢你的阅读！</p>
     
     <ul class="pager"><li class="previous">
-            <a href="hello-markdown.html">← 前一篇</a>
+            <a href="hello-markdown.html" rel="prev">← 前一篇</a>
         </li>
         <li class="next">
-            <a href="setup-md-notepad.html">后一篇 →</a>
+            <a href="setup-md-notepad.html" rel="next">后一篇 →</a>
         </li>
-    </ul><hr><div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
-  <a class="bds_tsina"></a>
-  <a class="bds_qzone"></a>
-  <a class="bds_tqq"></a>
-  <a class="bds_renren"></a>
-  <a class="bds_t163"></a>
-  <a class="bds_tqf"></a>
-  <a class="bds_douban"></a>
-  <a class="bds_kaixin001"></a>
-  <a class="bds_sqq"></a>
-  <a class="bds_fbook"></a>
-  <a class="bds_twi"></a>
-  <a class="bds_mshare"></a>
-  <span class="bds_more"></span>
-  </div>
-  <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6739020"></script><script type="text/javascript" id="bdshell_js"></script><script type="text/javascript">
-  document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
-  </script><div class="ds-thread" data-category="cache\posts\nikola-web.html" data-thread-key="" data-title="Nikola: 静态博客A.K.A引擎，我是怎样创建Shisaa.jp" data-author-key="" data-url="http://mc.basebb.com/posts/nikola-web.html"></div>
-      <script type="text/javascript">
-      var duoshuoQuery = {short_name:"mikecyc"};
+    </ul><div id="disqus_thread"></div>
+        <script type="text/javascript">
+        var disqus_shortname ="nikolademo";
+            var disqus_url="http://mc.basebb.com/posts/nikola-web.html";
+        var disqus_title="Nikola: \u9759\u6001\u535a\u5ba2A.K.A\u5f15\u64ce\uff0c\u6211\u662f\u600e\u6837\u521b\u5efaShisaa.jp";
+        var disqus_identifier="cache/posts/nikola-web.html";
+        var disqus_config = function () {
+            this.language = "zh_cn";
+        };
         (function() {
-          var ds = document.createElement('script');
-          ds.type = 'text/javascript';ds.async = true;
-          ds.src = 'http://static.duoshuo.com/embed.js';
-          ds.charset = 'UTF-8';
-          (document.getElementsByTagName('head')[0] 
-          || document.getElementsByTagName('body')[0]).appendChild(ds);
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-        </script></div>
+    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+    
 
     </div>
-    </div>
-    <!--End of body content-->
+
+        </div>
+        <!--End of body content-->
+
+        <footer>
+            Contents © <a href="mailto:mike.cyc@gmail.com">Mike Chen</a> - Powered by <a href="http://getnikola.com/">Nikola</a>
+        </footer></div>
 </div>
-<div class="footerbox">
-    Contents © <a href="mailto:mike.cyc@gmail.com">Mike Chen</a> - Powered by <a href="http://nikola.ralsina.com.ar">Nikola</a>
-</div>
 
 
-
-            <script src="../assets/js/jquery-1.7.2.min.js" type="text/javascript"></script><script src="../assets/js/bootstrap.min.js" type="text/javascript"></script><script src="../assets/js/jquery.colorbox-min.js" type="text/javascript"></script><script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&amp;fade=1"></script><a href="http://www.ujian.cc" style="border:0;"><img src="http://img.ujian.cc/pixel.png" alt="友荐云推荐" style="border:0;padding:0;margin:0;"></a>
-
-
-    <script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"80%",maxHeight:"80%",scalePhotos:true});</script></body></html>
+            <script src="../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="../assets/js/bootstrap.min.js" type="text/javascript"></script><script src="../assets/js/jquery.colorbox-min.js" type="text/javascript"></script><br><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script></body></html>
