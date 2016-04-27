@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /admin
-Disallow: /accounts
-Disallow: 404.html
-
-Sitemap: http://blog.basebb.com/sitemap.xml
