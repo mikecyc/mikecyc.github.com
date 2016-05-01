@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>麦客园</title><atom:link href="http://mikecyc.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link><link>http://mikecyc.github.io</link><description>集基督信仰，IT技术，生活的家园，分享生活中的点点滴滴。关注Web前端, iOS, Android, 网络技术, Linux, 开源硬件等。</description><pubDate>Wed, 06 Nov 2013 22:03:54 +0800</pubDate><generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator><language>en</language><item><title>Python字符串格式化</title><link>http://mikecyc.github.io/articles/python-string-format/</link><pubDate>Wed, 06 Nov 2013 22:03:54 +0800</pubDate><guid isPermaLink="true">http://mikecyc.github.io/articles/python-string-format/</guid><author></author><description>&lt;p&gt;在python中也有类似于c中的printf()的格式输出标记。在python中格式化输出字符串使用的是%运算符，通用的形式为&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>麦客园</title><atom:link href="http://mikecyc.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link><link>http://mikecyc.github.io</link><description>集基督信仰，IT技术，生活的家园，分享生活中的点点滴滴。关注Web前端, iOS, Android, 网络技术, Linux, 开源硬件等。</description><pubDate>Sun, 01 May 2016 08:00:00 +0800</pubDate><generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator><language>en</language><item><title>博客全新风格，新的起点</title><link>http://mikecyc.github.io/articles/hello-world/</link><pubDate>Sun, 01 May 2016 08:00:00 +0800</pubDate><guid isPermaLink="true">http://mikecyc.github.io/articles/hello-world/</guid><author></author><description>&lt;p&gt;欢迎光临麦客园全新设计定制的博客，之前使用过octopress, Pelican, Nikola，虽然也很方便地写文章，但对于我个人的网站而言，我希望它不仅仅是一个博客系统，不光能产生固定格式的文章和分类，更希望它是一个完整的CMS,能根据个人的需要定制更多的内容展现方式。&lt;/p&gt;
+&lt;!-- MORE --&gt;
+&lt;p&gt;我希望我的博客有这些功能：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;可以用多种方式写文章，如 &lt;code&gt;Markdown&lt;/code&gt;, &lt;code&gt;TeX&lt;/code&gt;, &lt;code&gt;yaml&lt;/code&gt;等方式。&lt;/li&gt;
+&lt;li&gt;相同的数据源可以生成不同风格展示页面，如演示或图表。&lt;/li&gt;
+&lt;li&gt;快速生成静态页面，直接部署到github pages.&lt;/li&gt;
+&lt;li&gt;支持插件机制，方便自己编写个人特殊的需求。&lt;/li&gt;
+&lt;li&gt;能够保护私有内容，支持根据不同的配置文件输出不同的内容。&lt;/li&gt;
+&lt;li&gt;需要能切割图片和加水印的功能。&lt;/li&gt;
+&lt;li&gt;可以即时预览页面结果，方便调试。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;因为我大部分时间都是写前端的代码，对 Javascript 比较熟悉，故看看 Node.JS 有没有什么开源的博客系统。通过 Google 查到了 Wintersmith, 一看描述就吸引了我：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Wintersmith 自称是基于 Node.js 的、灵活的、 简约的、 跨平台静态网站引擎。当然，“简约”是一个关键词 ！Wintersmith 并不适合于初学者，它比较适合中级或高级开发人员，这样运行起来才不费吹灰之力。Wintersmith 的解决方案并不是体积最小的。它用 CoffeeScript 作为开发语言，并内置了 Jade（模板标记语言） 和 Markdown 系统。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;真是太棒了，用 CoffeeScript 作为开发语言，我所喜爱的语法，像 Python 一样写 JavaScript，真是一大享受。通过扩展 Wintersmith，我已经实现了我所需要的全部功能。当然为了完成这个博客，我花了不少时间，同时通过阅读源代码让我更加体会到 Node.js 的精髓，也写了不少的插件来满足不同的需求。&lt;/p&gt;
+&lt;p&gt;这次博客的改版，相对于之前的静态网页生成器，无论从内容的生成速度上，代码的可读性上，还是可扩展性都提升了几个档次。因时间比较仓促自己写的代码比较乱，希望有时间可以把定制打造的内容管理系统源代码整理并发布到 Github 上面，敬请期待。&lt;/p&gt;
+</description></item><item><title>Python字符串格式化</title><link>http://mikecyc.github.io/articles/python-string-format/</link><pubDate>Wed, 06 Nov 2013 22:03:54 +0800</pubDate><guid isPermaLink="true">http://mikecyc.github.io/articles/python-string-format/</guid><author></author><description>&lt;p&gt;在python中也有类似于c中的printf()的格式输出标记。在python中格式化输出字符串使用的是%运算符，通用的形式为&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;格式标记字符串 % 要输出的值组
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;其中，左边部分的”格式标记字符串“可以完全和c中的一致。右边的’值组’如果有两个及以上的值则需要用小括号括起来，中间用短号隔开。重点来看左边的部分。左边部分的最简单形式为：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;%cdoe
@@ -1247,66 +1263,6 @@ _   底线
 &lt;li&gt;&lt;a href=&quot;http://www.sublimetext.com/2&quot;&gt;Sublime Text 2&lt;/a&gt; + &lt;a href=&quot;http://ttscoff.github.com/MarkdownEditing/&quot;&gt;MarkdownEditing&lt;/a&gt; / &lt;a href=&quot;http://lucifr.com/2012/07/12/markdownediting-for-sublime-text-2/&quot;&gt;教程&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;*** 如有更好的 Markdown 免费编辑器推荐，请到&lt;a href=&quot;https://gitcafe.com/riku/Markdown-Syntax-CN/tickets/1&quot;&gt;这里反馈&lt;/a&gt;，谢谢！&lt;/p&gt;
-</description></item><item><title>README</title><link>http://mikecyc.github.io/articles/hello-world/</link><pubDate>Tue, 30 Apr 2013 08:00:00 +0800</pubDate><guid isPermaLink="true">http://mikecyc.github.io/articles/hello-world/</guid><author></author><description>&lt;p&gt;Welcome to your new blog! This is the default blog template with RSS, pagination and an archive. There are other templates available – run &lt;code&gt;wintersmith new --help&lt;/code&gt; to list them.&lt;/p&gt;
-&lt;h2 id=&quot;_repeat-after-me-_-this-is-my-blog-there-are-many-like-it-but-this-one-is-mine-my-blog-is-my-best-friend-it-is-my-life-i-must-master-it-as-i-must-master-my-life-my-blog-without-me-is-useless-without-my-blog-i-am-useless-&quot;&gt;&lt;em&gt;Repeat after me:&lt;/em&gt; This is my blog. There are many like it, but this one is mine. My blog is my best friend. It is my life. I must master it as I must master my life. My blog, without me, is useless. Without my blog, I am useless.&lt;/h2&gt;
-&lt;p&gt;Good, now, the directory structure of your blog is as follows:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;├── config.json               &amp;lt;- site configuration
-├── contents
-│   ├── about.md
-│   ├── archive.json
-│   ├── articles              &amp;lt;– each article has its own directory
-│   │   ├── another-test
-│   │   │   └── index.md
-│   │   ├── bamboo-cutter
-│   │   │   ├── index.md
-│   │   │   └── taketori_monogatari.jpg
-│   │   ├── hello-world
-│   │   │   └── index.md
-│   │   ├── markdown-syntax
-│   │   │   └── index.md
-│   │   └── red-herring
-│   │       ├── banana.png
-│   │       └── index.md
-│   ├── authors               &amp;lt;- author metadata, check author.jade
-│   │   ├── baker.json
-│   │   └── the-wintersmith.json
-│   ├── css
-│   │   └── main.css
-│   └── feed.json
-├── plugins
-│   └── paginator.coffee      &amp;lt;- paginator plugin
-├── templates
-│   ├── archive.jade
-│   ├── article.jade
-│   ├── author.jade
-│   ├── feed.jade
-│   ├── index.jade
-│   └── layout.jade
-└── views
-    └── articles.coffee       &amp;lt;- view that lists articles
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Articles are sorted by date and 3 are shown per page, you can configure this and more in config.json. Check paginator.coffee for all options related to pagination, most plugins also have their own options.&lt;/p&gt;
-&lt;h3 id=&quot;a-typical-article&quot;&gt;A typical article&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-markdown&quot;&gt;&lt;span class=&quot;horizontal_rule&quot;&gt;---&lt;/span&gt;
-title: Hear me blog
-author: johndoe
-&lt;span class=&quot;header&quot;&gt;date: 2012-12-12 12:12
----&lt;/span&gt;
-
-This will be shown as the article excerpt.
-
-&lt;span class=&quot;header&quot;&gt;## A h2, hr or &amp;lt;span class=&quot;more&quot;&amp;gt; marks where the intro cuts off&lt;/span&gt;
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;links-in-the-markdown-to-other-items-in-the-content-tree-will-be-resolved-for-you-&quot;&gt;Links in the markdown to other items in the content tree will be resolved for you.&lt;/h2&gt;
-&lt;p&gt;For example a link to &lt;code&gt;../bamboo-cutter/index.md&lt;/code&gt; resolves to &lt;a href=&quot;http://mikecyc.github.io/articles/bamboo-cutter/index.md&quot;&gt;&lt;code&gt;/articles/bamboo-cutter/&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;This is where I leave you to your own devices. Join &lt;strong&gt;#wintersmith&lt;/strong&gt; on freenode if you have any questions.&lt;/p&gt;
 </description></item><item><title>基督徒生活十大守则</title><link>http://mikecyc.github.io/articles/ten-christian-life-code/</link><pubDate>Fri, 08 Mar 2013 13:52:05 +0800</pubDate><guid isPermaLink="true">http://mikecyc.github.io/articles/ten-christian-life-code/</guid><author></author><description>&lt;p&gt;&lt;strong&gt;你们愿意人怎样待你们，你们也要怎样待人。——路加福音六章三十一节&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;无论是玩游戏、开车或者做个可口的小菜，要成功又安全，一定得守某些规则。&lt;/p&gt;
 &lt;p&gt;我清楚记得，几年前，家宅附近马路扩大，从两线行车变成四线。在扩建期间，马路上划的那些白线没有了。有一晚，两辆车迎头相撞，死了五个人；原因是那条分开左右行车道的中央白线没有了，驾车的人失去了可循的“规则”。&lt;/p&gt;
