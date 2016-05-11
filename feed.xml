@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>麦客园</title><atom:link href="http://mikecyc.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link><link>http://mikecyc.github.io</link><description>集基督信仰，IT技术，生活的家园，分享生活中的点点滴滴。关注Web前端, iOS, Android, 网络技术, Linux, 开源硬件等。</description><pubDate>Tue, 10 May 2016 00:00:00 +0800</pubDate><generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator><language>en</language><item><title>我为什么喜爱 CoffeeScript</title><link>http://mikecyc.github.io/articles/why-i-love-coffeescript/</link><pubDate>Tue, 10 May 2016 00:00:00 +0800</pubDate><guid isPermaLink="true">http://mikecyc.github.io/articles/why-i-love-coffeescript/</guid><author></author><description>&lt;p&gt;我已经写了近10年的 JavaScript 代码了，对 JavaScript 的语法已经非常熟悉了，但当我某一天忽然见到 CoffeeScript 的时候，却一见钟情，为什么呢？&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>麦客园</title><atom:link href="http://mikecyc.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link><link>http://mikecyc.github.io</link><description>集基督信仰，IT技术，生活的家园，分享生活中的点点滴滴。关注Web前端, iOS, Android, 网络技术, Linux, 开源硬件等。</description><pubDate>Wed, 11 May 2016 08:00:00 +0800</pubDate><generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator><language>en</language><item><title>如何进行海淘（海外购物）</title><link>http://mikecyc.github.io/articles/online-shopping-overseas/</link><pubDate>Wed, 11 May 2016 08:00:00 +0800</pubDate><guid isPermaLink="true">http://mikecyc.github.io/articles/online-shopping-overseas/</guid><author></author><description>&lt;p&gt;海淘一词越来越流行，尤其是在白领阶层里，相信许多人也是想海淘一次，可是缺乏经验，不知道如何下手。相信有过海淘经验的朋友一定知道，许多国外的商城是不支持国内IP直接购买的。这时候就必须得用到VPN或者SSH，以达到更换IP的目的。如果你没有这样的工具，请到得自由 &lt;a href=&quot;http://devpn.info/&quot;&gt;devpn.info&lt;/a&gt; 获取，密码有效期一小时，可以连续获取。若直接使用国内IP购买，有可能出现以下几种情况：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;砍单，这是最常见的；&lt;/li&gt;
+&lt;li&gt;无法访问该站点进行下单；&lt;/li&gt;
+&lt;li&gt;账号被删 等结果。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下面我们来看看如何进行海淘:&lt;/p&gt;
+&lt;h2 id=&quot;1-&quot;&gt;1、注册“转运”&lt;/h2&gt;
+&lt;p&gt;大多数海外的B2C商家不支持直接发货到中国，即使支持，运费也不菲。转运公司可解决这一难题，它可以提供一个消费者专属海外收货地址，在海外代收商品后转发到国内，收取一定服务费用。美国在线零售市场繁荣，人民币对美元越来越划算，目前海外购以美国商家居多，大多数转运公司提供美国转运服务。比较有名的转运公司列表（风雷、百通、天翼、飞洋、久禾、瑞天、同舟、QQ-EX、友家、先锋等）。各家转运公司收费不一，清关速度略有差异，功能却大致相同。注册转运公司网站账号后，消费者可以在主页找到自己在美国的收货地址，各家操作大同小异。&lt;/p&gt;
+&lt;h2 id=&quot;2-&quot;&gt;2、开始海淘&lt;/h2&gt;
+&lt;p&gt;海淘之前，最好准备一张双币信用卡（Master、Visa、American Express、JCB等均可）。不少海外商家支持国内信用卡支付，例如最著名的Amazon（美国亚马逊），但也有部分商家不支持国内信用卡，这些商家我们就只能放弃了。购物方式与国内B2C差不多，只是在订单支付环节略有不同。基本流程为：注册-登录-添加商品至购物车-开始结算-填写收货地址（即转运公司提供的专属海外收货地址）-填写支付方式-确认订单-收到订单确认邮件。付款方式通常是信用卡支付，填写自己的卡号、姓名、有效期、cvv安全码即可。&lt;/p&gt;
+&lt;p&gt;友情提示：部分网站会预授权1美元用来测试信用卡的有效性，不必担心，这1美元不会体现在账单中。&lt;/p&gt;
+&lt;p&gt;Amazon是美国最大的B2C商城，产品种类繁多，价格通常较有优势，而且不对国内用户有任何限制，是海淘的首选网站。由于海淘需要一定的语言基础，而美国亚马逊同亚马逊中国网页样式、操作方法等方面基本一致，故建议网友们从Amazon入手开始自己的海淘之旅，同时也可在英语水平较好或有英语水平较好朋友的帮助下进行操作，或使用翻译工具临时解决问题。&lt;/p&gt;
+&lt;h2 id=&quot;3-&quot;&gt;3、收发转运&lt;/h2&gt;
+&lt;p&gt;支付订单几天后，转运公司网站可以查询海外收货地址/仓库是否收到货物，如果不放心或者迟迟未入库，可以查询网购商家的订单详情中的快递编号，然后到相应快递网站（例如UPS等）查询快递详情，必要时记录下运单号码与转运公司核实。&lt;/p&gt;
+&lt;p&gt;友情提示：部分转运公司需要手工入库，这就需要网友在转运公司网站的个人中心中手动输入自己的运单号码。&lt;/p&gt;
+&lt;p&gt;各家转运公司接下来的操作略有不同，但不外乎给转运公司的账户汇充足额转运费用、登记填写国内收货地址、确认转运公司入库单、核实称重（运费通常都以重量为依据）、提交转运申请、计算费用并扣款等。全部操作完成后，就可以等待商品到国内了。通常后台都会有一个跟踪运单页面，可以查看运单实时状态，了解送达时间。&lt;/p&gt;
+&lt;p&gt;友情提示：有的转运公司需要预先充值才能使用其服务，可以适当多充一些，预防因费用不足延误收货时间。各转运公司都有详细的流程介绍，也有相关的论坛讨论相关问题，网友们不必过于担心流程繁琐，实际操作一次就可以明了。&lt;/p&gt;
+&lt;h2 id=&quot;4-&quot;&gt;4、清关“入手”&lt;/h2&gt;
+&lt;p&gt;海淘的产品必须清关才可进入国内配送环节。中华人民共和国海关总署《关于调整进出境个人邮递物品管理措施有关事宜》规定，自2010年9月1日起，取消过去对个人邮递物品的免税额，并且对邮递进境物品应缴进口税超过50元人民币的一律按商品价值全额征税。如果如被抽到需要缴纳关税履行义务，有可能导致到货时间延长。不过，消费者不需要懊恼，依法纳税是每个公民应尽的义务。海淘的产品通常算上关税也比国内购买的价格划算的多。如果产生关税，转运公司客服会电话或邮件通知你，充值后由转运公司代缴，货品被海关强制没收的可能性非常小。&lt;/p&gt;
+&lt;p&gt;转运公司在国内通常使用EMS作为快递方式，也有部分使用中通、圆通等快递的。通常在转运网站的后台中可以查询到国内快递单号，用户可以根据单号在特快专递网站查询到包裹的实时状态。一旦国内快递运单号能查到状态，商品“入手”也就是2-3天的事情了。&lt;/p&gt;
+&lt;h2 id=&quot;5-&quot;&gt;5、海淘总结&lt;/h2&gt;
+&lt;p&gt;海淘虽然很有诱惑力，但仅适合部分产品不在大陆销售的产品（例如Kindle电子书阅读器等）以及与国内同型号产品价差较大的商品。然而一些过重的产品可能会因为转运费用抵消掉国内外的价差，海淘就不划算了。另外，应避免购买类似香水、喷雾类气压罐等海关禁运的产品。最后需要提醒的是，海淘需要一些耐心，海淘周期通常需要2周或20个工作日，这是非常正常的事情，如果有问题可以随时与转运公司或商家进行沟通。除此之外，若海淘产品有故障，返修不便也是不得不面对的问题。&lt;/p&gt;
+&lt;p&gt;注意事项：&lt;/p&gt;
+&lt;p&gt;a. 部分网站有自己的Gift card（礼品券）系统，可以用来抵用现金。大家接触到较多的是Amazon的Gift card。由于网络市场上存在较多黑卡（盗刷信用卡所得），我们不建议用户去淘宝购买，而且，在人民币兑美元越来越划算的情况下，购买礼品券的繁琐和风险，相比于省的那点钱已经不再有优势。
+b. 每个网站都有自己的免美国境内运费政策，例如Amazon满25美元可享受免运费、Timberland等品牌官网不时的有免运费活动。Amazon提供的Free Shipping（免运费）服务，通常需要5-7个工作日到达美国的收货地址。如果急需，新用户可以选择试用Amazon Prime（亚马逊优先服务），该服务每个用户可以免费试用一个月。通常而言，这项服务以包年形式出现，支付年费79美元，无论每次消费额为多少，均可享受免费2日送达服务。
+友情提示：选择试用后，一定要记得去Amazon后台的“Prime服务自动续费”处关闭自动续费，否则1个月之后信用卡就自动划走年费。
+c. 由于商品包装较重，商品较多的时候，可以通过合箱节省运费。例如一个1.1磅的电子书和0.3磅的耳机，如果原箱转运需要付2磅+1磅=3磅的运费，申请合箱后，转运公司的工作人员会拆开货物包装，把两件物品放在一起后重新打包称重，这样只需要2磅的运费。但合箱操作可能会带来收货的延迟，特别是在黑色星期五等转运公司不堪重负的时候，尽量不要提交合箱操作。部分转运还提供诸如加固、塞报纸等附加服务，这些服务可能需收取一定费用。 &lt;/p&gt;
+</description></item><item><title>我为什么喜爱 CoffeeScript</title><link>http://mikecyc.github.io/articles/why-i-love-coffeescript/</link><pubDate>Tue, 10 May 2016 00:00:00 +0800</pubDate><guid isPermaLink="true">http://mikecyc.github.io/articles/why-i-love-coffeescript/</guid><author></author><description>&lt;p&gt;我已经写了近10年的 JavaScript 代码了，对 JavaScript 的语法已经非常熟悉了，但当我某一天忽然见到 CoffeeScript 的时候，却一见钟情，为什么呢？&lt;/p&gt;
 &lt;h2 id=&quot;javascript-&quot;&gt;JavaScript 陷阱&lt;/h2&gt;
 &lt;p&gt;JavaScript 让人又爱又恨，因为它独特，卓越，而且不可或缺。JavaScript 现在如日中天， 未来发展更是不可小觑。 但毕竟它的设计非常仓促, 有些陷阱, 有些晦涩。当定义变量没有加 var 关系字在前面的时候，当前的变量就是全局的啦，这是一个很大的陷阱。&lt;/p&gt;
 &lt;h2 id=&quot;javascript-&quot;&gt;JavaScript 没有美感&lt;/h2&gt;
