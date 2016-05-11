@@ -1,0 +1,67 @@
+{
+  "debug": false,
+  "locals": {
+    "url": "https://mikecyc.github.io",
+    "name": "麦客园",
+    "owner": "Mike",
+    "mail": "mike.cyc@gmail.com",
+    "keywords": "信仰, 创业, 经验, 开源, c/c++, python, nodejs, javascript, linux, mac, ios, android",
+    "description": "集基督信仰，IT技术，生活的家园，分享生活中的点点滴滴。关注Web前端, iOS, Android, 网络技术, Linux, 开源硬件等。",
+    "dateFormat": "YYYY年MM月DD日"
+  },
+  "navigation": ["", "articles/", "opensource/", "laboratory/", "about/"],
+  "links": [
+    ["网上圣经", "http://rcuv.hkbs.org.hk/"],
+    ["赞美诗", "http://www.zanmeishi.com/"],
+    ["得自由", "http://devpn.info/"]
+  ],
+  "defaultTemplate": "article.jade",
+  "articleTitle": "文章随笔",
+  "plugins": [
+    "./plugins/paginator.js",
+    "./plugins/tag.js",
+    "./plugins/images.js",
+    "./plugins/icon.js",
+    "./plugins/markdown2.js",
+    "./plugins/yaml.js",
+    "./plugins/home.js",
+    "./plugins/resume.js"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr",
+    "pinyin": "pinyin"
+  },
+  "jade": {
+    "pretty": false
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "paginator": {
+    "perPage": 5,
+    "template": "articles.jade",
+    "first": "articles/index.html",
+    "filename": "articles/page%d.html"
+  },
+  "tag": {
+    "filename": "articles/tags/%s/%d.html",
+    "first": "articles/tags/%s/index.html"
+  },
+  "testpage":{
+  },
+  "images": {
+    "defaultSize": [750],
+    "iconSize": [750, 280],
+    "opensourceSize": [220, 220],
+    "laboratorySize": [200, 200],
+    "defaultMark": "./design/mark.png"
+  },
+  "icon": [750, 280],
+  "home": {
+    "bigSize": [555, 350],
+    "smallSize": [358, 230]
+  }
+}
