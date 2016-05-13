@@ -1,4 +1,109 @@
-<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>麦客园</title><atom:link href="https://mikecyc.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link><link>https://mikecyc.github.io</link><description>集基督信仰，IT技术，生活的家园，分享生活中的点点滴滴。关注Web前端, iOS, Android, 网络技术, Linux, 开源硬件等。</description><pubDate>Thu, 12 May 2016 00:00:00 +0800</pubDate><generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator><language>en</language><item><title>Hybrid App开发实战</title><link>https://mikecyc.github.io/articles/hybrid-app-development-combat/</link><pubDate>Thu, 12 May 2016 00:00:00 +0800</pubDate><guid isPermaLink="true">https://mikecyc.github.io/articles/hybrid-app-development-combat/</guid><author></author><description>&lt;p&gt;近年来随着移动设备类型的变多，操作系统的变多，用户需求的增加，对于每个项目启动前，大家都会考虑到的成本，团队成员，技术成熟度，时间，项目需求等一堆的因素。因此，开发App的方案已经变得越来越多了。曾经有一段HTML5的小浪潮，无数的人参与或者看到过一个讨论：原生开发还是混合开发，又或者是Web开发？到底最佳实践是怎样的，笔者认为只有实践过的人才会知道。尤其是在这个充满各种变数的移动互联网时代。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>麦客园</title><atom:link href="https://mikecyc.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link><link>https://mikecyc.github.io</link><description>集基督信仰，IT技术，生活的家园，分享生活中的点点滴滴。关注Web前端, iOS, Android, 网络技术, Linux, 开源硬件等。</description><pubDate>Sat, 14 May 2016 00:00:00 +0800</pubDate><generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator><language>en</language><item><title>互联网网站的反爬虫策略浅析</title><link>https://mikecyc.github.io/articles/anti-crawler-strategy/</link><pubDate>Sat, 14 May 2016 00:00:00 +0800</pubDate><guid isPermaLink="true">https://mikecyc.github.io/articles/anti-crawler-strategy/</guid><author></author><description>&lt;p&gt;因为搜索引擎的流行，网络爬虫已经成了很普及网络技术，除了专门做搜索的Google，Yahoo，微软，百度以外，几乎每个大型门户网站都有自己的搜索引擎，大大小小叫得出来名字得就几十种，还有各种不知名的几千几万种，对于一个内容型驱动的网站来说，受到网络爬虫的光顾是不可避免的。&lt;/p&gt;
+&lt;p&gt;一些智能的搜索引擎爬虫的爬取频率比较合理，对网站资源消耗比较少，但是很多糟糕的网络爬虫，对网页爬取能力很差，经常并发几十上百个请求循环重复抓取，这种爬虫对中小型网站往往是毁灭性打击，特别是一些缺乏爬虫编写经验的程序员写出来的爬虫破坏力极强，造成的网站访问压力会非常大，会导致网站访问速度缓慢，甚至无法访问。&lt;/p&gt;
+&lt;h2 id=&quot;-&quot;&gt;手工识别和拒绝爬虫的访问&lt;/h2&gt;
+&lt;p&gt;相当多的爬虫对网站会造成非常高的负载，因此识别爬虫的来源IP是很容易的事情。最简单的办法就是用netstat检查80端口的连接：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;netstat -nt | grep youhostip:&lt;span class=&quot;number&quot;&gt;80&lt;/span&gt; | awk &lt;span class=&quot;string&quot;&gt;'{print $5}'&lt;/span&gt; | awk -F&lt;span class=&quot;string&quot;&gt;&quot;:&quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;'{print $1}'&lt;/span&gt;| sort | uniq -c | sort -r -n
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这行shell可以按照80端口连接数量对来源IP进行排序，这样可以直观的判断出来网页爬虫。一般来说爬虫的并发连接非常高。&lt;/p&gt;
+&lt;p&gt;如果使用lighttpd做Web Server，那么就更简单了。lighttpd的mod_status提供了非常直观的并发连接的信息，包括每个连接的来源IP，访问的URL，连接状态和连接时间等信息，只要检查那些处于handle-request状态的高并发IP就可以很快确定爬虫的来源IP了。&lt;/p&gt;
+&lt;p&gt;拒绝爬虫请求既可以通过内核防火墙来拒绝，也可以在web server拒绝，比方说用iptables拒绝：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;iptables -A INPUT -i eth0 -j DROP -p tcp --dport &lt;span class=&quot;number&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;84.80&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;46.0&lt;/span&gt;/&lt;span class=&quot;number&quot;&gt;24&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;直接封锁爬虫所在的C网段地址。这是因为一般爬虫都是运行在托管机房里面，可能在一个C段里面的多台服务器上面都有爬虫，而这个C段不可能是用户宽带上网，封锁C段可以很大程度上解决问题。&lt;/p&gt;
+&lt;h2 id=&quot;-user-agent-&quot;&gt;通过识别爬虫的User-Agent信息来拒绝爬虫&lt;/h2&gt;
+&lt;p&gt;有很多爬虫并不会以很高的并发连接爬取，一般不容易暴露自己；有些爬虫的来源IP分布很广，很难简单的通过封锁IP段地址来解决问题；另外还有很多各种各样的小爬虫，它们在尝试Google以外创新的搜索方式，每个爬虫每天爬取几万的网页，几十个爬虫加起来每天就能消耗掉上百万动态请求的资源，由于每个小爬虫单独的爬取量都很低，所以你很难把它从每天海量的访问IP地址当中把它准确的挖出来。&lt;/p&gt;
+&lt;p&gt;这种情况下我们可以通过爬虫的User-Agent信息来识别。每个爬虫在爬取网页的时候，会声明自己的User-Agent信息，因此我们就可以通过记录和分析User-Agent信息来挖掘和封锁爬虫。我们需要记录每个请求的User-Agent信息，对于Rails来说我们可以简单的在app/controllers/application.rb里面添加一个全局的before_filter，来记录每个请求的User-Agent信息：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;logger.info &lt;span class=&quot;string&quot;&gt;&quot;HTTP_USER_AGENT #{request.env[&quot;&lt;/span&gt;HTTP_USER_AGENT&lt;span class=&quot;string&quot;&gt;&quot;]}&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后统计每天的production.log，抽取User-Agent信息，找出访问量最大的那些User-Agent。要注意的是我们只关注那些爬虫的User-Agent信息，而不是真正浏览器User-Agent，所以还要排除掉浏览器User-Agent，要做到这一点仅仅需要一行shell：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;grep HTTP_USER_AGENT production.log | grep -v -E &lt;span class=&quot;string&quot;&gt;'MSIE|Firefox|Chrome|Opera|Safari|Gecko'&lt;/span&gt; | sort | uniq -c | sort -r -n | head -n &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt; &amp;gt; bot.log
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;统计结果类似这样：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;  &lt;span class=&quot;number&quot;&gt;57335&lt;/span&gt; HTTP_USER_AGENT Baiduspider+(+http://www.baidu.com/search/spider.htm)
+  &lt;span class=&quot;number&quot;&gt;56639&lt;/span&gt; HTTP_USER_AGENT Mozilla/&lt;span class=&quot;number&quot;&gt;5.0&lt;/span&gt; (compatible; Googlebot/&lt;span class=&quot;number&quot;&gt;2.1&lt;/span&gt;; +http://www.google.com/bot.html)
+  &lt;span class=&quot;number&quot;&gt;42610&lt;/span&gt; HTTP_USER_AGENT Mediapartners-Google
+  &lt;span class=&quot;number&quot;&gt;19131&lt;/span&gt; HTTP_USER_AGENT msnbot/&lt;span class=&quot;number&quot;&gt;2.0&lt;/span&gt;b (+http://search.msn.com/msnbot.htm)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;从日志就可以直观的看出每个爬虫的请求次数。要根据User-Agent信息来封锁爬虫是件很容易的事情，lighttpd配置如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$HTTP&lt;/span&gt;[&lt;span class=&quot;string&quot;&gt;&quot;useragent&quot;&lt;/span&gt;] =~ &lt;span class=&quot;string&quot;&gt;&quot;qihoobot|^Java|Commons-HttpClient|Wget|^PHP|Ruby|Python&quot;&lt;/span&gt; {
+  url.rewrite = ( &lt;span class=&quot;string&quot;&gt;&quot;^/(.*)&quot;&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;/crawler.html&quot;&lt;/span&gt; )
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用这种方式来封锁爬虫虽然简单但是非常有效，除了封锁特定的爬虫，还可以封锁常用的编程语言和HTTP类库的User-Agent信息，这样就可以避免很多无谓的程序员用来练手的爬虫程序对网站的骚扰。&lt;/p&gt;
+&lt;p&gt;还有一种比较常见的情况，就是某个搜索引擎的爬虫对网站爬取频率过高，但是搜索引擎给网站带来了很多流量，我们并不希望简单的封锁爬虫，仅仅是希望降低爬虫的请求频率，减轻爬虫对网站造成的负载，那么我们可以这样做：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$HTTP&lt;/span&gt;[&lt;span class=&quot;string&quot;&gt;&quot;user-agent&quot;&lt;/span&gt;] =~ &lt;span class=&quot;string&quot;&gt;&quot;Baiduspider+&quot;&lt;/span&gt; {
+    connection.delay-seconds = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;对百度的爬虫请求延迟10秒钟再进行处理，这样就可以有效降低爬虫对网站的负载了。&lt;/p&gt;
+&lt;h2 id=&quot;-&quot;&gt;通过网站流量统计系统和日志分析来识别爬虫&lt;/h2&gt;
+&lt;p&gt;有些爬虫喜欢修改User-Agent信息来伪装自己，把自己伪装成一个真实浏览器的User-Agent信息，让你无法有效的识别。这种情况下我们可以通过网站流量系统记录的真实用户访问IP来进行识别。&lt;/p&gt;
+&lt;p&gt;主流的网站流量统计系统不外乎两种实现策略：一种策略是在网页里面嵌入一段js，这段js会向特定的统计服务器发送请求的方式记录访问量；另一种策略是直接分析服务器日志，来统计网站访问量。在理想的情况下，嵌入js的方式统计的网站流量应该高于分析服务器日志，这是因为用户浏览器会有缓存，不一定每次真实用户访问都会触发服务器的处理。但实际情况是，分析服务器日志得到的网站访问量远远高于嵌入js方式，极端情况下，甚至要高出10倍以上。&lt;/p&gt;
+&lt;p&gt;现在很多网站喜欢采用awstats来分析服务器日志，来计算网站的访问量，但是当他们一旦采用Google Analytics来统计网站流量的时候，却发现GA统计的流量远远低于awstats，为什么GA和awstats统计会有这么大差异呢？罪魁祸首就是把自己伪装成浏览器的网络爬虫。这种情况下awstats无法有效的识别了，所以awstats的统计数据会虚高。&lt;/p&gt;
+&lt;p&gt;其实作为一个网站来说，如果希望了解自己的网站真实访问量，希望精确了解网站每个频道的访问量和访问用户，应该用页面里面嵌入js的方式来开发自己的网站流量统计系统。自己做一个网站流量统计系统是件很简单的事情，写段服务器程序响应客户段js的请求，分析和识别请求然后写日志的同时做后台的异步统计就搞定了。&lt;/p&gt;
+&lt;p&gt;通过流量统计系统得到的用户IP基本是真实的用户访问，因为一般情况下爬虫是无法执行网页里面的js代码片段的。所以我们可以拿流量统计系统记录的IP和服务器程序日志记录的IP地址进行比较，如果服务器日志里面某个IP发起了大量的请求，在流量统计系统里面却根本找不到，或者即使找得到，可访问量却只有寥寥几个，那么无疑就是一个网络爬虫。&lt;/p&gt;
+&lt;p&gt;分析服务器日志统计访问最多的IP地址段一行shell就可以了：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;grep Processing production.log | awk &lt;span class=&quot;string&quot;&gt;'{print $4}'&lt;/span&gt; | awk -F&lt;span class=&quot;string&quot;&gt;'.'&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;'{print $1&quot;.&quot;$2&quot;.&quot;$3&quot;.0&quot;}'&lt;/span&gt; | sort | uniq -c | sort -r -n | head -n &lt;span class=&quot;number&quot;&gt;200&lt;/span&gt; &amp;gt; &lt;span class=&quot;built_in&quot;&gt;stat&lt;/span&gt;_ip.log
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后把统计结果和流量统计系统记录的IP地址进行对比，排除真实用户访问IP，再排除我们希望放行的网页爬虫，比方Google，百度，微软msn爬虫等等。最后的分析结果就就得到了爬虫的IP地址了。以下代码段是个简单的实现示意：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;whitelist = []
+IO.foreach(&lt;span class=&quot;string&quot;&gt;&quot;#{RAILS_ROOT}/lib/whitelist.txt&quot;&lt;/span&gt;) { |line| whitelist &amp;lt;&amp;lt; line.split[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;].strip &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; line }
+
+realiplist = []
+IO.foreach(&lt;span class=&quot;string&quot;&gt;&quot;#{RAILS_ROOT}/log/visit_ip.log&quot;&lt;/span&gt;) { |line|  realiplist &amp;lt;&amp;lt; line.strip &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; line }
+
+iplist = []
+IO.foreach(&lt;span class=&quot;string&quot;&gt;&quot;#{RAILS_ROOT}/log/stat_ip.log&quot;&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt; |line|
+  ip = line.split[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;].strip
+  iplist &amp;lt;&amp;lt; ip &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; line.split[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;].to_i &amp;gt; &lt;span class=&quot;number&quot;&gt;3000&lt;/span&gt; &amp;amp;&amp;amp; !whitelist.include?(ip) &amp;amp;&amp;amp; !realiplist.include?(ip)
+end
+
+Report.deliver_crawler(iplist)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;分析服务器日志里面请求次数超过3000次的IP地址段，排除白名单地址和真实访问IP地址，最后得到的就是爬虫IP了，然后可以发送邮件通知管理员进行相应的处理。&lt;/p&gt;
+&lt;h2 id=&quot;-&quot;&gt;网站的实时反爬虫防火墙实现策略&lt;/h2&gt;
+&lt;p&gt;通过分析日志的方式来识别网页爬虫不是一个实时的反爬虫策略。如果一个爬虫非要针对你的网站进行处心积虑的爬取，那么他可能会采用分布式爬取策略，比方说寻找几百上千个国外的代理服务器疯狂的爬取你的网站，从而导致网站无法访问，那么你再分析日志是不可能及时解决问题的。所以必须采取实时反爬虫策略，要能够动态的实时识别和封锁爬虫的访问。&lt;/p&gt;
+&lt;p&gt;要自己编写一个这样的实时反爬虫系统其实也很简单。比方说我们可以用memcached来做访问计数器，记录每个IP的访问频度，在单位时间之内，如果访问频率超过一个阀值，我们就认为这个IP很可能有问题，那么我们就可以返回一个验证码页面，要求用户填写验证码。如果是爬虫的话，当然不可能填写验证码，所以就被拒掉了，这样很简单就解决了爬虫问题。&lt;/p&gt;
+&lt;p&gt;用memcache记录每个IP访问计数，单位时间内超过阀值就让用户填写验证码，用Rails编写的示例代码如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-ruby&quot;&gt;ip_counter = &lt;span class=&quot;constant&quot;&gt;Rails&lt;/span&gt;.cache.increment(request.remote_ip)
+&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; !ip_counter
+  &lt;span class=&quot;constant&quot;&gt;Rails&lt;/span&gt;.cache.write(request.remote_ip, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;symbol&quot;&gt;:expires_in&lt;/span&gt; =&amp;gt; &lt;span class=&quot;number&quot;&gt;30&lt;/span&gt;.minutes)
+&lt;span class=&quot;keyword&quot;&gt;elsif&lt;/span&gt; ip_counter &amp;gt; &lt;span class=&quot;number&quot;&gt;2000&lt;/span&gt;
+  render &lt;span class=&quot;symbol&quot;&gt;:template&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;'test'&lt;/span&gt;, &lt;span class=&quot;symbol&quot;&gt;:status&lt;/span&gt; =&amp;gt; &lt;span class=&quot;number&quot;&gt;401&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这段程序只是最简单的示例，实际的代码实现我们还会添加很多判断，比方说我们可能要排除白名单IP地址段，要允许特定的User-Agent通过，要针对登录用户和非登录用户，针对有无referer地址采取不同的阀值和计数加速器等等。&lt;/p&gt;
+&lt;p&gt;此外如果分布式爬虫爬取频率过高的话，过期就允许爬虫再次访问还是会对服务器造成很大的压力，因此我们可以添加一条策略：针对要求用户填写验证码的IP地址，如果该IP地址短时间内继续不停的请求，则判断为爬虫，加入黑名单，后续请求全部拒绝掉。为此，示例代码可以改进一下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-ruby&quot;&gt;before_filter &lt;span class=&quot;symbol&quot;&gt;:ip_firewall&lt;/span&gt;, &lt;span class=&quot;symbol&quot;&gt;:except&lt;/span&gt; =&amp;gt; &lt;span class=&quot;symbol&quot;&gt;:test&lt;/span&gt;
+&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ip_firewall&lt;/span&gt;&lt;/span&gt;
+  render &lt;span class=&quot;symbol&quot;&gt;:file&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;subst&quot;&gt;#{&lt;span class=&quot;constant&quot;&gt;RAILS_ROOT&lt;/span&gt;}&lt;/span&gt;/public/403.html&quot;&lt;/span&gt;, &lt;span class=&quot;symbol&quot;&gt;:status&lt;/span&gt; =&amp;gt; &lt;span class=&quot;number&quot;&gt;403&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;constant&quot;&gt;BlackList&lt;/span&gt;.&lt;span class=&quot;keyword&quot;&gt;include&lt;/span&gt;?(ip_sec)
+&lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们可以定义一个全局的过滤器，对所有请求进行过滤，出现在黑名单的IP地址一律拒绝。对非黑名单的IP地址再进行计数和统计：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-ruby&quot;&gt;ip_counter = &lt;span class=&quot;constant&quot;&gt;Rails&lt;/span&gt;.cache.increment(request.remote_ip)
+&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; !ip_counter
+  &lt;span class=&quot;constant&quot;&gt;Rails&lt;/span&gt;.cache.write(request.remote_ip, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;symbol&quot;&gt;:expires_in&lt;/span&gt; =&amp;gt; &lt;span class=&quot;number&quot;&gt;30&lt;/span&gt;.minutes)
+&lt;span class=&quot;keyword&quot;&gt;elsif&lt;/span&gt; ip_counter &amp;gt; &lt;span class=&quot;number&quot;&gt;2000&lt;/span&gt;
+  crawler_counter = &lt;span class=&quot;constant&quot;&gt;Rails&lt;/span&gt;.cache.increment(&lt;span class=&quot;string&quot;&gt;&quot;crawler/&lt;span class=&quot;subst&quot;&gt;#{request.remote_ip}&lt;/span&gt;&quot;&lt;/span&gt;)
+  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; !crawler_counter
+    &lt;span class=&quot;constant&quot;&gt;Rails&lt;/span&gt;.cache.write(&lt;span class=&quot;string&quot;&gt;&quot;crawler/&lt;span class=&quot;subst&quot;&gt;#{request.remote_ip}&lt;/span&gt;&quot;&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;symbol&quot;&gt;:expires_in&lt;/span&gt; =&amp;gt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;.minutes)
+  &lt;span class=&quot;keyword&quot;&gt;elsif&lt;/span&gt; crawler_counter &amp;gt; &lt;span class=&quot;number&quot;&gt;50&lt;/span&gt;
+    &lt;span class=&quot;constant&quot;&gt;BlackList&lt;/span&gt;.add(ip_sec)
+    render &lt;span class=&quot;symbol&quot;&gt;:file&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;subst&quot;&gt;#{&lt;span class=&quot;constant&quot;&gt;RAILS_ROOT&lt;/span&gt;}&lt;/span&gt;/public/403.html&quot;&lt;/span&gt;, &lt;span class=&quot;symbol&quot;&gt;:status&lt;/span&gt; =&amp;gt; &lt;span class=&quot;number&quot;&gt;403&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;
+  &lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;
+  render &lt;span class=&quot;symbol&quot;&gt;:template&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;'test'&lt;/span&gt;, &lt;span class=&quot;symbol&quot;&gt;:status&lt;/span&gt; =&amp;gt; &lt;span class=&quot;number&quot;&gt;401&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果某个IP地址单位时间内访问频率超过阀值，再增加一个计数器，跟踪他会不会立刻填写验证码，如果他不填写验证码，在短时间内还是高频率访问，就把这个IP地址段加入黑名单，除非用户填写验证码激活，否则所有请求全部拒绝。这样我们就可以通过在程序里面维护黑名单的方式来动态的跟踪爬虫的情况，甚至我们可以自己写个后台来手工管理黑名单列表，了解网站爬虫的情况。&lt;/p&gt;
+&lt;p&gt;关于这个通用反爬虫的功能，我们开发一个开源的插件：&lt;a href=&quot;https://github.com/csdn-dev/limiter&quot;&gt;https://github.com/csdn-dev/limiter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这个策略已经比较智能了，但是还不够好！我们还可以继续改进：&lt;/p&gt;
+&lt;p&gt;1、用网站流量统计系统来改进实时反爬虫系统&lt;/p&gt;
+&lt;p&gt;还记得吗？网站流量统计系统记录的IP地址是真实用户访问IP，所以我们在网站流量统计系统里面也去操作memcached，但是这次不是增加计数值，而是减少计数值。在网站流量统计系统里面每接收到一个IP请求，就相应的cache.decrement(key)。所以对于真实用户的IP来说，它的计数值总是加1然后就减1，不可能很高。这样我们就可以大大降低判断爬虫的阀值，可以更加快速准确的识别和拒绝掉爬虫。&lt;/p&gt;
+&lt;p&gt;2、用时间窗口来改进实时反爬虫系统&lt;/p&gt;
+&lt;p&gt;爬虫爬取网页的频率都是比较固定的，不像人去访问网页，中间的间隔时间比较无规则，所以我们可以给每个IP地址建立一个时间窗口，记录IP地址最近12次访问时间，每记录一次就滑动一次窗口，比较最近访问时间和当前时间，如果间隔时间很长判断不是爬虫，清除时间窗口，如果间隔不长，就回溯计算指定时间段的访问频率，如果访问频率超过阀值，就转向验证码页面让用户填写验证码。&lt;/p&gt;
+&lt;p&gt;最终这个实时反爬虫系统就相当完善了，它可以很快的识别并且自动封锁爬虫的访问，保护网站的正常访问。不过有些爬虫可能相当狡猾，它也许会通过大量的爬虫测试来试探出来你的访问阀值，以低于阀值的爬取速度抓取你的网页，因此我们还需要辅助第3种办法，用日志来做后期的分析和识别，就算爬虫爬的再慢，它累计一天的爬取量也会超过你的阀值被你日志分析程序识别出来。&lt;/p&gt;
+&lt;p&gt;总之我们综合运用上面的四种反爬虫策略，可以很大程度上缓解爬虫对网站造成的负面影响，保证网站的正常访问。&lt;/p&gt;
+</description></item><item><title>Hybrid App开发实战</title><link>https://mikecyc.github.io/articles/hybrid-app-development-combat/</link><pubDate>Thu, 12 May 2016 00:00:00 +0800</pubDate><guid isPermaLink="true">https://mikecyc.github.io/articles/hybrid-app-development-combat/</guid><author></author><description>&lt;p&gt;近年来随着移动设备类型的变多，操作系统的变多，用户需求的增加，对于每个项目启动前，大家都会考虑到的成本，团队成员，技术成熟度，时间，项目需求等一堆的因素。因此，开发App的方案已经变得越来越多了。曾经有一段HTML5的小浪潮，无数的人参与或者看到过一个讨论：原生开发还是混合开发，又或者是Web开发？到底最佳实践是怎样的，笔者认为只有实践过的人才会知道。尤其是在这个充满各种变数的移动互联网时代。&lt;/p&gt;
 &lt;h2 id=&quot;hybrid-app-&quot;&gt;Hybrid App现状分析&lt;/h2&gt;
 &lt;h3 id=&quot;web-app&quot;&gt;Web App&lt;/h3&gt;
 &lt;p&gt;毫无疑问Web App就是成本最低，最快速地解决方案了。尤其是近两年非常流行的响应式设计，Web App市场提供了非常好的实践场地。最近典型的Web App最佳案例是Sun天气应用了，其细节处理让人赞不绝口。&lt;/p&gt;
@@ -1711,50 +1816,6 @@ _   底线
 })();
 
 &lt;/script&gt;
-</description></item><item><title>怎样下载Chrome插件和离线安装CRX文件</title><link>https://mikecyc.github.io/articles/how-to-download-chrome-plugin-and-setup-offline/</link><pubDate>Thu, 08 Mar 2012 13:52:05 +0800</pubDate><guid isPermaLink="true">https://mikecyc.github.io/articles/how-to-download-chrome-plugin-and-setup-offline/</guid><author></author><description>&lt;p&gt;自从chrome网上应用店出来后，Chrome插件就无法下载插件，必须在线安装，安装后又自动把CRX文件删除，而且是那么的迅速…&lt;/p&gt;
-&lt;p&gt;以下是下载离线插件包的方法：&lt;/p&gt;
-&lt;h2 id=&quot;-&quot;&gt;第一步：&lt;/h2&gt;
-&lt;p&gt;每个Google Chrome扩展都有一个固定的ID，例如&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;上面是一个Chrome扩展的完整URL，&lt;/p&gt;
-&lt;p&gt;在&lt;code&gt;https://chrome.google.com/webstore/detail/adblock/&lt;/code&gt;之后的一串字符就是扩展的ID了。&lt;/p&gt;
-&lt;p&gt;即：&lt;code&gt;gighmmpiobklfepjocnamgkkbiglidom&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;把这个扩展的ID复制下来。&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-&lt;h2 id=&quot;-&quot;&gt;第二步：&lt;/h2&gt;
-&lt;p&gt;用扩展ID替换下面URL中的“&lt;strong&gt;~~~~&lt;/strong&gt;”&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;https://clients2.google.com/service/update2/crx?response=redirect&amp;amp;x=id%3D~~~~%26uc&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;将替换后的URL粘贴到IE或火狐中，注意&lt;strong&gt;不要粘到Chrome里&lt;/strong&gt;，那样你还是无法获得CRX扩展文件包。&lt;/p&gt;
-&lt;p&gt;接下来下载保存即可。&lt;/p&gt;
-&lt;h2 id=&quot;-&quot;&gt;在线链接转换小工具&lt;/h2&gt;
-&lt;p&gt;将Google Chrome扩展的完整URL或者ID粘贴在这里，将得到下载Chrome扩展的完整URL，然后复制生成的URL到IE或者火狐中下载。
-如果你正在使用IE或者火狐，直接点击生成的&lt;strong&gt;链接&lt;/strong&gt;下载。&lt;/p&gt;
-&lt;p&gt;&lt;div style=&quot;border:1px solid #DDD;background:#EEE;padding:10px;border-radius:5px;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p&gt;&lt;input type=&quot;text&quot; id=&quot;source&quot; style=&quot;width:95%&quot;/&gt;&lt;/p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p&gt;&lt;textarea id=&quot;soutput&quot; style=&quot;width:95%&quot;&gt;&lt;/textarea&gt;&lt;/p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p style=&quot;height:3.2em;&quot;&gt;&lt;a id=&quot;slink&quot; target=&quot;download&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;
-&lt;script&gt;
-window.onload = function(){
-    var source = $('#source').bind('change paste', function(){
-        setTimeout(function(){
-            var pt = /[a-z]{30,}/.exec(source.val());
-            if(pt){
-                var url = 'https://clients2.google.com/service/update2/crx?response=redirect&amp;x=id%3D'+ pt[0]+ '%26uc';
-                $('#soutput').val(url).focus().select();
-                $('#slink').attr('href', url).html(url);
-            }else{
-                $('#soutput').val('源链接格式不对');
-                $('#slink').attr('href', '').html('');
-            }
-        }, 0);
-    });
-}
-&lt;/script&gt;
-
-&lt;h2 id=&quot;-&quot;&gt;安装方法：&lt;/h2&gt;
-&lt;p&gt;打开chrome，把CRX文件拖到chrome中，下方会有提示，继续即可，如图。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/articles/how-to-download-chrome-plugin-and-setup-offline/setup-chrome-plugin.jpg&quot; alt=&quot;离线安装Chrome插件&quot;&gt;&lt;/p&gt;
 </description></item><item><title>为什么信耶稣？[甘力克]</title><link>https://mikecyc.github.io/articles/why-jesus/</link><pubDate>Thu, 08 Mar 2012 13:52:05 +0800</pubDate><guid isPermaLink="true">https://mikecyc.github.io/articles/why-jesus/</guid><author></author><description>&lt;h2 id=&quot;-&quot;&gt;怎么回事？&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;01.gif&quot; width=&quot;168&quot; height=&quot;172&quot; align=&quot;right&quot; hsapce=&quot;15&quot;/&gt;&lt;/p&gt;
 &lt;p&gt;人生在世，最叫人振奋的事情，莫如：成功的人际关系——父子、夫妇、爱侣、朋友等。&lt;/p&gt;
@@ -1902,6 +1963,50 @@ window.onload = function(){
 &lt;h3 id=&quot;-&quot;&gt;四、 加入一家有生气的教会&lt;/h3&gt;
 &lt;p&gt;我们必须成为教会的一员。教会是一群基督徒聚集敬拜、听候神的说话，与弟兄姊妹相知相交、鼓励互勉的地方——因此不难想像是个活泼及吸引人的地方！&lt;/p&gt;
 &lt;p&gt;我在1974年2月16日信耶稣，向神做了一个短短的祷告(就象上面“邀请”的祷文)，就此改变了一生。那是我一生中最明智、最重大的决定！如果你信耶稣，我肯定这决定也会成为你一生最明智、最重大的决定。&lt;/p&gt;
+</description></item><item><title>怎样下载Chrome插件和离线安装CRX文件</title><link>https://mikecyc.github.io/articles/how-to-download-chrome-plugin-and-setup-offline/</link><pubDate>Thu, 08 Mar 2012 13:52:05 +0800</pubDate><guid isPermaLink="true">https://mikecyc.github.io/articles/how-to-download-chrome-plugin-and-setup-offline/</guid><author></author><description>&lt;p&gt;自从chrome网上应用店出来后，Chrome插件就无法下载插件，必须在线安装，安装后又自动把CRX文件删除，而且是那么的迅速…&lt;/p&gt;
+&lt;p&gt;以下是下载离线插件包的方法：&lt;/p&gt;
+&lt;h2 id=&quot;-&quot;&gt;第一步：&lt;/h2&gt;
+&lt;p&gt;每个Google Chrome扩展都有一个固定的ID，例如&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;上面是一个Chrome扩展的完整URL，&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;https://chrome.google.com/webstore/detail/adblock/&lt;/code&gt;之后的一串字符就是扩展的ID了。&lt;/p&gt;
+&lt;p&gt;即：&lt;code&gt;gighmmpiobklfepjocnamgkkbiglidom&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;把这个扩展的ID复制下来。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;h2 id=&quot;-&quot;&gt;第二步：&lt;/h2&gt;
+&lt;p&gt;用扩展ID替换下面URL中的“&lt;strong&gt;~~~~&lt;/strong&gt;”&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;https://clients2.google.com/service/update2/crx?response=redirect&amp;amp;x=id%3D~~~~%26uc&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;将替换后的URL粘贴到IE或火狐中，注意&lt;strong&gt;不要粘到Chrome里&lt;/strong&gt;，那样你还是无法获得CRX扩展文件包。&lt;/p&gt;
+&lt;p&gt;接下来下载保存即可。&lt;/p&gt;
+&lt;h2 id=&quot;-&quot;&gt;在线链接转换小工具&lt;/h2&gt;
+&lt;p&gt;将Google Chrome扩展的完整URL或者ID粘贴在这里，将得到下载Chrome扩展的完整URL，然后复制生成的URL到IE或者火狐中下载。
+如果你正在使用IE或者火狐，直接点击生成的&lt;strong&gt;链接&lt;/strong&gt;下载。&lt;/p&gt;
+&lt;p&gt;&lt;div style=&quot;border:1px solid #DDD;background:#EEE;padding:10px;border-radius:5px;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;&lt;input type=&quot;text&quot; id=&quot;source&quot; style=&quot;width:95%&quot;/&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;&lt;textarea id=&quot;soutput&quot; style=&quot;width:95%&quot;&gt;&lt;/textarea&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;p style=&quot;height:3.2em;&quot;&gt;&lt;a id=&quot;slink&quot; target=&quot;download&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;script&gt;
+window.onload = function(){
+    var source = $('#source').bind('change paste', function(){
+        setTimeout(function(){
+            var pt = /[a-z]{30,}/.exec(source.val());
+            if(pt){
+                var url = 'https://clients2.google.com/service/update2/crx?response=redirect&amp;x=id%3D'+ pt[0]+ '%26uc';
+                $('#soutput').val(url).focus().select();
+                $('#slink').attr('href', url).html(url);
+            }else{
+                $('#soutput').val('源链接格式不对');
+                $('#slink').attr('href', '').html('');
+            }
+        }, 0);
+    });
+}
+&lt;/script&gt;
+
+&lt;h2 id=&quot;-&quot;&gt;安装方法：&lt;/h2&gt;
+&lt;p&gt;打开chrome，把CRX文件拖到chrome中，下方会有提示，继续即可，如图。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/how-to-download-chrome-plugin-and-setup-offline/setup-chrome-plugin.jpg&quot; alt=&quot;离线安装Chrome插件&quot;&gt;&lt;/p&gt;
 </description></item><item><title>Markdown syntax</title><link>https://mikecyc.github.io/articles/markdown-syntax/</link><pubDate>Thu, 02 Feb 2012 08:00:00 +0800</pubDate><guid isPermaLink="true">https://mikecyc.github.io/articles/markdown-syntax/</guid><author></author><description>&lt;p&gt;Full markdown syntax taken from John Gruber’s &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;Daring Fireball&lt;/a&gt;.
 Did you know that 9 out of 10 bloggers prefer to write in markdown?&lt;/p&gt;
 &lt;hr&gt;
