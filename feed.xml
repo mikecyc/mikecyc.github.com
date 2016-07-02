@@ -1,11 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>麦客园</title><atom:link href="https://mikecyc.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link><link>https://mikecyc.github.io</link><description>集基督信仰，IT技术，生活的家园，分享生活中的点点滴滴。关注Web前端, iOS, Android, 网络技术, Linux, 开源硬件等。</description><pubDate>Thu, 30 Jun 2016 08:00:00 +0800</pubDate><generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator><language>en</language><item><title>成为自由职业者，很难吗？</title><link>https://mikecyc.github.io/articles/as-a-freelancer/</link><pubDate>Thu, 30 Jun 2016 08:00:00 +0800</pubDate><guid isPermaLink="true">https://mikecyc.github.io/articles/as-a-freelancer/</guid><author></author><description>&lt;p&gt;很多人都想开咖啡馆，我一度奇怪为什么咖啡馆会让那么多人心心念念？后来发现，咖啡馆、小餐馆、奶茶店、小客栈、淘宝小店……这些梦想指数高的关键词，它们有一些共同的特性：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;能够获得一份收入&lt;/li&gt;
-&lt;li&gt;入门较简单，不需花费过多成本和精力&lt;/li&gt;
-&lt;li&gt;自己说了算，不牵扯太多团队合作&lt;/li&gt;
-&lt;li&gt;美美哒&lt;/li&gt;
-&lt;li&gt;面向流动人群&lt;/li&gt;
-&lt;/ol&gt;
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>麦客园</title><atom:link href="https://mikecyc.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link><link>https://mikecyc.github.io</link><description>集基督信仰，IT技术，生活的家园，分享生活中的点点滴滴。关注Web前端, iOS, Android, 网络技术, Linux, 开源硬件等。</description><pubDate>Thu, 30 Jun 2016 08:00:00 +0800</pubDate><generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator><language>en</language><item><title>成为自由职业者，很难吗？</title><link>https://mikecyc.github.io/articles/as-a-freelancer/</link><pubDate>Thu, 30 Jun 2016 08:00:00 +0800</pubDate><guid isPermaLink="true">https://mikecyc.github.io/articles/as-a-freelancer/</guid><author></author><description>&lt;p&gt;我是一名开发工程师，每天在公司里重复的工作令我头疼，既忙碌又没有上升的空间。当我爬山的时候看到骡子挑着重担往，被鞭打前行的时候，我的心忽然间被这景象僵住了，我不就是像眼前的骡子一样吗？&lt;/p&gt;
+&lt;p&gt;我想过自由的生活，但日常支出都没有，怎么办呢？开咖啡馆、小餐馆、奶茶店、小客栈、淘宝小店……吗？难道就没有办法创业吗？&lt;/p&gt;
 &lt;p&gt;想开这些店的人，潜台词是：&lt;strong&gt;我想过自由的生活，有点钱，够日常支出就好；有点闲，能慢下来，享受过程的美好；有趣，能认识更多朋友。&lt;/strong&gt;&lt;/p&gt;
 &lt;!-- MORE --&gt;
 &lt;p&gt;维持平衡就好，有钱但忙到死，有趣但穷到哭，有闲但无聊得要命，都不算一个好状态。如果没钱没时间还无聊，光是想想都生不如死呢。&lt;/p&gt;
@@ -254,6 +248,60 @@ Report.deliver_crawler(iplist)
 &lt;p&gt;爬虫爬取网页的频率都是比较固定的，不像人去访问网页，中间的间隔时间比较无规则，所以我们可以给每个IP地址建立一个时间窗口，记录IP地址最近12次访问时间，每记录一次就滑动一次窗口，比较最近访问时间和当前时间，如果间隔时间很长判断不是爬虫，清除时间窗口，如果间隔不长，就回溯计算指定时间段的访问频率，如果访问频率超过阀值，就转向验证码页面让用户填写验证码。&lt;/p&gt;
 &lt;p&gt;最终这个实时反爬虫系统就相当完善了，它可以很快的识别并且自动封锁爬虫的访问，保护网站的正常访问。不过有些爬虫可能相当狡猾，它也许会通过大量的爬虫测试来试探出来你的访问阀值，以低于阀值的爬取速度抓取你的网页，因此我们还需要辅助第3种办法，用日志来做后期的分析和识别，就算爬虫爬的再慢，它累计一天的爬取量也会超过你的阀值被你日志分析程序识别出来。&lt;/p&gt;
 &lt;p&gt;总之我们综合运用上面的四种反爬虫策略，可以很大程度上缓解爬虫对网站造成的负面影响，保证网站的正常访问。&lt;/p&gt;
+</description></item><item><title>使用youtube-dl下载YouTube视频</title><link>https://mikecyc.github.io/articles/use-youtube-dl-to-download-video/</link><pubDate>Thu, 12 May 2016 00:00:00 +0800</pubDate><guid isPermaLink="true">https://mikecyc.github.io/articles/use-youtube-dl-to-download-video/</guid><author></author><description>&lt;p&gt;&lt;a href=&quot;http://youtube-dl.org/&quot;&gt;youtube-dl&lt;/a&gt;是一个使用python编写的脚本，可以下载热门视频网站的视频。在Linux系统下可以一健下载Youtube、Youku、Tudou等热门网站的视频。下面介绍使用方法。&lt;/p&gt;
+&lt;h2 id=&quot;1-&quot;&gt;1、环境确认&lt;/h2&gt;
+&lt;p&gt;youtube-dl需要Python 2.6以上的版本。因此需要先确认安装的Python版本。默认CentOS6.x是安装了2.6.6。通过以下命令可以查看版本：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;python –version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;2-&quot;&gt;2、下载安装&lt;/h2&gt;
+&lt;p&gt;youtube-dl直接下载最新版到&lt;code&gt;/usr/local/bin/&lt;/code&gt;目录下并赋予权限即可使用。命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;wget http://youtube-dl.org/latest/youtube-dl -O /usr/&lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt;/bin/youtube-dl
+chmod a+x /usr/&lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt;/bin/youtube-dl
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;3-&quot;&gt;3、用法&lt;/h2&gt;
+&lt;p&gt;使用帮助命令查看其用法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;youtube-dl -h
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;一些常用的参数：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;youtube-dl --list-extractors  &lt;span class=&quot;comment&quot;&gt;#查看支持网站列表&lt;/span&gt;
+youtube-dl -U  &lt;span class=&quot;comment&quot;&gt;#程序升级&lt;/span&gt;
+youtube-dl --get-format URL &lt;span class=&quot;comment&quot;&gt;#获取视频格式&lt;/span&gt;
+youtube-dl -F URL &lt;span class=&quot;comment&quot;&gt;#获取所有格式（目前仅支持YouTube），例如：&lt;/span&gt;
+youtube-dl -F http://www.youtube.com/watch?v=n-BXNXvTvV4
+[youtube] Setting language
+[youtube] n-BXNXvTvV4: Downloading video webpage
+[youtube] n-BXNXvTvV4: Downloading video info webpage
+[youtube] n-BXNXvTvV4: Extracting video information
+Available formats:
+&lt;span class=&quot;number&quot;&gt;37&lt;/span&gt;      :      mp4    [&lt;span class=&quot;number&quot;&gt;1080&lt;/span&gt;x1920]
+&lt;span class=&quot;number&quot;&gt;46&lt;/span&gt;      :      webm    [&lt;span class=&quot;number&quot;&gt;1080&lt;/span&gt;x1920]
+&lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;      :      mp4    [&lt;span class=&quot;number&quot;&gt;720&lt;/span&gt;x1280]
+&lt;span class=&quot;number&quot;&gt;45&lt;/span&gt;      :      webm    [&lt;span class=&quot;number&quot;&gt;720&lt;/span&gt;x1280]
+&lt;span class=&quot;number&quot;&gt;35&lt;/span&gt;      :      flv    [&lt;span class=&quot;number&quot;&gt;480&lt;/span&gt;x854]
+&lt;span class=&quot;number&quot;&gt;44&lt;/span&gt;      :      webm    [&lt;span class=&quot;number&quot;&gt;480&lt;/span&gt;x854]
+&lt;span class=&quot;number&quot;&gt;34&lt;/span&gt;      :      flv    [&lt;span class=&quot;number&quot;&gt;360&lt;/span&gt;x640]
+&lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;      :      mp4    [&lt;span class=&quot;number&quot;&gt;360&lt;/span&gt;x640]
+&lt;span class=&quot;number&quot;&gt;43&lt;/span&gt;      :      webm    [&lt;span class=&quot;number&quot;&gt;360&lt;/span&gt;x640]
+&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;      :      flv    [&lt;span class=&quot;number&quot;&gt;240&lt;/span&gt;x400]
+&lt;span class=&quot;number&quot;&gt;36&lt;/span&gt;      :      &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;gp    [&lt;span class=&quot;number&quot;&gt;240&lt;/span&gt;x320]
+&lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;      :      &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;gp    [&lt;span class=&quot;number&quot;&gt;144&lt;/span&gt;x176]
+&lt;span class=&quot;number&quot;&gt;137&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;1080&lt;/span&gt;p] (DASH Video)
+&lt;span class=&quot;number&quot;&gt;136&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;720&lt;/span&gt;p] (DASH Video)
+&lt;span class=&quot;number&quot;&gt;135&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;480&lt;/span&gt;p] (DASH Video)
+&lt;span class=&quot;number&quot;&gt;134&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;360&lt;/span&gt;p] (DASH Video)
+&lt;span class=&quot;number&quot;&gt;133&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;240&lt;/span&gt;p] (DASH Video)
+&lt;span class=&quot;number&quot;&gt;160&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;192&lt;/span&gt;p] (DASH Video)
+&lt;span class=&quot;number&quot;&gt;141&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;256&lt;/span&gt;k] (DASH Audio)
+&lt;span class=&quot;number&quot;&gt;172&lt;/span&gt;    :      webm    [&lt;span class=&quot;number&quot;&gt;256&lt;/span&gt;k] (DASH Audio)
+&lt;span class=&quot;number&quot;&gt;140&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;128&lt;/span&gt;k] (DASH Audio)
+&lt;span class=&quot;number&quot;&gt;171&lt;/span&gt;    :      webm    [&lt;span class=&quot;number&quot;&gt;128&lt;/span&gt;k] (DASH Audio)
+&lt;span class=&quot;number&quot;&gt;139&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;48&lt;/span&gt;k] (DASH Audio)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;youtube-dl &lt;span class=&quot;operator&quot;&gt;-f&lt;/span&gt; format URL &lt;span class=&quot;comment&quot;&gt;#下载指定格式的视频，这里以下载1080p原画质量的视频格式为例:&lt;/span&gt;
+youtube-dl &lt;span class=&quot;operator&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;137&lt;/span&gt; http://www.youtube.com/watch?v=n-BXNXvTvV4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;补充说明：&lt;/p&gt;
+&lt;p&gt;我在VPS上试了试，下载YouTube的1080p速度飞快，几百兆的视频几乎瞬间搞定。下载回来重命名一下，放到Apache的htdoc目录里，再用百度或迅雷的离线下载拖回来，如此收藏YouTube视频易如反掌。&lt;/p&gt;
 </description></item><item><title>Hybrid App开发实战</title><link>https://mikecyc.github.io/articles/hybrid-app-development-combat/</link><pubDate>Thu, 12 May 2016 00:00:00 +0800</pubDate><guid isPermaLink="true">https://mikecyc.github.io/articles/hybrid-app-development-combat/</guid><author></author><description>&lt;p&gt;近年来随着移动设备类型的变多，操作系统的变多，用户需求的增加，对于每个项目启动前，大家都会考虑到的成本，团队成员，技术成熟度，时间，项目需求等一堆的因素。因此，开发App的方案已经变得越来越多了。曾经有一段HTML5的小浪潮，无数的人参与或者看到过一个讨论：原生开发还是混合开发，又或者是Web开发？到底最佳实践是怎样的，笔者认为只有实践过的人才会知道。尤其是在这个充满各种变数的移动互联网时代。&lt;/p&gt;
 &lt;h2 id=&quot;hybrid-app-&quot;&gt;Hybrid App现状分析&lt;/h2&gt;
 &lt;h3 id=&quot;web-app&quot;&gt;Web App&lt;/h3&gt;
@@ -435,60 +483,6 @@ require.js
 &lt;p&gt;所以要认清跨平台这个”幌子”，并非所有的问题都用同一个方法处理。笔者们要融汇贯通嘛！&lt;/p&gt;
 &lt;h2 id=&quot;-&quot;&gt;总结和笔者的感受&lt;/h2&gt;
 &lt;p&gt;对于做Web App的坑，其实挺多的。这里无法一一表达。但是相信实践过就会知道如何更好地绕过这些坑（例如笔者说的过场动画的例子）。那么对于开发者来说要有坚强的毅力，努力去实践，满足自己永远不能满足的好奇心，因为最终的经验会给你带来不一样的感受，stay hungry。同时笔者们必须保持一颗学习的心，不断地吸收有营养的思想，学习新的知识，不要太容易满足，stay foolish。每一种语言都会有其中的思想，每一种工具都有自己解决问题的方法论。多尝试就能够给自己带来更优秀的架构，更优秀的应用，提供给用户更好的体验。当然，也会有更好的回报。&lt;/p&gt;
-</description></item><item><title>使用youtube-dl下载YouTube视频</title><link>https://mikecyc.github.io/articles/use-youtube-dl-to-download-video/</link><pubDate>Thu, 12 May 2016 00:00:00 +0800</pubDate><guid isPermaLink="true">https://mikecyc.github.io/articles/use-youtube-dl-to-download-video/</guid><author></author><description>&lt;p&gt;&lt;a href=&quot;http://youtube-dl.org/&quot;&gt;youtube-dl&lt;/a&gt;是一个使用python编写的脚本，可以下载热门视频网站的视频。在Linux系统下可以一健下载Youtube、Youku、Tudou等热门网站的视频。下面介绍使用方法。&lt;/p&gt;
-&lt;h2 id=&quot;1-&quot;&gt;1、环境确认&lt;/h2&gt;
-&lt;p&gt;youtube-dl需要Python 2.6以上的版本。因此需要先确认安装的Python版本。默认CentOS6.x是安装了2.6.6。通过以下命令可以查看版本：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;python –version
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;2-&quot;&gt;2、下载安装&lt;/h2&gt;
-&lt;p&gt;youtube-dl直接下载最新版到&lt;code&gt;/usr/local/bin/&lt;/code&gt;目录下并赋予权限即可使用。命令：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;wget http://youtube-dl.org/latest/youtube-dl -O /usr/&lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt;/bin/youtube-dl
-chmod a+x /usr/&lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt;/bin/youtube-dl
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;3-&quot;&gt;3、用法&lt;/h2&gt;
-&lt;p&gt;使用帮助命令查看其用法：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;youtube-dl -h
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;一些常用的参数：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;youtube-dl --list-extractors  &lt;span class=&quot;comment&quot;&gt;#查看支持网站列表&lt;/span&gt;
-youtube-dl -U  &lt;span class=&quot;comment&quot;&gt;#程序升级&lt;/span&gt;
-youtube-dl --get-format URL &lt;span class=&quot;comment&quot;&gt;#获取视频格式&lt;/span&gt;
-youtube-dl -F URL &lt;span class=&quot;comment&quot;&gt;#获取所有格式（目前仅支持YouTube），例如：&lt;/span&gt;
-youtube-dl -F http://www.youtube.com/watch?v=n-BXNXvTvV4
-[youtube] Setting language
-[youtube] n-BXNXvTvV4: Downloading video webpage
-[youtube] n-BXNXvTvV4: Downloading video info webpage
-[youtube] n-BXNXvTvV4: Extracting video information
-Available formats:
-&lt;span class=&quot;number&quot;&gt;37&lt;/span&gt;      :      mp4    [&lt;span class=&quot;number&quot;&gt;1080&lt;/span&gt;x1920]
-&lt;span class=&quot;number&quot;&gt;46&lt;/span&gt;      :      webm    [&lt;span class=&quot;number&quot;&gt;1080&lt;/span&gt;x1920]
-&lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;      :      mp4    [&lt;span class=&quot;number&quot;&gt;720&lt;/span&gt;x1280]
-&lt;span class=&quot;number&quot;&gt;45&lt;/span&gt;      :      webm    [&lt;span class=&quot;number&quot;&gt;720&lt;/span&gt;x1280]
-&lt;span class=&quot;number&quot;&gt;35&lt;/span&gt;      :      flv    [&lt;span class=&quot;number&quot;&gt;480&lt;/span&gt;x854]
-&lt;span class=&quot;number&quot;&gt;44&lt;/span&gt;      :      webm    [&lt;span class=&quot;number&quot;&gt;480&lt;/span&gt;x854]
-&lt;span class=&quot;number&quot;&gt;34&lt;/span&gt;      :      flv    [&lt;span class=&quot;number&quot;&gt;360&lt;/span&gt;x640]
-&lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;      :      mp4    [&lt;span class=&quot;number&quot;&gt;360&lt;/span&gt;x640]
-&lt;span class=&quot;number&quot;&gt;43&lt;/span&gt;      :      webm    [&lt;span class=&quot;number&quot;&gt;360&lt;/span&gt;x640]
-&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;      :      flv    [&lt;span class=&quot;number&quot;&gt;240&lt;/span&gt;x400]
-&lt;span class=&quot;number&quot;&gt;36&lt;/span&gt;      :      &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;gp    [&lt;span class=&quot;number&quot;&gt;240&lt;/span&gt;x320]
-&lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;      :      &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;gp    [&lt;span class=&quot;number&quot;&gt;144&lt;/span&gt;x176]
-&lt;span class=&quot;number&quot;&gt;137&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;1080&lt;/span&gt;p] (DASH Video)
-&lt;span class=&quot;number&quot;&gt;136&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;720&lt;/span&gt;p] (DASH Video)
-&lt;span class=&quot;number&quot;&gt;135&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;480&lt;/span&gt;p] (DASH Video)
-&lt;span class=&quot;number&quot;&gt;134&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;360&lt;/span&gt;p] (DASH Video)
-&lt;span class=&quot;number&quot;&gt;133&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;240&lt;/span&gt;p] (DASH Video)
-&lt;span class=&quot;number&quot;&gt;160&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;192&lt;/span&gt;p] (DASH Video)
-&lt;span class=&quot;number&quot;&gt;141&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;256&lt;/span&gt;k] (DASH Audio)
-&lt;span class=&quot;number&quot;&gt;172&lt;/span&gt;    :      webm    [&lt;span class=&quot;number&quot;&gt;256&lt;/span&gt;k] (DASH Audio)
-&lt;span class=&quot;number&quot;&gt;140&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;128&lt;/span&gt;k] (DASH Audio)
-&lt;span class=&quot;number&quot;&gt;171&lt;/span&gt;    :      webm    [&lt;span class=&quot;number&quot;&gt;128&lt;/span&gt;k] (DASH Audio)
-&lt;span class=&quot;number&quot;&gt;139&lt;/span&gt;    :      mp4    [&lt;span class=&quot;number&quot;&gt;48&lt;/span&gt;k] (DASH Audio)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;youtube-dl &lt;span class=&quot;operator&quot;&gt;-f&lt;/span&gt; format URL &lt;span class=&quot;comment&quot;&gt;#下载指定格式的视频，这里以下载1080p原画质量的视频格式为例:&lt;/span&gt;
-youtube-dl &lt;span class=&quot;operator&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;137&lt;/span&gt; http://www.youtube.com/watch?v=n-BXNXvTvV4
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;补充说明：&lt;/p&gt;
-&lt;p&gt;我在VPS上试了试，下载YouTube的1080p速度飞快，几百兆的视频几乎瞬间搞定。下载回来重命名一下，放到Apache的htdoc目录里，再用百度或迅雷的离线下载拖回来，如此收藏YouTube视频易如反掌。&lt;/p&gt;
 </description></item><item><title>如何进行海淘（海外购物）</title><link>https://mikecyc.github.io/articles/online-shopping-overseas/</link><pubDate>Wed, 11 May 2016 08:00:00 +0800</pubDate><guid isPermaLink="true">https://mikecyc.github.io/articles/online-shopping-overseas/</guid><author></author><description>&lt;p&gt;海淘一词越来越流行，尤其是在白领阶层里，相信许多人也是想海淘一次，可是缺乏经验，不知道如何下手。相信有过海淘经验的朋友一定知道，许多国外的商城是不支持国内IP直接购买的。这时候就必须得用到VPN或者SSH，以达到更换IP的目的。如果你没有这样的工具，请到得自由 &lt;a href=&quot;http://devpn.info/&quot;&gt;devpn.info&lt;/a&gt; 获取，密码有效期一小时，可以连续获取。若直接使用国内IP购买，有可能出现以下几种情况：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;砍单，这是最常见的；&lt;/li&gt;
